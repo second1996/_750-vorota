@@ -1,0 +1,27 @@
+.btn, button
+	display: inline-flex
+	align-items: center
+	padding: 26px 52px
+	border-radius: 0
+	border: 2px solid $primary
+	color: $primary
+	font-family: inherit
+	font-size: 15px
+	font-weight: $w-bold
+	line-height: 1
+	text-align: center
+	text-transform: lowercase
+	white-space: nowrap
+	outline: none!important
+	user-select: none
+	transition: $trs
+	+media-breakpoint-down(xl)
+		padding: 26px 42px
+	+media-breakpoint-down(lg)
+		padding: 22px 36px
+	> svg
+		width: 12px
+		height: 12px
+		margin-left: 10px
+	&:hover
+		color: inherit
