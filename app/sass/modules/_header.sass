@@ -1,2 +1,264 @@
 .header
 	position: relative
+
+	// Top header
+	&-top
+		background-color: $white
+		border-bottom: 1px solid $border
+		&-adress
+		&-btns
+			display: inline-flex
+			align-items: center
+			.btn
+				margin: 0 6px
+		&-nav
+			display: inline-flex
+			align-items: center
+			.menu-list
+				display: inline-flex
+				> li
+					display: inline-flex
+					align-items: center
+					&:not(:first-child)
+						margin-left: 24px
+					> a
+						padding: 16px 0
+						font-size: 15px
+						line-height: 1
+					&.has-dropdown
+						position: relative
+						&::after
+							content: ''
+							display: inline-block
+							width: 16px
+							height: 16px
+							margin-left: 4px
+							background: url('../images/dist/icons/dropdown-arrow.svg') no-repeat center/16px
+							transform-origin: 50% 50%
+							transition: transform .3s ease
+						&:hover
+							&::after
+								transform: rotate(180deg)
+							> a
+								color: $blue
+							> ul
+								pointer-events: auto
+								visibility: visible
+								opacity: 1
+								transform: none
+						> ul
+							pointer-events: none
+							visibility: hidden
+							position: absolute
+							top: 100%
+							left: -25px
+							z-index: 9
+							width: 200px
+							padding: 16px
+							border-radius: 8px
+							box-shadow: 0px 9px 27px rgba(176, 190, 197, 0.82), 0px 3px 6px rgba(176, 190, 197, 0.32)
+							background-color: $white
+							opacity: 0
+							transform: translate3d(0, 10px, 0)
+							transition: $trs
+							&::before
+								content: ''
+								position: absolute
+								top: -15px
+								left: 50px
+								display: block
+								border: 8px solid $trsp
+								border-bottom: 8px solid $white
+							> li
+								&:not(:last-child)
+									margin-bottom: 8px
+								> a
+									@include font-size(xs)
+			.social-list
+				display: inline-flex
+				margin-left: 40px
+				> li
+					&:not(:first-child)
+						margin-left: 6px
+					> a
+						display: inline-flex
+						align-items: center
+						justify-content: center
+						width: 36px
+						height: 36px
+						border-radius: 50%
+						border: 1px solid $text-200
+						> img
+							width: 20px
+							height: 20px
+
+	// Middle header
+	&-middle
+		padding-top: 24px
+		padding-bottom: 24px
+		&-logo
+			a
+				display: block
+			img
+				max-width: 248px
+				max-height: 40px
+		&-search
+			max-width: 326px
+		&-contacts
+			.phone,
+			.mail
+				display: flex
+				align-items: center
+				&-icon
+					flex: 0 0 auto
+					display: inline-flex
+					align-items: center
+					color: $text-300
+					font-size: 14px
+				&-list
+					margin-left: 8px
+					> a
+						display: inline-flex
+						align-items: center
+						color: $text-400
+						> i:first-child
+							margin-left: 8px
+						.viber,
+						.whatsapp
+							user-select: none
+							flex: 0 0 auto
+							display: inline-block
+							margin-left: 2px
+							background-repeat: no-repeat
+							background-size: 100%
+							background-position: center
+							font-style: normal
+						.viber
+							width: 22px
+							height: 22px
+							background-image: url('../images/dist/icons/viber.svg')
+						.whatsapp
+							width: 24px
+							height: 24px
+							background-image: url('../images/dist/icons/whatsapp.svg')
+						&:hover
+							color: $blue
+						&:not(:last-child)
+							margin-right: 6px
+							&::after
+								content: ','
+								display: inline-block
+								color: $text-400
+		&-actions
+			display: flex
+			align-items: center
+			> .btn
+				margin-right: 16px
+			.shopping-cart
+				display: inline-flex
+				align-items: center
+				&-content
+					margin-left: 12px
+					.title
+						display: block
+						color: $text-400
+						@include font-size(xxs)
+					.total
+						display: block
+						color: $text-500
+						font-size: 12px
+						font-weight: $w-bold
+						line-height: 16px
+
+	// Bottom header
+	&-bottom
+		.container
+			position: relative
+		&-catalog
+			flex: 0 0 210px
+		&-nav
+			position: static
+			> ul
+				display: flex
+				justify-content: space-between
+				> li
+					display: inline-flex
+					align-items: center
+					> a
+						padding: 14px 0
+						font-size: 12px
+						font-weight: $w-bold
+						letter-spacing: 1px
+						text-transform: uppercase
+						&.promo
+							display: inline-flex
+							align-items: center
+							&::before
+								content: ''
+								flex: 0 0 auto
+								display: inline-block
+								width: 24px
+								height: 24px
+								margin-right: 8px
+								background: url('../images/dist/icons/fire.svg') no-repeat center/100%
+					&.has-dropdown
+						&::after
+							content: ''
+							display: inline-block
+							width: 16px
+							height: 16px
+							margin-left: 4px
+							background: url('../images/dist/icons/dropdown-arrow.svg') no-repeat center/16px
+							transform-origin: 50% 50%
+							transition: transform .3s ease
+						&:hover
+							&::after
+								transform: rotate(180deg)
+							> a
+								color: $blue
+							.megamenu
+								pointer-events: auto
+								visibility: visible
+								opacity: 1
+								transform: none
+						.megamenu
+							pointer-events: none
+							visibility: hidden
+							position: absolute
+							top: 100%
+							left: 0
+							right: 0
+							z-index: 9
+							padding-top: 32px
+							padding-bottom: 32px
+							background-color: $white
+							opacity: 0
+							transform: translate3d(0, 10px, 0)
+							transition: $trs
+							&-list
+								display: flex
+								flex-wrap: wrap
+								margin: -20px -12px
+							&-item
+								flex: 0 0 16.66667%
+								max-width: 16.66667%
+								padding: 20px 12px
+								.image
+									display: block
+									width: 88px
+									height: 88px
+									margin-bottom: 16px
+									border-radius: 38px
+								.category
+									display: inline-block
+									padding-right: 10px
+									font-size: 15px
+									font-weight: $w-bold
+									line-height: 16px
+								.subcategories
+									margin-top: 10px
+									> li
+										> a
+											display: inline-block
+											padding: 4px 0
+											@include font-size(xxs)

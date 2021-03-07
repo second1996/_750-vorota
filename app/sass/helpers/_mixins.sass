@@ -1,0 +1,31 @@
+// Font sizes mixin
+@mixin font-size($size)
+	@if $size == 'xl'
+		font-size: 34px
+		line-height: 40px
+		+media-breakpoint-down(sm)
+			font-size: 24px
+			line-height: 32px
+
+	@else if $size == 'lg'
+		font-size: 27px
+		line-height: 32px
+		+media-breakpoint-down(sm)
+			font-size: 20px
+			line-height: 24px
+
+	@else if $size == 'md'
+		font-size: 22px
+		line-height: 32px
+
+	@else if $size == 'sm'
+		font-size: 18px
+		line-height: 24px
+
+	@else if $size == 'xs'
+		font-size: 15px
+		line-height: 24px
+
+	@else if $size == 'xxs'
+		font-size: 13px
+		line-height: 16px

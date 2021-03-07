@@ -1,27 +1,118 @@
 .btn, button
 	display: inline-flex
 	align-items: center
-	padding: 26px 52px
-	border-radius: 0
-	border: 2px solid $primary
-	color: $primary
+	justify-content: center
+	height: 48px
+	padding-left: 40px
+	padding-right: 40px
+	border-radius: 4px
+	border: 1px solid $trsp
+	background-color: $trsp
+	color: $text-400
 	font-family: inherit
 	font-size: 15px
 	font-weight: $w-bold
 	line-height: 1
 	text-align: center
-	text-transform: lowercase
 	white-space: nowrap
 	outline: none!important
 	user-select: none
 	transition: $trs
-	+media-breakpoint-down(xl)
-		padding: 26px 42px
-	+media-breakpoint-down(lg)
-		padding: 22px 36px
-	> svg
-		width: 12px
-		height: 12px
+	> .icon
+		width: 20px
+		height: 20px
+	> .icon ~ span:not(.badge)
+		margin-left: 10px
+	> span:not(.badge) ~ .icon
 		margin-left: 10px
 	&:hover
 		color: inherit
+	&:focus
+		box-shadow: 0 0 0 3px rgba($text-300, 0.25)
+
+	// Themes
+	&.btn-yellow
+		background-color: $yellow
+		color: $text-500
+		&:focus
+			box-shadow: 0 0 0 3px rgba($yellow, 0.25)
+	&.btn-green
+		background-color: $green
+		color: $white
+		&:focus
+			box-shadow: 0 0 0 3px rgba($green, 0.25)
+	&.btn-secondary
+		border-color: $text-200
+		background-color: $white
+
+	// Sizes
+	&.btn-sm
+		height: 32px
+		padding-left: 12px
+		padding-right: 12px
+		font-size: 13px
+		font-weight: $w-regular
+		.icon
+			width: 15px
+			height: 15px
+	&.btn-lg
+		height: 64px
+
+	// Dropdown button
+	&.btn-dropdown
+		height: auto
+		padding-left: 0
+		padding-right: 0
+		color: $text-500
+		font-size: 13px
+		font-weight: $w-regular
+		&::after
+			content: ''
+			display: inline-block
+			width: 16px
+			height: 16px
+			margin-left: 4px
+			transition: transform .3s ease
+			background: url('../images/dist/icons/dropdown-arrow.svg') no-repeat center/16px
+
+	// Compare, Wishlist & Shopping cart buttons
+	&.btn-compare,
+	&.btn-wishlist,
+	&.btn-shopping-cart
+		width: 48px
+		padding-left: 0
+		padding-right: 0
+		border-radius: 50%
+		color: $text-300
+		&:hover
+			border-color: $text-200
+			background-color: $text-200
+			color: $text-500
+		.icon
+			width: 24px
+			height: 24px
+		.badge
+			overflow: hidden
+			position: absolute
+			top: -8px
+			left: 32px
+			z-index: 2
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			background-color: $yellow
+			color: $text-500
+			font-size: 12px
+			font-weight: $w-medium
+			text-align: center
+	&.btn-shopping-cart
+		color: $green
+
+	// Catalog button
+	&.btn-catalog
+		width: 100%
+		font-size: 12px
+		text-transform: uppercase
