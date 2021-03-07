@@ -85,19 +85,85 @@
 
 		<div class="header-middle">
 			<div class="container">
-				<div class="row flex-nowrap align-items-center justify-content-between">
+				<div class="row flex-nowrap align-items-center">
 					<div class="col-auto header-middle-logo">
 						<a href="page-home.html" rel="home">
 							<img src="images/logo.svg" alt="Атоматика для ворот">
 						</a>
 					</div><!-- /.header-middle-logo -->
-					<div class="col-auto header-middle-search">
+					<div class="col header-middle-search">
 						<form class="form form-search">
-							<input type="search" class="form-control" placeholder="Поиск" required>
+							<div class="form-group-label">
+								<input type="text" id="header-search-field" class="form-control" placeholder="Поиск" required autocomplete="off">
+								<label for="header-search-field">Поиск</label>
+							</div>
 							<button type="submit" class="form-submit btn btn-yellow"><svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg></button>
 						</form>
+						<div class="search-results">
+							<div class="search-results-wrapper">
+								<div class="categories">
+									<span class="categories-title mb-8">Категории</span>
+									<ul class="categories-list">
+										<li><a href="#">Автоматика для подъёмно-поворотных ворот</a></li>
+										<li><a href="#">Автоматика для ворот</a></li>
+										<li><a href="#">Шлагбаумы</a></li>
+										<li><a href="#">Блоки управления</a></li>
+									</ul>
+								</div>
+								<div class="products">
+									<span class="products-title mb-8">Товары</span>
+									<div class="products-results">
+										<span>Найдено: 140 товаров</span>
+										<a href="page-search.html">Все результаты поиска <svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg></a>
+									</div>
+									<ul class="products-list">
+										<li>
+											<a href="#">
+												<div class="photo img-cover">
+													<img src="images/dist/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>15 800 руб.</ins>
+														<del>17 400 руб.</del>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="photo img-cover">
+													<img src="images/dist/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>19 200 руб.</ins>
+														<del>12 500 руб.</del>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="photo img-cover">
+													<img src="images/dist/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>71 300 руб.</ins>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div><!-- /.header-middle-search -->
-					<div class="col-auto header-middle-contacts">
+					<div class="col header-middle-contacts">
 						<div class="phone">
 							<div class="phone-icon">
 								<svg class="icon icon-phone-alt"><use xlink:href="images/symbol-defs.svg#phone-alt"></use></svg>
@@ -117,13 +183,60 @@
 						</div>
 					</div><!-- /.header-middle-contacts -->
 					<div class="col-auto header-middle-actions">
-						<a href="#" class="btn btn-secondary btn-compare">
-							<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
-						</a>
-						<a href="#" class="btn btn-secondary btn-wishlist">
-							<span class="badge">2</span>
-							<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
-						</a>
+						<div class="compare">
+							<div class="compare-icon">
+								<a href="#" class="btn btn-secondary btn-compare">
+									<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+								</a>
+							</div>
+						</div><!-- /.compare -->
+						<div class="wishlist">
+							<div class="wishlist-icon">
+								<a href="#" class="btn btn-secondary btn-wishlist">
+									<span class="badge">2</span>
+									<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+								</a>
+							</div>
+							<div class="wishlist-widget">
+								<div class="wrapper">
+									<ul class="products-list">
+										<li class="products-list-item">
+											<a href="#" class="products-list-link">
+												<div class="photo img-cover">
+													<img src="images/dist/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>15 800 руб.</ins>
+													</div>
+												</div>
+											</a>
+											<a href="#" class="products-list-delete">
+												<svg class="icon icon-trash-alt"><use xlink:href="images/symbol-defs.svg#trash-alt"></use></svg>
+											</a>
+										</li>
+										<li class="products-list-item">
+											<a href="#" class="products-list-link">
+												<div class="photo img-cover">
+													<img src="images/dist/menu-categories/1.jpg" alt="">
+												</div>
+												<div class="meta">
+													<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+													<div class="price">
+														<ins>4 800 руб.</ins>
+													</div>
+												</div>
+											</a>
+											<a href="#" class="products-list-delete">
+												<svg class="icon icon-trash-alt"><use xlink:href="images/symbol-defs.svg#trash-alt"></use></svg>
+											</a>
+										</li>
+									</ul>
+									<a href="page-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
+								</div><!-- /.wrapper -->
+							</div><!-- /.widget -->
+						</div><!-- /.wishlist -->
 						<div class="shopping-cart">
 							<div class="shopping-cart-icon">
 								<a href="#" class="btn btn-secondary btn-shopping-cart">
@@ -135,7 +248,37 @@
 								<span class="title">Товаров на сумму</span>
 								<span class="total">2 500 Руб.</span>
 							</div>
-						</div>
+							<div class="shopping-cart-widget">
+								<div class="wrapper">
+									<ul class="products-list">
+										<li class="products-list-item">
+											<a href="#" class="products-list-link">
+												<div class="photo img-cover">
+													<img src="images/dist/menu-categories/1.jpg" alt="">
+												</div>
+												<span class="title">NICE RB400BDKCE комплект автоматики для откатных ворот до 400 кг</span>
+											</a>
+											<div class="total">
+												<div class="total-quantity quantity">
+													<button type="button" class="quantity-minus">-</button>
+													<input type="text" class="quantity-value form-control" name="quantity" value="1" step="1" min="1" max="99" title="Количество">
+													<button type="button" class="quantity-plus">+</button>
+												</div>
+												<div class="total-price price">
+													<ins>15 800 руб.</ins>
+													<!-- <del>17 400 руб.</del> -->
+												</div>
+											</div>
+											<a href="#" class="products-list-delete">
+												<svg class="icon icon-trash-alt"><use xlink:href="images/symbol-defs.svg#trash-alt"></use></svg>
+											</a>
+										</li>
+									</ul>
+									<div class="subtotal text-md w-bold">Итого: 15 800 руб.</div>
+									<a href="page-cart.html" class="checkout-btn btn btn-green">Оформить заказ</a>
+								</div><!-- /.wrapper -->
+							</div><!-- /.widget -->
+						</div><!--/.shopping-cart-->
 					</div><!-- /.header-middle-actions -->
 				</div><!-- /.row -->
 			</div><!-- /.container -->
@@ -144,12 +287,263 @@
 		<div class="header-bottom">
 			<div class="container">
 				<div class="row flex-nowrap align-items-center">
+
 					<div class="col-auto header-bottom-catalog">
-						<button class="btn btn-yellow btn-catalog">
+						<button class="catalog-btn btn btn-yellow">
 							<svg class="icon icon-bars"><use xlink:href="images/symbol-defs.svg#bars"></use></svg>
 							<span>Каталог</span>
 						</button>
-					</div>
+						<nav class="catalog-nav">
+							<ul class="catalog-nav-list">
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Автоматика для ворот</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<div class="catalog-nav-submenu">
+										<h3 class="menu-title mb-24">Автоматика для ворот</h3>
+										<div class="menu-grid">
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для откатных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для распашных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для секционных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для подъёмно-поворотных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Блоки управления</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Пульты и брелоки</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+														<li><a href="#">Apollo</a></li>
+														<li><a href="#">2-х канальные</a></li>
+														<li><a href="#">4-х канальные</a></li>
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Радиоуправление</a>
+													<ul class="subcategories">
+														<li><a href="#">Радиоприемники</a></li>
+														<li><a href="#">Антенны</a></li>
+														<li><a href="#">Адиодекодеры</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Запчасти для автоматики</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Устройства для безопасности</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">Apollo</a></li>
+														<li><a href="#">2-х канальные</a></li>
+														<li><a href="#">4-х канальные</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Сигнальные элементы</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Консольные системы</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Дополнительное оборудование</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+										</div><!-- ./menu-grid -->
+									</div><!-- /.catalog-nav-submenu -->
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Шлагбаумы</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+									<div class="catalog-nav-submenu">
+										<h3 class="menu-title mb-24">Шлагбаумы</h3>
+										<div class="menu-grid">
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для откатных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для распашных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Автоматика для подъёмно-поворотных ворот</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Консольные системы</a></li>
+														<li><a href="#">Зубчатые рейки и крепеж</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Блоки управления</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Радиоуправление</a>
+													<ul class="subcategories">
+														<li><a href="#">Радиоприемники</a></li>
+														<li><a href="#">Антенны</a></li>
+														<li><a href="#">Адиодекодеры</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Запчасти для автоматики</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+											<div class="menu-grid-col">
+												<div class="menu-grid-list">
+													<a href="#" class="category">Сигнальные элементы</a>
+													<ul class="subcategories">
+														<li><a href="#">Комплекты</a></li>
+														<li><a href="#">Приводы</a></li>
+														<li><a href="#">Аксессуары</a></li>
+													</ul>
+												</div>
+												<div class="menu-grid-list">
+													<a href="#" class="category">Консольные системы</a>
+													<ul class="subcategories">
+														<li><a href="#">Came</a></li>
+														<li><a href="#">Nice</a></li>
+														<li><a href="#">DoorHan</a></li>
+														<li><a href="#">Faac</a></li>
+													</ul>
+												</div>
+											</div><!-- ./menu-grid-col -->
+										</div><!-- ./menu-grid -->
+									</div><!-- /.catalog-nav-submenu -->
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Комплектующие для ворот</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Парковочное оборудование</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Пульты</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+								<li class="catalog-nav-item">
+									<a href="#" class="catalog-nav-link">
+										<span>Аксессуары</span>
+										<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div><!-- /.header-bottom-catalog -->
+
 					<div class="col header-bottom-nav">
 						<ul>
 							<li><a href="#" class="promo">Акции и скидки</a></li>
@@ -157,12 +551,9 @@
 								<a href="#">Автоматика для ворот</a>
 								<div class="megamenu">
 									<div class="container">
-										<div class="row">
-											<div class="col-2"></div>
-										</div>
 										<div class="megamenu-list">
 											<div class="megamenu-item">
-												<div class="image img-fill">
+												<div class="image img-cover">
 													<img src="images/dist/menu-categories/1.jpg" alt="Автоматика для откатных ворот">
 												</div>
 												<a href="#" class="category">Автоматика для откатных ворот</a>
@@ -199,7 +590,8 @@
 							<li><a href="#">Наши работы</a></li>
 							<li><a href="#">Услуги</a></li>
 						</ul>
-					</div>
+					</div><!-- /.header-bottom-nav -->
+
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- /.header-bottom -->

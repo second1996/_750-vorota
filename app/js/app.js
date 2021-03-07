@@ -12,5 +12,17 @@ require('../../node_modules/bootstrap/js/dist/dropdown.js') // Bootstrap Dropdow
 require('./_scripts.js')
 
 document.addEventListener('DOMContentLoaded', () => {
-	// JS code...
+	$('#header-search-field').on('click', function() {
+		const searchEl = $('.header-middle-search')
+
+		searchEl.addClass('_is-focused')
+		searchEl.find('.search-results').addClass('_is-opened')
+
+		$(document).on('click', function(e) {
+			if (!searchEl.is(e.target) && searchEl.has(e.target).length === 0) {
+				searchEl.removeClass('_is-focused')
+				searchEl.find('.search-results').removeClass('_is-opened')
+			}
+		})
+	})
 })

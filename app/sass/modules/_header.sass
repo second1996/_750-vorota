@@ -56,7 +56,7 @@
 							width: 200px
 							padding: 16px
 							border-radius: 8px
-							box-shadow: 0px 9px 27px rgba(176, 190, 197, 0.82), 0px 3px 6px rgba(176, 190, 197, 0.32)
+							box-shadow: $box-shadow
 							background-color: $white
 							opacity: 0
 							transform: translate3d(0, 10px, 0)
@@ -96,15 +96,138 @@
 	&-middle
 		padding-top: 24px
 		padding-bottom: 24px
+
+		// Logotype
 		&-logo
+			margin-right: 30px
 			a
 				display: block
 			img
-				max-width: 248px
-				max-height: 40px
+				max-width: 250px
+				max-height: 45px
+		
+		// Search
 		&-search
-			max-width: 326px
+			position: relative
+			max-width: 304px
+			.form
+				width: 280px
+				transition: width .3s ease
+			.form-group-label
+				width: 100%
+			&._is-focused
+				width: auto
+				max-width: 100%
+				.form
+					width: 100%
+				~ .header-middle-contacts
+					display: none
+
+			// Search results
+			.search-results
+				pointer-events: none
+				visibility: hidden
+				overflow: hidden
+				position: absolute
+				left: 12px
+				right: 12px
+				z-index: 8
+				height: 0
+				margin-top: 16px
+				opacity: 0
+				will-change: transform
+				transform: translate3d(0, 10px, 0)
+				transition: $trs
+				&._is-opened
+					pointer-events: auto
+					visibility: visible
+					overflow: visible
+					height: auto
+					opacity: 1
+					transform: none
+				&-wrapper
+					padding: 24px 16px
+					border-radius: 8px
+					box-shadow: $box-shadow
+					background-color: $white
+					> div:not(:last-child)
+						margin-bottom: 26px
+				.categories
+					&-title
+						display: block
+						color: $text-400
+						@include font-size(xxs)
+					&-list
+						> li
+							&:not(:last-child)
+								margin-bottom: 6px
+							> a
+								display: inline-block
+								font-size: 15px
+								line-height: 1.3
+								font-weight: $w-bold
+				.products
+					&-title
+						display: block
+						color: $text-400
+						@include font-size(xxs)
+					&-results
+						display: flex
+						justify-content: space-between
+						> span
+							color: $text-400
+							@include font-size(xs)
+						> a
+							display: inline-flex
+							align-items: center
+							color: $blue
+							@include font-size(xs)
+							&:hover
+								color: $green
+							.icon
+								width: 16px
+								height: 16px
+								margin-left: 8px
+					&-list
+						margin-top: 20px
+						> li
+							&:not(:last-child)
+								margin-bottom: 8px
+							> a
+								display: flex
+								padding: 8px
+								border-radius: 4px
+								background-color: $white
+								&:hover
+									background-color: $background
+								.photo
+									flex: 0 0 auto
+									width: 64px
+									height: 64px
+								.meta
+									margin-left: 14px
+									.title
+										display: block
+										margin-bottom: 8px
+										color: $blue
+										@include font-size(xs)
+									.price
+										display: flex
+										flex-wrap: wrap
+										align-items: center
+										ins
+											margin-right: 8px
+											color: $text-500
+											@include font-size(xs)
+											font-weight: $w-bold
+											text-decoration: none
+										del
+											color: #EB5757
+											@include font-size(xxs)
+
+		// Contacts
 		&-contacts
+			margin-left: 14px
 			.phone,
 			.mail
 				display: flex
@@ -149,10 +272,13 @@
 								content: ','
 								display: inline-block
 								color: $text-400
+		
+		// Compare, Wishlist & Shopping cart
 		&-actions
 			display: flex
 			align-items: center
-			> .btn
+			justify-content: flex-end
+			.compare, .wishlist
 				margin-right: 16px
 			.shopping-cart
 				display: inline-flex
@@ -169,13 +295,225 @@
 						font-size: 12px
 						font-weight: $w-bold
 						line-height: 16px
+			
+			// Widget
+			.wishlist,
+			.shopping-cart
+				position: relative
+				&:hover
+					.wishlist-icon,
+					.shopping-cart-icon
+						.btn
+							border-color: $text-200
+							background-color: $text-200
+							color: $text-500
+					.wishlist-widget,
+					.shopping-cart-widget
+						pointer-events: auto
+						opacity: 1
+						visibility: visible
+				&-widget
+					pointer-events: none
+					visibility: hidden
+					position: absolute
+					top: 100%
+					left: calc(-312px / 2)
+					z-index: 10
+					width: 312px
+					opacity: 0
+					transition: $trs
+					&::before
+						content: ''
+						position: absolute
+						top: -4px
+						left: 55.5%
+						display: block
+						border: 8px solid $trsp
+						border-bottom: 8px solid $white
+					.wrapper
+						margin-top: 12px
+						padding: 16px
+						border-radius: 8px
+						box-shadow: $box-shadow
+						background-color: $white
+					.products-list
+						&-item
+							position: relative
+							margin-bottom: 16px
+							padding-bottom: 8px
+							border-bottom: 1px solid $text-200
+						&-link
+							display: flex
+							padding-right: 30px
+							border-radius: 4px
+							background-color: $white
+							&:hover
+								.title
+									color: $green
+							.photo
+								flex: 0 0 auto
+								width: 48px
+								height: 48px
+								margin-right: 14px
+							.title
+								display: block
+								margin-bottom: 12px
+								color: $blue
+								@include font-size(xxs)
+								font-weight: $w-bold
+								transition: color .3s ease
+						.total
+							display: flex
+							padding-bottom: 8px
+							align-items: center
+							justify-content: space-between
+							padding-left: 62px
+							&-price
+								justify-content: flex-end
+								ins
+									display: block
+									margin-right: 0 !important
+						.price
+							display: flex
+							flex-wrap: wrap
+							align-items: center
+							ins
+								margin-right: 8px
+								color: $text-500
+								@include font-size(xs)
+								font-weight: $w-bold
+								text-decoration: none
+							del
+								color: #EB5757
+								@include font-size(xxs)
+						&-delete
+							position: absolute
+							top: 0
+							right: 0
+							color: $text-300
+							font-size: 18px
+							&:hover
+								color: #EB5757
+					.subtotal
+						margin-bottom: 20px
+						text-align: right
+					.checkout-btn
+						width: 100%
+						font-weight: $w-regular
 
 	// Bottom header
 	&-bottom
 		.container
 			position: relative
+
+		// Catalog
 		&-catalog
-			flex: 0 0 210px
+			flex: 0 0 auto
+			&:hover
+				.catalog-nav
+					pointer-events: auto
+					visibility: visible
+					opacity: 1
+			// Catalog button
+			.catalog-btn
+				width: 210px
+				font-size: 12px
+				text-transform: uppercase
+			// Catalog navigation
+			.catalog-nav
+				pointer-events: none
+				visibility: hidden
+				position: absolute
+				left: 12px
+				right: 12px
+				z-index: 8
+				margin-top: 8px
+				background-color: $white
+				opacity: 0
+				transition: $trs
+				&:before
+					content: ''
+					position: absolute
+					top: -8px
+					left: 0
+					width: 100%
+					height: 20px
+					background-color: $trsp
+				&-list
+					padding-top: 14px
+				&-item
+					&:not(:last-child)
+						padding-bottom: 8px
+					&:hover
+						.catalog-nav-link
+							background-color: $background
+							color: $blue
+							font-weight: $w-bold
+						.catalog-nav-submenu
+							display: block
+				&-link
+					display: flex
+					align-items: center
+					justify-content: space-between
+					padding: 8px 12px
+					border-radius: 4px
+					background-color: $white
+					color: $text-500
+					font-size: 15px
+					line-height: 16px
+					transition: color .3s ease
+					.icon
+						flex: 0 0 auto
+						width: 16px
+						height: 16px
+						margin-left: 6px
+				&-submenu
+					position: absolute
+					top: 0
+					left: 228px
+					display: none
+					width: 1096px
+					padding: 30px 25px
+					background-color: $background
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: -20px
+						display: block
+						width: 20px
+						height: 100%
+						background-color: $trsp
+					.menu-title
+						color: $text-300
+					.menu-grid
+						display: flex
+						flex-wrap: wrap
+						margin-left: -12px
+						margin-right: -12px
+						&-col
+							flex: 0 0 25%
+							max-width: 25%
+							padding-left: 12px
+							padding-right: 12px
+						&-list
+							&:not(:last-child)
+								margin-bottom: 16px
+							.category
+								display: block
+								margin-bottom: 8px
+								font-size: 15px
+								line-height: 1.3
+								font-weight: $w-bold
+							.subcategories
+								> li
+									&:not(:last-child)
+										margin-bottom: 8px
+									> a
+										display: block
+										@include font-size(xxs)
+
+		// Navigation
 		&-nav
 			position: static
 			> ul

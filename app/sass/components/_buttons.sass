@@ -28,22 +28,32 @@
 	&:hover
 		color: inherit
 	&:focus
-		box-shadow: 0 0 0 3px rgba($text-300, 0.25)
+		box-shadow: 0 0 0 4px rgba($text-300, 0.25)
 
 	// Themes
 	&.btn-yellow
 		background-color: $yellow
 		color: $text-500
+		&:hover
+			background-color: darken($yellow, 8%)
 		&:focus
-			box-shadow: 0 0 0 3px rgba($yellow, 0.25)
+			box-shadow: 0 0 0 4px rgba($yellow, 0.25)
+			background-color: $yellow
 	&.btn-green
 		background-color: $green
 		color: $white
+		&:hover
+			background-color: darken($green, 5%)
 		&:focus
-			box-shadow: 0 0 0 3px rgba($green, 0.25)
+			box-shadow: 0 0 0 4px rgba($green, 0.25)
+			background-color: $green
 	&.btn-secondary
 		border-color: $text-200
 		background-color: $white
+		&:hover
+			background-color: rgba($text-200, .5)
+		&:focus
+			background-color: $white
 
 	// Sizes
 	&.btn-sm
@@ -110,9 +120,3 @@
 			text-align: center
 	&.btn-shopping-cart
 		color: $green
-
-	// Catalog button
-	&.btn-catalog
-		width: 100%
-		font-size: 12px
-		text-transform: uppercase
