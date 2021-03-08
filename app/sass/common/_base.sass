@@ -46,6 +46,18 @@ a
 	&:hover
 		color: $blue
 		text-decoration: none
+	&.link-arrow
+		display: inline-flex
+		align-items: center
+		color: $blue
+		@include font-size(xs)
+		&:hover
+			color: $green
+			text-decoration: underline
+		.icon
+			width: 16px
+			height: 16px
+			margin-left: 8px
 	&.blue-link
 		color: $blue
 		&:hover
@@ -55,6 +67,7 @@ img
 	display: inline-block
 	max-width: 100%
 	height: auto
+	box-sizing: border-box
 
 h1
 	font-size: 34px

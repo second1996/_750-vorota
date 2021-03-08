@@ -6,6 +6,7 @@
 	padding-left: 40px
 	padding-right: 40px
 	border-radius: 4px
+	box-sizing: border-box
 	border: 1px solid $trsp
 	background-color: $trsp
 	color: $text-400
@@ -128,7 +129,7 @@
 		font-weight: $w-medium
 		white-space: normal
 		text-align: left
-		&--added
+		&._added
 			border: 2px solid $green
 			background-color: $white
 			&:hover,
@@ -151,11 +152,11 @@
 					@include font-size(xxs)
 					font-weight: $w-regular
 					> a
-						color: $green
+						color: #219653
 						font-weight: $w-bold
 						&:hover
 							text-decoration: underline
-		&:not(.btn-cart--added)
+		&:not(._added)
 			.before-added
 				display: block
 			.after-added
@@ -164,6 +165,5 @@
 	// Quick buy button
 	&.btn-quick-buy
 		margin-top: 8px
-		width: 100%
 		font-size: 15px
 		color: #219653

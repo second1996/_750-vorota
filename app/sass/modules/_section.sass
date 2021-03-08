@@ -1,5 +1,16 @@
 .section
 	position: relative
+	
+	&-blue
+		padding-top: 48px
+		padding-bottom: 48px
+		background-color: $background
+		.section-heading
+			&::before
+				display: none
+			.title
+				background-color: $trsp
+
 	&-heading
 		position: relative
 		text-align: center

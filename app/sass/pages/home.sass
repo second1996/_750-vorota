@@ -1,5 +1,14 @@
 // Section: Heroes
 .h-heroes
+	&-slider,
+	&-product-slider
+		.btn.swiper-button-prev,
+		.btn.swiper-button-next
+			top: 50%
+		.btn.swiper-button-prev
+			left: 12px
+		.btn.swiper-button-next
+			right: 12px
 	&-slider
 		position: relative
 		overflow: hidden
@@ -28,6 +37,8 @@
 		&::after
 			left: -100px
 			bottom: -60px
+		.swiper-pagination
+			bottom: 16px
 		.product
 			padding: 16px
 			text-align: center
@@ -192,3 +203,19 @@
 			max-width: 178px
 			max-height: 178px
 
+// Section: Partners
+.h-partners
+	&-slider
+		.swiper-container
+			padding-left: 24px
+			padding-right: 24px
+	&-item
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 104px
+		border-radius: 8px
+		background-color: $white
+		img
+			padding: 16px 24px
