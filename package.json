@@ -31,10 +31,12 @@
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-stylus": "^2.7.0",
 		"gulp-svg-sprite": "^1.5.0",
+		"swiper": "^6.5.0",
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
 		"jquery": "^3.6.0",
+		"jquery-mask-plugin": "^1.14.16",
 		"popper.js": "^1.16.1"
 	}
 }

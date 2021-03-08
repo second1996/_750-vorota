@@ -1,0 +1,59 @@
+@import 'node_modules/swiper/swiper.scss' // Swiper core
+@import 'node_modules/swiper/components/pagination/pagination.scss' // Pagination module
+
+// Navigation customize
+.btn.swiper-button-prev,
+.btn.swiper-button-next
+	position: absolute
+	top: 50%
+	z-index: 50
+	width: 40px
+	height: 40px
+	margin-top: -20px
+	padding-left: 0
+	padding-right: 0
+	border-radius: 50%
+	border: 0
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25)
+	background-color: $white
+	&:hover,
+	&:focus
+		background-color: $green
+		.icon
+			fill: $white
+	&:focus
+		box-shadow: none
+	&:active
+		background-color: darken($green, 6%)
+		.icon
+			fill: $white
+	.icon
+		width: 26px
+		height: 26px
+		fill: $green
+		transition: fill .3s ease
+	&.swiper-button-disabled
+		visibility: hidden
+		opacity: 0
+.btn.swiper-button-prev
+	left: 12px
+	.icon
+		transform: scaleX(-1)
+.btn.swiper-button-next
+	right: 12px
+
+// Pagination customize
+.swiper-pagination
+	bottom: 16px
+	left: 0
+	right: 0
+	&-bullet
+		width: 4px
+		height: 4px
+		margin: 0 8px
+		border-radius: 50%
+		background-color: $text-500
+		opacity: 1
+		transition: $trs
+		&-active
+			box-shadow: 0 0 0 3px $text-500

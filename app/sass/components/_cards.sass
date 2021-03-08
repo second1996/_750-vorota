@@ -6,3 +6,247 @@
 .card
 	position: relative
 	height: 100%
+
+
+/* ==========================================================================
+	 Product card
+	 ========================================================================== */
+.card-product
+	z-index: 1
+	padding-top: 16px
+	background-color: $white
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		margin: -16px
+		border: 1px solid $text-200
+		opacity: 0
+		transition: opacity .15s ease
+	&:hover
+		&::before
+			opacity: 1
+		.card-label
+			visibility: hidden
+			opacity: 0
+		.card-quick-view,
+		.card-attributes
+			visibility: visible
+			opacity: 1
+			transform: none
+
+	// Quick view
+	.card-quick-view
+		visibility: hidden
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 3
+		opacity: 0
+		transition: $trs
+		.btn
+			width: 100%
+			font-size: 15px
+			color: #219653
+
+	// Card labels
+	.card-label
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 3
+		padding: 4px 6px
+		border-radius: 4px
+		@include font-size(xxs)
+		font-weight: $w-bold
+		transition: all .15s ease
+		&--yellow
+			background-color: $yellow
+			color: $text-500
+		&--red
+			background-color: $warning
+			color: $white
+		&--blue
+			background-color: $blue
+			color: $white
+		&--green
+			background-color: $green
+			color: $white
+		&--gray
+			background-color: $text-300
+			color: $white
+
+	// Card gallery (slideshow)
+	.card-gallery
+		position: relative
+		display: flex
+		padding-left: 5px
+		padding-right: 5px
+		&-item
+			flex-grow: 1
+			height: 164px
+			+media-breakpoint-down(md)
+				&:not(:first-child)
+					display: none
+			&:not(:last-child)
+				.card-gallery-item-nav
+					margin-right: 4px
+			&-nav
+				display: block
+				position: relative
+				height: 100%
+				+media-breakpoint-down(md)
+					display: none
+				&::before
+					content: ''
+					cursor: pointer
+					display: block
+					position: absolute
+					left: 0
+					right: 0
+					bottom: -2px
+					height: 2px
+					border-radius: 2px
+					background-color: $text-200
+					transition: background-color .2s ease-in-out
+			img
+				user-select: none
+				pointer-events: none
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 1
+				padding-top: 16px
+				padding-bottom: 2px
+				margin: auto
+				max-width: 100%
+				max-height: 100%
+				object-fit: scale-down
+				opacity: 0
+				transform: scale(1.01)
+				transition: $trs
+			&._active
+				.card-gallery-item-nav::before
+					background-color: $green
+				img
+					opacity: 1
+	
+	// Card photo (base state)
+	.card-photo
+		overflow: hidden
+		height: 154px
+		border-radius: 5px
+		img
+			width: 100%
+			height: 100%
+			object-fit: scale-down
+			transform: scale(1.01)
+			transition: transform .3s ease
+
+	// Card meta props
+	.card-meta
+		// Stock
+		.stock
+			display: block
+			padding: 8px 5px
+			color: $text-400
+			@include font-size(xxs)
+			&::before
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 5px
+				height: 5px
+				margin-right: 9px
+				border-radius: 50%
+			&-in::before
+				background-color: $green
+			&-out::before
+				background-color: $warning
+			&-order::before
+				background-color: $yellow
+			&-archive::before,
+			&-removed::before
+				background-color: $text-300
+		// Permalink
+		.permalink
+			display: block
+			font-size: 15px
+			line-height: 20px
+		.price
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			margin-top: 12px
+			ins
+				margin-right: 8px
+				color: $text-500
+				@include font-size(xs)
+				font-weight: $w-bold
+				text-decoration: none
+			del
+				color: $warning
+				@include font-size(xxs)
+	
+	// Card buttons (Compare, Wishlist, Add to cart)
+	.card-buttons
+		margin-top: 16px
+		&-group
+			margin-bottom: 8px
+			display: flex
+			align-items: center
+			border-radius: 4px
+			> .btn
+				flex-grow: 1
+				width: 100%
+				height: 40px
+				padding-left: 0
+				padding-right: 0
+				color: $text-300
+				line-height: 40px
+				&:not(:first-child)
+					border-top-left-radius: 0
+					border-bottom-left-radius: 0
+					border-left-width: 0
+				&:not(:last-child)
+					border-top-right-radius: 0
+					border-bottom-right-radius: 0
+				&:hover
+					background-color: $yellow
+					border-color: $trsp
+					color: $text-500
+				&:focus
+					z-index: 1
+					box-shadow: 0 0 0 4px rgba($yellow, 0.25)
+		.btn-cart
+			width: 100%
+
+	// Card attributes
+	.card-attributes
+		visibility: hidden
+		position: absolute
+		top: 100%
+		left: -16px
+		right: -16px
+		z-index: -1
+		padding: 16px
+		border: 1px solid $text-200
+		border-top: 0
+		background-color: $white
+		opacity: 0
+		transform: translate3d(0, 3px, 0)
+		transition: all .15s ease
+		> div
+			color: $text-400
+			@include font-size(xxs)
+			> b, > strong
+				color: $text-500
+			&:not(:last-child)
+				margin-bottom: 8px
