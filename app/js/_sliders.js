@@ -1,14 +1,14 @@
 // Import Swiper slider bundle
-import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core'
-SwiperCore.use([Navigation, Pagination])
+import SwiperCore, { Autoplay, Navigation, Pagination, Swiper } from 'swiper/core'
+SwiperCore.use([Autoplay, Navigation, Pagination])
 
 
 // Home page: Heroes main slider
 new Swiper('.h-heroes-slider', {
 	loop: true,
-	autoplay: {
-		delay: 10000,
-	},
+	// autoplay: {
+	// 	delay: 5000,
+	// },
 	navigation: {
 		prevEl: '.h-heroes-slider-nav .swiper-button-prev',
 		nextEl: '.h-heroes-slider-nav .swiper-button-next',
@@ -18,9 +18,6 @@ new Swiper('.h-heroes-slider', {
 // Home page: Heroes product slider
 new Swiper('.h-heroes-product-slider', {
 	loop: true,
-	autoplay: {
-		delay: 1000,
-	},
 	navigation: {
 		prevEl: '.h-heroes-product-slider-nav .swiper-button-prev',
 		nextEl: '.h-heroes-product-slider-nav .swiper-button-next',
@@ -62,6 +59,20 @@ new Swiper('.h-partners-slider .swiper-container', {
 	},
 	pagination: {
 		el: '.h-partners-slider-dots .swiper-pagination',
+		type: 'bullets',
+	},
+})
+
+// Home page: Testimonials slider
+new Swiper('.h-testimonials-slider .swiper-container', {
+	slidesPerView: 2,
+	spaceBetween: 24,
+	navigation: {
+		prevEl: '.h-testimonials-slider-nav .swiper-button-prev',
+		nextEl: '.h-testimonials-slider-nav .swiper-button-next',
+	},
+	pagination: {
+		el: '.h-testimonials-slider-dots .swiper-pagination',
 		type: 'bullets',
 	},
 })

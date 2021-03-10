@@ -1,0 +1,26 @@
+.nav
+	&-tabs
+		justify-content: center
+		margin-bottom: 8px
+		border-bottom: none
+		.nav-link
+			margin-bottom: 0
+			border-radius: 4px
+			border: none
+			&.active
+				background-color: $yellow
+				color: $text-500
+	&-link
+		padding: 8px 16px
+		color: $text-400
+		font-size: 12px
+		font-weight: $w-bold
+		line-height: 16px
+		text-transform: uppercase
+		&:not(:last-child)
+			margin-right: 16px
+		&:hover
+			background-color: lighten($border, 3%)
+
+.tab-content
+	margin-top: 32px

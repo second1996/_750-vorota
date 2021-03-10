@@ -5,8 +5,9 @@
 	 ========================================================================== */
 .card
 	position: relative
-	height: 100%
+	display: block
 	min-width: 0
+	height: 100%
 
 
 /* ==========================================================================
@@ -270,3 +271,55 @@
 				color: $text-500
 			&:not(:last-child)
 				margin-bottom: 8px
+
+
+/* ==========================================================================
+	 Testimonial card
+	 ========================================================================== */
+.card-testimonial
+	padding: 24px
+	border-radius: 8px
+	background-color: $background
+	.card-meta
+		.rating
+			display: flex
+			align-items: center
+			.icon-rating
+				width: 24px
+				height: 24px
+				&:not(:last-child)
+					margin-right: 4px
+				&:not(.icon-rating--filled)
+					fill: $text-200
+				&--filled
+					fill: $yellow
+		.name
+			margin-top: 24px
+			@include font-size(sm)
+		.text
+			margin-top: 16px
+			color: $text-400
+			> p
+				&:last-child
+					margin-bottom: 0
+
+
+/* ==========================================================================
+	 Article card
+	 ========================================================================== */
+.card-article
+	&:hover
+		.card-photo img
+			transform: scale(1.1)
+	.card-photo
+		border-radius: 8px
+		height: 200px
+		img
+			transition: transform .35s ease
+	.card-meta
+		margin-top: 24px
+		.title
+			margin-bottom: 16px
+		.date
+			display: block
+			color: $text-400

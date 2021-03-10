@@ -42,7 +42,7 @@ $('.switch-input-mask').each(function(index, element) {
  * Product card gallery slideshow on hover
  *-------------------------------------------------------------------------------------------------------------------------------------------
 */
-	if( window.matchMedia('(min-width: 992px)').matches ) {
+if( window.matchMedia('(min-width: 992px)').matches ) {
 	$(document).on('mouseenter', '.card-product .card-gallery-item', function() {
 		$(this).siblings().removeClass('_active')
 		$(this).addClass('_active')

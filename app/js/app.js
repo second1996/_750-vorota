@@ -7,13 +7,14 @@ window.$ = $
 require('../../node_modules/popper.js/dist/popper.min.js') // Popper lib
 require('../../node_modules/bootstrap/js/dist/util.js') // Bootstrap Util lib
 require('../../node_modules/bootstrap/js/dist/dropdown.js') // Bootstrap Dropdown
+require('../../node_modules/bootstrap/js/dist/tab.js') // Bootstrap Tab
 require('../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js') // jQuery Mask
 
-// Another imports
-require('./_scripts.js')
-require('./_sliders.js')
+$(document).on('ready', function() {
+	// Another imports
+	require('./_scripts.js')
+	require('./_sliders.js')
 
-document.addEventListener('DOMContentLoaded', () => {
 	$('#header-search-field').on('click', function() {
 		const searchEl = $('.header-middle-search')
 

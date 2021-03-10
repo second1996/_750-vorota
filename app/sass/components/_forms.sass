@@ -17,7 +17,6 @@ input, textarea
 label
 	cursor: pointer
 
-
 .form
 	position: relative
 	&-control,
@@ -35,6 +34,8 @@ label
 		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .3s ease-in-out
 		&:focus
 			box-shadow: 0 0 0 3px rgba($yellow, 0.25)
+
+	// Input
 	&-control
 		height: 64px
 		padding-left: 16px
@@ -137,7 +138,9 @@ label
 			transition: all .1s ease-in-out
 
 
-// Search form
+/* ==========================================================================
+	 Search form
+	 ========================================================================== */
 .form-search
 	display: flex
 	align-items: center
@@ -164,3 +167,18 @@ label
 		width: 48px
 		padding: 0
 		border-radius: 0 4px 4px 0
+
+
+/* ==========================================================================
+	 Questions form
+	 ========================================================================== */
+.form-inline
+	display: flex
+	.form-group
+		width: 100%
+		margin-right: 16px
+	.form-control:focus
+		box-shadow: 0 0 0 1px $text-200
+	.btn-submit
+		padding-left: 16px
+		padding-right: 16px
