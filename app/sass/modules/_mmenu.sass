@@ -1,0 +1,361 @@
+.mmenu
+	pointer-events: none
+	overflow-x: hidden
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 999
+	max-width: 375px
+	background-color: $white
+	visibility: hidden
+	opacity: 0
+	transform: translateX(-10px)
+	transition: $trs
+	&._is-active
+		pointer-events: auto
+		visibility: visible
+		opacity: 1
+		transform: none
+
+	// Backdrop
+	&-backdrop
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 998
+		background-color: rgba(0,0,0, 0.75)
+		opacity: 0
+		&.show
+			opacity: 1
+
+	&-wrapper
+		overflow-x: hidden
+		height: 100%
+		padding: 16px
+
+	// Mmenu header
+	&-heading
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 16px
+		.btn-close
+			position: relative
+			z-index: 100
+
+	// Mmenu main
+	&-main
+
+		// Catalog menu (button)
+		&-catalog
+			margin-bottom: 24px
+			.btn
+				width: 100%
+			.submenu
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				overflow: hidden
+				z-index: 99
+				padding: 16px
+				background-color: $white
+				visibility: hidden
+				opacity: 0
+				transform: translateX(60%)
+				transition: opacity .15s, transform .4s ease
+				&._is-opened
+					visibility: visible
+					opacity: 1
+					transform: none
+				&-back-btn
+					height: 28px
+					padding-left: 0
+					margin-left: -4px
+					padding-right: 6px
+					&:hover
+						> .icon
+							fill: $green
+						> span
+							color: $green
+					> .icon
+						width: 16px
+						height: 16px
+						fill: $text-300
+						transform: scaleX(-1)
+						transition: fill .3s ease
+					> span
+						margin-left: 6px
+						color: $text-400
+						+font-size(xs)
+						font-weight: $w-regular
+						transition: color .3s ease
+				&-title
+					margin-top: 24px
+				&-list
+					display: flex
+					flex-direction: column
+					margin-top: 8px
+					> li
+						> a
+							display: flex
+							align-items: center
+							padding: 10px 8px
+							margin-left: -8px
+							margin-right: -8px
+							border-radius: 4px
+							background-color: $white
+							font-size: 12px
+							font-weight: $w-bold
+							letter-spacing: 1px
+							text-transform: uppercase
+							&:hover
+								background-color: #f5f5f5
+							&.promo::after
+								content: ''
+								flex: 0 0 auto
+								display: inline-block
+								width: 24px
+								height: 24px
+								margin-left: 8px
+								background: url('../images/dist/icons/fire.svg') no-repeat center/100%
+		
+		// Actions
+		&-actions
+			margin-bottom: 16px
+			> a
+				&:not(:last-child)
+					margin-bottom: 8px
+			.shopping-cart,
+			.compare,
+			.wishlist
+				display: flex
+				align-items: center
+				&:hover
+					.btn
+						border-color: $text-200
+						background-color: $text-200
+						color: $text-500
+					.shopping-cart,
+					.compare,
+					.wishlist
+						&-content
+							.title
+								color: $blue
+				&-content
+					margin-left: 14px
+					.title
+						display: block
+						color: $text-500
+						+font-size(xxs)
+					.total
+						display: block
+						color: $text-500
+						font-size: 12px
+						font-weight: $w-bold
+						line-height: 16px
+						text-transform: uppercase
+
+		// Navigation
+		&-nav
+			padding-top: 12px
+			padding-bottom: 24px
+			border-top: 1px solid $text-200
+			border-bottom: 1px solid $text-200
+			.menu
+				display: flex
+				flex-direction: column
+				&-item
+					> span,
+					> a
+						display: flex
+						align-items: center
+						justify-content: space-between
+						margin-left: -8px
+						margin-right: -8px
+						padding: 8px
+						border-radius: 4px
+						transition: $trs
+						+font-size(xs)
+						&:hover
+							cursor: pointer
+							background-color: #f5f5f5
+							color: $blue
+							.icon
+								fill: $blue
+						.icon
+							width: 16px
+							height: 16px
+							fill: $text-300
+					// Submenu
+					.submenu
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						overflow: hidden
+						z-index: 99
+						padding: 16px
+						background-color: $white
+						visibility: hidden
+						opacity: 0
+						transform: translateX(60%)
+						transition: opacity .15s, transform .4s ease
+						&._is-opened
+							visibility: visible
+							opacity: 1
+							transform: none
+						&-back-btn
+							height: 28px
+							padding-left: 0
+							margin-left: -4px
+							padding-right: 6px
+							&:hover
+								> .icon
+									fill: $green
+								> span
+									color: $green
+							> .icon
+								width: 16px
+								height: 16px
+								fill: $text-300
+								transform: scaleX(-1)
+								transition: fill .3s ease
+							> span
+								margin-left: 6px
+								color: $text-400
+								+font-size(xs)
+								font-weight: $w-regular
+								transition: color .3s ease
+						&-title
+							margin-top: 24px
+						&-list
+							margin-top: 8px
+							> li
+								> a
+									display: flex
+									align-items: center
+									justify-content: space-between
+									margin-left: -8px
+									margin-right: -8px
+									padding: 8px
+									border-radius: 4px
+									transition: $trs
+									+font-size(xs)
+									&:hover
+										cursor: pointer
+										background-color: #f5f5f5
+										color: $blue
+
+		// Contacts
+		&-contacts
+			margin-top: 20px
+			margin-bottom: 20px
+			.phone,
+			.mail
+				display: flex
+				align-items: flex-start
+				&-icon
+					flex: 0 0 auto
+					color: $text-300
+					font-size: 16px
+				&-list
+					margin-left: 8px
+					> a
+						display: flex
+						align-items: center
+						color: $text-500
+						> i:first-child
+							margin-left: 8px
+						.viber,
+						.whatsapp
+							user-select: none
+							flex: 0 0 auto
+							display: inline-block
+							margin-left: 2px
+							background-repeat: no-repeat
+							background-size: 100%
+							background-position: center
+							font-style: normal
+						.viber
+							width: 22px
+							height: 22px
+							background-image: url('../images/dist/icons/viber.svg')
+						.whatsapp
+							width: 24px
+							height: 24px
+							background-image: url('../images/dist/icons/whatsapp.svg')
+						&:hover
+							color: $blue
+
+		// Adress
+		&-adress
+			padding-top: 6px
+			padding-bottom: 24px
+			border-top: 1px solid $text-200
+			&-title
+				margin-bottom: 15px
+				color: $text-500
+			&-item
+				display: flex
+				+font-size(xxs)
+				&:not(:last-child)
+					margin-bottom: 16px
+					padding-bottom: 16px
+					border-bottom: 1px solid $text-200
+				.icon
+					flex: 0 0 auto
+					width: 20px
+					height: 20px
+					margin-right: 10px
+					color: $text-300
+				.content
+					span
+						display: block
+						font-weight: $w-bold
+					p
+						margin-top: 8px
+						margin-bottom: 0
+
+		// Support
+		&-support
+			> .btn
+				width: 100%
+				font-weight: $w-medium
+				&:not(:last-child)
+					margin-bottom: 8px
+
+		// Social
+		&-social
+			margin-top: 24px
+			&-title
+				margin-bottom: 16px
+				color: $text-400
+			&-list
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				justify-content: center
+				> li
+					&:not(:first-child)
+						margin-left: 6px
+					> a
+						display: inline-flex
+						align-items: center
+						justify-content: center
+						width: 36px
+						height: 36px
+						border-radius: 50%
+						border: 1px solid $text-200
+						background-color: $white
+						&:hover
+							background-color: $text-200
+						> img
+							width: 20px
+							height: 20px

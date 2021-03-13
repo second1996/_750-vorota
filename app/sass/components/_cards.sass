@@ -52,12 +52,12 @@
 
 	// Quick view
 	.card-quick-view
-		visibility: hidden
 		position: absolute
 		top: 0
 		left: 0
 		right: 0
 		z-index: 3
+		visibility: hidden
 		opacity: 0
 		transition: $trs
 		+media-breakpoint-down(sm)
@@ -280,7 +280,6 @@
 
 	// Card attributes
 	.card-attributes
-		visibility: hidden
 		position: absolute
 		top: 100%
 		left: -16px
@@ -290,6 +289,7 @@
 		border: 1px solid $text-200
 		border-top: 0
 		background-color: $white
+		visibility: hidden
 		opacity: 0
 		transform: translate3d(0, 3px, 0)
 		transition: all .15s ease

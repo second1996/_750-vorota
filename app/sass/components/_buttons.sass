@@ -137,5 +137,60 @@
 			height: 24px
 		&:hover
 			color: $warning
-		&:focus
+		&:focus,
+		&:active
 			box-shadow: 0 0 0 3px rgba($warning, 0.25)
+
+	// Action buttons
+	&.btn-search,
+	&.btn-compare,
+	&.btn-wishlist,
+	&.btn-shopping-cart
+		width: 48px
+		height: 48px
+		padding-left: 0
+		padding-right: 0
+		border-radius: 50%
+		color: $text-300
+		+media-breakpoint-down(sm)
+			width: 40px
+			height: 40px
+		+media-breakpoint-down(xxs)
+			width: 36px
+			height: 36px
+		&:hover
+			border-color: $text-200
+			background-color: $text-200
+			color: $text-500
+		.icon
+			width: 22px
+			height: 22px
+			+media-breakpoint-down(sm)
+				width: 18px
+				height: 18px
+		.badge
+			overflow: hidden
+			position: absolute
+			top: -8px
+			left: 32px
+			z-index: 2
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			background-color: $yellow
+			color: $text-500
+			font-size: 12px
+			font-weight: $w-medium
+			text-align: center
+			+media-breakpoint-down(sm)
+				left: 25px
+			+media-breakpoint-down(xxs)
+				left: 22px
+				width: 20px
+				height: 20px
+				font-size: 11px
+	&.btn-shopping-cart
+		color: $green

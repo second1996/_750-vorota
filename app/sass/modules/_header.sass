@@ -50,7 +50,6 @@
 								transform: none
 						> ul
 							pointer-events: none
-							visibility: hidden
 							position: absolute
 							top: 100%
 							left: -25px
@@ -60,6 +59,7 @@
 							border-radius: 8px
 							box-shadow: $box-shadow
 							background-color: $white
+							visibility: hidden
 							opacity: 0
 							transform: translate3d(0, 10px, 0)
 							transition: $trs
@@ -90,6 +90,9 @@
 						height: 36px
 						border-radius: 50%
 						border: 1px solid $text-200
+						background-color: $white
+						&:hover
+							background-color: $text-200
 						> img
 							width: 20px
 							height: 20px
@@ -182,10 +185,6 @@
 				align-items: center
 				justify-content: space-between
 				margin-bottom: 16px
-				&-title
-					font-size: 20px
-					line-height: 24px
-					font-weight: $w-bold
 
 			// Search form
 			.form
@@ -201,7 +200,6 @@
 			// Search results
 			.search-results
 				pointer-events: none
-				visibility: hidden
 				overflow: hidden
 				position: absolute
 				left: 12px
@@ -209,6 +207,7 @@
 				z-index: 8
 				height: 0
 				margin-top: 16px
+				visibility: hidden
 				opacity: 0
 				transform: translate3d(0, 10px, 0)
 				transition: $trs
@@ -261,6 +260,9 @@
 						> span
 							color: $text-400
 							+font-size(xs)
+							+media-breakpoint-down(xs)
+								margin-bottom: 8px
+								+font-size(xxs)
 					&-list
 						margin-top: 20px
 						> li
@@ -383,60 +385,6 @@
 						font-weight: $w-bold
 						line-height: 16px
 						text-transform: uppercase
-
-			// Buttons
-			.btn-search,
-			.btn-compare,
-			.btn-wishlist,
-			.btn-shopping-cart
-				width: 48px
-				height: 48px
-				padding-left: 0
-				padding-right: 0
-				border-radius: 50%
-				color: $text-300
-				+media-breakpoint-down(sm)
-					width: 40px
-					height: 40px
-				+media-breakpoint-down(xxs)
-					width: 36px
-					height: 36px
-				&:hover
-					border-color: $text-200
-					background-color: $text-200
-					color: $text-500
-				.icon
-					width: 22px
-					height: 22px
-					+media-breakpoint-down(sm)
-						width: 18px
-						height: 18px
-				.badge
-					overflow: hidden
-					position: absolute
-					top: -8px
-					left: 32px
-					z-index: 2
-					display: flex
-					align-items: center
-					justify-content: center
-					width: 24px
-					height: 24px
-					border-radius: 50%
-					background-color: $yellow
-					color: $text-500
-					font-size: 12px
-					font-weight: $w-medium
-					text-align: center
-					+media-breakpoint-down(sm)
-						left: 25px
-					+media-breakpoint-down(xxs)
-						left: 22px
-						width: 20px
-						height: 20px
-						font-size: 11px
-			.btn-shopping-cart
-				color: $green
 			
 			// Widget
 			.wishlist,
@@ -456,12 +404,12 @@
 						visibility: visible
 				&-widget
 					pointer-events: none
-					visibility: hidden
 					position: absolute
 					top: 100%
 					left: calc(-312px / 2)
 					z-index: 10
 					width: 312px
+					visibility: hidden
 					opacity: 0
 					transition: $trs
 					+media-breakpoint-down(lg)
@@ -568,7 +516,6 @@
 			// Catalog navigation
 			.catalog-nav
 				pointer-events: none
-				visibility: hidden
 				position: absolute
 				left: 12px
 				right: 12px
@@ -576,6 +523,7 @@
 				margin-top: 8px
 				padding-bottom: 16px
 				background-color: $white
+				visibility: hidden
 				opacity: 0
 				transition: $trs
 				&:before
@@ -709,7 +657,6 @@
 								transform: none
 						.megamenu
 							pointer-events: none
-							visibility: hidden
 							position: absolute
 							top: 100%
 							left: 0
@@ -718,6 +665,7 @@
 							padding-top: 32px
 							padding-bottom: 32px
 							background-color: $white
+							visibility: hidden
 							opacity: 0
 							transform: translate3d(0, 10px, 0)
 							transition: $trs
