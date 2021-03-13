@@ -68,7 +68,7 @@ label
 			margin-bottom: 10px
 			padding-left: 28px
 			color: $text-500
-			@include font-size(xs)
+			+font-size(xs)
 			&::before,
 			&::after
 				content: ''
@@ -99,7 +99,7 @@ label
 				margin-bottom: 0
 				padding-left: 25px
 				color: $text-400
-				@include font-size(xxs)
+				+font-size(xxs)
 				&::before,
 				&::after
 					width: 16px
@@ -174,9 +174,14 @@ label
 	 ========================================================================== */
 .form-inline
 	display: flex
+	+media-breakpoint-down(sm)
+		flex-direction: column
 	.form-group
 		width: 100%
 		margin-right: 16px
+		+media-breakpoint-down(sm)
+			margin-right: 0
+			margin-bottom: 16px
 	.form-control:focus
 		box-shadow: 0 0 0 1px $text-200
 	.btn-submit

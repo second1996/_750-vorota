@@ -17,6 +17,9 @@
 	&-main
 		padding-top: 32px
 		padding-bottom: 75px
+		+media-breakpoint-down(md)
+			padding-top: 24px
+			padding-bottom: 24px
 
 	&-title
 		margin-bottom: 24px
@@ -25,23 +28,39 @@
 		font-weight: $w-bold
 		line-height: 16px
 		text-transform: uppercase
+		+media-breakpoint-down(md)
+			margin-bottom: 16px
 
 	// Subscribe
 	&-subscribe
 		padding-top: 16px
 		padding-bottom: 16px
 		border-bottom: 1px solid rgba($white, 0.05)
+		+media-breakpoint-down(md)
+			padding-top: 24px
+			padding-bottom: 24px
 		.subscribe
 			display: flex
 			align-items: center
+			+media-breakpoint-down(md)
+				flex-direction: column
 			&-heading
+				padding-right: 90px
+				+media-breakpoint-down(xl)
+					padding-right: 30px
+				+media-breakpoint-down(md)
+					padding-right: 0
+					text-align: center
 				.title
 					margin-bottom: 4px
 				.descr
 					margin-bottom: 0
 			&-form
-				margin-left: 90px
-				flex: 1 1 auto
+				flex: 1 1 50%
+				+media-breakpoint-down(md)
+					flex-basis: 100%
+					width: 100%
+					margin-top: 16px
 				.form-control
 					border: none
 					background-color: #37383D
@@ -52,19 +71,23 @@
 	// Intro
 	&-intro
 		.logo
-			max-width: 200px
+			+media-breakpoint-up(lg)
+				max-width: 200px
 			.descr
 				margin-top: 12px
 				margin-bottom: 0
 		.payments,
 		.yandex-market
 			margin-top: 28px
+			+media-breakpoint-down(md)
+				margin-top: 16px
 			&-title
 				margin-bottom: 8px
 
 	// Contacts
 	&-contacts
-		padding-left: 24px
+		+media-breakpoint-up(lg)
+			padding-left: 24px
 		.phone
 			> div:not(:last-child)
 				margin-bottom: 8px
@@ -72,7 +95,12 @@
 				display: inline-flex
 				align-items: center
 				color: $text-300
-				@include font-size(md)
+				+font-size(md)
+				white-space: nowrap
+				+media-breakpoint-down(xl)
+					font-size: 20px
+				+media-breakpoint-down(lg)
+					font-size: 18px
 				> i:first-child
 					margin-left: 8px
 				.viber,
@@ -120,6 +148,10 @@
 					color: $text-300
 					font-size: 32px
 					line-height: 1
+					+media-breakpoint-down(lg)
+						width: 42px
+						height: 42px
+						font-size: 26px
 					&:not(:last-child)
 						margin-right: 16px
 					&:hover
@@ -127,7 +159,8 @@
 
 	// Adress
 	&-adress
-		padding-left: 40px
+		+media-breakpoint-up(lg)
+			padding-left: 40px
 		p
 			max-width: 200px
 			color: $text-300

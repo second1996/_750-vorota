@@ -5,6 +5,8 @@
 	&-top
 		background-color: $white
 		border-bottom: 1px solid $border
+		+media-breakpoint-down(xl)
+			display: none
 		&-adress
 		&-btns
 			display: inline-flex
@@ -73,7 +75,7 @@
 								&:not(:last-child)
 									margin-bottom: 8px
 								> a
-									@include font-size(xs)
+									+font-size(xs)
 			.social-list
 				display: inline-flex
 				margin-left: 40px
@@ -96,32 +98,105 @@
 	&-middle
 		padding-top: 24px
 		padding-bottom: 24px
+		+media-breakpoint-down(xl)
+			padding-bottom: 8px
+		+media-breakpoint-down(sm)
+			padding-top: 12px
+			padding-bottom: 0
+
+		.container
+			position: relative
+
+		// Mmenu burger button
+		&-burger
+			.toggle-mmenu-btn
+				width: 24px
+				padding-left: 0
+				padding-right: 0
+				color: #1B1C1E
+				&:focus
+					box-shadow: none
+				.icon
+					width: 24px
+					height: 24px
 
 		// Logotype
 		&-logo
 			margin-right: 30px
+			+media-breakpoint-down(sm)
+				margin-right: 0
+				padding-left: 0
+				padding-right: 0
 			a
 				display: block
 			img
 				max-width: 250px
 				max-height: 45px
-		
+				+media-breakpoint-down(sm)
+					max-width: 200px
+					max-height: 40px
+				+media-breakpoint-down(xs)
+					max-width: 146px
+					max-height: 30px
+
 		// Search
 		&-search
 			position: relative
 			max-width: 304px
-			.form
-				width: 280px
-				transition: width .3s ease
-			.form-group-label
-				width: 100%
+			+media-breakpoint-down(xl)
+				max-width: 100%
+				margin-right: 30px
+			+media-breakpoint-down(lg)
+				visibility: hidden
+				overflow: auto
+				position: fixed
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 99
+				max-width: 0
+				margin-right: 0
+				padding: 24px 32px
+				background-color: $white
+			+media-breakpoint-down(sm)
+				padding: 16px !important
+
+			// Active class when form toggled
 			&._is-focused
+				visibility: visible
 				width: auto
 				max-width: 100%
+				.heading
+					+media-breakpoint-down(lg)
+						display: flex
 				.form
+					display: flex
 					width: 100%
 				~ .header-middle-contacts
 					display: none
+
+			// Heading
+			.heading
+				display: none
+				align-items: center
+				justify-content: space-between
+				margin-bottom: 16px
+				&-title
+					font-size: 20px
+					line-height: 24px
+					font-weight: $w-bold
+
+			// Search form
+			.form
+				width: 280px
+				transition: width .3s ease
+				+media-breakpoint-down(xl)
+					width: 100%
+				+media-breakpoint-down(lg)
+					display: none
+			.form-group-label
+				width: 100%
 
 			// Search results
 			.search-results
@@ -137,6 +212,12 @@
 				opacity: 0
 				transform: translate3d(0, 10px, 0)
 				transition: $trs
+				+media-breakpoint-down(xl)
+					left: 12px
+					right: -120px
+				+media-breakpoint-down(lg)
+					position: static
+					margin-top: 24px
 				&._is-opened
 					pointer-events: auto
 					visibility: visible
@@ -149,13 +230,16 @@
 					border-radius: 8px
 					box-shadow: $box-shadow
 					background-color: $white
+					+media-breakpoint-down(lg)
+						padding: 0
+						box-shadow: none
 					> div:not(:last-child)
 						margin-bottom: 26px
 				.categories
 					&-title
 						display: block
 						color: $text-400
-						@include font-size(xxs)
+						+font-size(xxs)
 					&-list
 						> li
 							&:not(:last-child)
@@ -169,18 +253,21 @@
 					&-title
 						display: block
 						color: $text-400
-						@include font-size(xxs)
+						+font-size(xxs)
 					&-results
 						display: flex
+						flex-wrap: wrap
 						justify-content: space-between
 						> span
 							color: $text-400
-							@include font-size(xs)
+							+font-size(xs)
 					&-list
 						margin-top: 20px
 						> li
 							&:not(:last-child)
 								margin-bottom: 8px
+								+media-breakpoint-down(lg)
+									margin-bottom: 16px
 							> a
 								display: flex
 								padding: 8px
@@ -188,6 +275,10 @@
 								background-color: $white
 								&:hover
 									background-color: $background
+								+media-breakpoint-down(lg)
+									padding: 0
+									&:hover
+										background-color: $white
 								.photo
 									flex: 0 0 auto
 									width: 64px
@@ -198,7 +289,7 @@
 										display: block
 										margin-bottom: 8px
 										color: $blue
-										@include font-size(xs)
+										+font-size(xs)
 									.price
 										display: flex
 										flex-wrap: wrap
@@ -206,16 +297,18 @@
 										ins
 											margin-right: 8px
 											color: $text-500
-											@include font-size(xs)
+											+font-size(xs)
 											font-weight: $w-bold
 											text-decoration: none
 										del
 											color: $warning
-											@include font-size(xxs)
+											+font-size(xxs)
 
 		// Contacts
 		&-contacts
 			margin-left: 14px
+			+media-breakpoint-down(xl)
+				display: none
 			.phone,
 			.mail
 				display: flex
@@ -266,17 +359,23 @@
 			display: flex
 			align-items: center
 			justify-content: flex-end
-			.compare, .wishlist
+			+media-breakpoint-down(lg)
+				flex: 1 1 auto
+			.search, .compare, .wishlist
 				margin-right: 16px
+				+media-breakpoint-down(md)
+					margin-right: 8px
 			.shopping-cart
 				display: inline-flex
 				align-items: center
 				&-content
 					margin-left: 12px
+					+media-breakpoint-down(lg)
+						display: none
 					.title
 						display: block
 						color: $text-400
-						@include font-size(xxs)
+						+font-size(xxs)
 					.total
 						display: block
 						color: $text-500
@@ -284,6 +383,60 @@
 						font-weight: $w-bold
 						line-height: 16px
 						text-transform: uppercase
+
+			// Buttons
+			.btn-search,
+			.btn-compare,
+			.btn-wishlist,
+			.btn-shopping-cart
+				width: 48px
+				height: 48px
+				padding-left: 0
+				padding-right: 0
+				border-radius: 50%
+				color: $text-300
+				+media-breakpoint-down(sm)
+					width: 40px
+					height: 40px
+				+media-breakpoint-down(xxs)
+					width: 36px
+					height: 36px
+				&:hover
+					border-color: $text-200
+					background-color: $text-200
+					color: $text-500
+				.icon
+					width: 22px
+					height: 22px
+					+media-breakpoint-down(sm)
+						width: 18px
+						height: 18px
+				.badge
+					overflow: hidden
+					position: absolute
+					top: -8px
+					left: 32px
+					z-index: 2
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 24px
+					height: 24px
+					border-radius: 50%
+					background-color: $yellow
+					color: $text-500
+					font-size: 12px
+					font-weight: $w-medium
+					text-align: center
+					+media-breakpoint-down(sm)
+						left: 25px
+					+media-breakpoint-down(xxs)
+						left: 22px
+						width: 20px
+						height: 20px
+						font-size: 11px
+			.btn-shopping-cart
+				color: $green
 			
 			// Widget
 			.wishlist,
@@ -311,6 +464,8 @@
 					width: 312px
 					opacity: 0
 					transition: $trs
+					+media-breakpoint-down(lg)
+						display: none
 					&::before
 						content: ''
 						position: absolute
@@ -348,7 +503,7 @@
 								display: block
 								margin-bottom: 12px
 								color: $blue
-								@include font-size(xxs)
+								+font-size(xxs)
 								font-weight: $w-bold
 								transition: color .3s ease
 						.total
@@ -369,12 +524,12 @@
 							ins
 								margin-right: 8px
 								color: $text-500
-								@include font-size(xs)
+								+font-size(xs)
 								font-weight: $w-bold
 								text-decoration: none
 							del
 								color: $warning
-								@include font-size(xxs)
+								+font-size(xxs)
 						&-delete
 							position: absolute
 							top: 0
@@ -392,6 +547,8 @@
 
 	// Bottom header
 	&-bottom
+		+media-breakpoint-down(xl)
+			display: none
 		.container
 			position: relative
 
@@ -502,7 +659,7 @@
 										margin-bottom: 8px
 									> a
 										display: block
-										@include font-size(xxs)
+										+font-size(xxs)
 
 		// Navigation
 		&-nav
@@ -590,4 +747,4 @@
 										> a
 											display: inline-block
 											padding: 4px 0
-											@include font-size(xxs)
+											+font-size(xxs)

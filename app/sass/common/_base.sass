@@ -27,6 +27,9 @@ body
 	font-family: $userfont
 	font-size: 15px
 	line-height: 24px
+	+media-breakpoint-down(sm)
+		font-size: 13px
+		line-height: 20px
 	&.lock-scroll
 		overflow: hidden
 		height: 100%
@@ -53,14 +56,16 @@ a
 		display: inline-flex
 		align-items: center
 		color: $blue
-		@include font-size(xs)
+		+font-size(xs)
+		+media-breakpoint-down(xs)
+			+font-size(xxs)
 		&:hover
 			color: $green
 			text-decoration: underline
 		.icon
 			width: 16px
 			height: 16px
-			margin-left: 8px
+			margin-left: 6px
 	&.blue-link
 		color: $blue
 		&:hover
@@ -75,24 +80,36 @@ h1
 	font-size: 34px
 	font-weight: $w-bold
 	line-height: 40px
-	+media-breakpoint-down(sm)
-		font-size: 24px
+	+media-breakpoint-down(lg)
+		font-size: 27px
+		line-height: 32px
+	+media-breakpoint-down(md)
+		font-size: 22px
 		line-height: 32px
 h2
 	font-size: 27px
 	font-weight: $w-bold
 	line-height: 32px
-	+media-breakpoint-down(sm)
+	+media-breakpoint-down(lg)
+		font-size: 22px
+		line-height: 32px
+	+media-breakpoint-down(md)
 		font-size: 20px
 		line-height: 24px
 h3
 	font-size: 22px
 	font-weight: $w-bold
 	line-height: 32px
+	+media-breakpoint-down(lg)
+		font-size: 18px
+		line-height: 24px
 h4
 	font-size: 18px
 	font-weight: $w-medium
 	line-height: 24px
+	+media-breakpoint-down(lg)
+		font-size: 16px
+		line-height: 22px
 h5, h6
 	font-size: 12px
 	font-weight: $w-bold

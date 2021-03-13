@@ -1,5 +1,7 @@
 article
 	margin-bottom: -32px
+	+media-breakpoint-down(md)
+		margin-bottom: -16px
 
 	h1, h2, h3, h4, h5, h6,
 	p,
@@ -8,6 +10,8 @@ article
 	ol,
 	blockquote, table
 		margin-bottom: 32px
+		+media-breakpoint-down(md)
+			margin-bottom: 16px
 
 	b,
 	strong
@@ -16,7 +20,10 @@ article
 	p,
 	ul > li,
 	ul > li > a
-		@include font-size(xs)
+		+font-size(xs)
+		+media-breakpoint-down(sm)
+			font-size: 13px
+			line-height: 20px
 
 	a
 		color: $blue
@@ -38,3 +45,6 @@ article
 				margin-right: 16px
 				border-radius: 50%
 				background: $yellow url('../images/dist/icons/checked-dark.svg') no-repeat center/14px
+				+media-breakpoint-down(xs)
+					width: 30px
+					height: 30px

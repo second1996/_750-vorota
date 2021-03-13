@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title><!--#echo var="title" --></title>
 	<meta name="description" content="Автоматика для ворот 750">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
@@ -86,12 +86,26 @@
 		<div class="header-middle">
 			<div class="container">
 				<div class="row flex-nowrap align-items-center">
+
+					<div class="col-auto header-middle-burger d-xxl-none">
+						<button class="toggle-mmenu-btn">
+							<svg class="icon icon-bars"><use xlink:href="images/symbol-defs.svg#bars"></use></svg>
+						</button>
+					</div>
+
 					<div class="col-auto header-middle-logo">
 						<a href="page-home.html" rel="home">
 							<img src="images/logo.svg" alt="Атоматика для ворот">
 						</a>
 					</div><!-- /.header-middle-logo -->
+
 					<div class="col header-middle-search">
+						<div class="heading">
+							<span class="heading-title">Поиск</span>
+							<button class="heading-btn btn btn-close">
+								<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+							</button>
+						</div>
 						<form class="form form-search">
 							<div class="form-group-label">
 								<input type="text" id="header-search-field" class="form-control" placeholder="Поиск" required autocomplete="off">
@@ -163,6 +177,7 @@
 							</div>
 						</div>
 					</div><!-- /.header-middle-search -->
+
 					<div class="col header-middle-contacts">
 						<div class="phone">
 							<div class="phone-icon">
@@ -182,15 +197,23 @@
 							</div>
 						</div>
 					</div><!-- /.header-middle-contacts -->
+
 					<div class="col-auto header-middle-actions">
-						<div class="compare">
+						<div class="search d-xl-none">
+							<div class="search-icon">
+								<button class="btn btn-secondary btn-search">
+									<svg class="icon icon-search"><use xlink:href="images/symbol-defs.svg#search"></use></svg>
+								</button>
+							</div>
+						</div><!-- /.compare -->
+						<div class="compare d-none d-sm-block">
 							<div class="compare-icon">
 								<a href="#" class="btn btn-secondary btn-compare">
 									<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
 								</a>
 							</div>
 						</div><!-- /.compare -->
-						<div class="wishlist">
+						<div class="wishlist d-none d-sm-block">
 							<div class="wishlist-icon">
 								<a href="#" class="btn btn-secondary btn-wishlist">
 									<span class="badge">2</span>
@@ -280,6 +303,7 @@
 							</div><!-- /.widget -->
 						</div><!--/.shopping-cart-->
 					</div><!-- /.header-middle-actions -->
+
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- /.header-middle -->
