@@ -1,11 +1,277 @@
 @import '../helpers/helpers'
 
+/* ==========================================================================
+	 Base customize for modal
+	 ========================================================================== */
 .modal
 	padding-right: 0!important
 	padding-left: 0!important
 	&.fade
 		.modal-dialog
-			transform: translate(50px, 0)
+			transform: scale(0.95)
 	&.show
 		.modal-dialog
 			transform: none
+
+	&-backdrop
+		background-color: $text-500
+		&.show
+			opacity: 0.4
+
+	.modal-dialog
+		max-width: 336px
+		margin-left: auto
+		margin-right: auto
+		padding-left: 8px
+		padding-right: 8px
+
+	.modal-content
+		border-radius: 16px
+		border: none
+		box-shadow: $box-shadow
+
+	.modal-header
+		padding: 24px
+		border-bottom: 0
+		.title
+			margin-bottom: 0
+			padding-right: 12px
+
+	.modal-body
+		padding: 8px 24px 32px
+		.btn-submit
+			width: 100%
+
+/* ==========================================================================
+	 Buy in one lick
+	 ========================================================================== */
+.modal-quick-buy
+	.modal-dialog
+		max-width: 875px
+
+	.modal-header
+		+media-breakpoint-up(lg)
+			padding: 48px 32px
+			justify-content: center
+			.title
+				padding-right: 0
+			.btn-close
+				position: absolute
+				top: 16px
+				right: 16px
+
+	.modal-body
+		+media-breakpoint-up(lg)
+			padding: 0px 32px 62px
+
+	.qb-product
+		display: flex
+		padding-top: 0
+		+media-breakpoint-down(sm)
+			flex-direction: column
+		&::before
+			display: none
+		&:hover
+			.card-label
+				visibility: visible
+				opacity: 1
+		.card-photo
+			flex: 0 0 auto
+			width: 200px
+			height: 200px
+			+media-breakpoint-down(md)
+				width: 160px
+				height: 160px
+			+media-breakpoint-down(sm)
+				width: 120px
+				height: 120px
+			img
+				padding-top: 0
+				object-position: top
+		.card-meta
+			margin-left: 24px
+			+media-breakpoint-down(sm)
+				margin-top: 24px
+				margin-left: 0
+			.permalink
+				overflow: visible
+				height: auto
+				margin-bottom: 18px
+				+media-breakpoint-down(sm)
+					margin-bottom: 12px
+			.price
+				height: auto
+				padding-top: 0
+			.quantity
+				margin-top: 18px
+				+media-breakpoint-down(sm)
+					margin-top: 12px
+			.order
+				&-subtotal
+					margin-bottom: 20px
+				.btn-submit
+					+media-breakpoint-up(lg)
+						max-width: 280px
+
+
+/* ==========================================================================
+	 Quick View product
+	 ========================================================================== */
+.modal-quick-view
+	+media-breakpoint-down(sm)
+		display: none !important
+
+	.modal-dialog
+		max-width: 875px
+
+	.modal-content
+		overflow: hidden
+		padding: 0
+
+	.modal-header
+		+media-breakpoint-up(lg)
+			padding: 48px 32px
+			justify-content: center
+			.title
+				padding-right: 0
+			.btn-close
+				position: absolute
+				top: 16px
+				right: 16px
+
+	.qv-product
+		// Title
+		&-title
+			margin-bottom: 30px
+
+		// Tabs
+		&-nav
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			border-bottom: 1px solid $text-200
+			> .nav-link
+				padding: 0 0 20px
+				border-radius: 0
+				margin-right: 32px
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					right: 0
+					bottom: -1px
+					border-bottom: 2px solid $text-500
+					opacity: 0
+					transition: opacity .3s ease
+				&.active
+					cursor: default
+					background-color: $white
+					&::after
+						opacity: 1
+				&:hover
+					background-color: $white
+			> .permalink
+				margin-left: auto
+				padding-bottom: 8px
+
+		// Product attributes & gallery
+		&-content
+			.product-gallery
+				max-width: 424px
+				margin: 0 auto
+
+				// Main slider
+				&-slider
+					.card-label
+						top: 16px
+						left: 16px
+					.swiper-slide
+						position: relative
+						display: flex
+						align-items: center
+						justify-content: center
+						max-height: 424px
+						.photo
+							&::before
+								content: ''
+								position: absolute
+								top: 50%
+								left: 50%
+								z-index: 1
+								display: block
+								width: 64px
+								height: 64px
+								margin-top: -32px
+								margin-left: -32px
+								border-radius: 50%
+								background: rgba($text-400, 0.3) url('../images/dist/icons/plus-circle.svg') no-repeat center/32px
+								opacity: 0
+								transform: scale(0.9)
+								transition: $trs
+							&:hover
+								&::before
+									opacity: 1
+									transform: none
+
+					&-nav
+						.btn.swiper-button-prev
+							left: -60px
+						.btn.swiper-button-next
+							right: -60px
+
+				// Thumbs slider
+				&-thumbs
+					.swiper-container
+						margin: -4px
+						padding: 4px
+					.swiper-wrapper
+						justify-content: center
+					.swiper-slide
+						position: relative
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 56px
+						height: 56px
+						box-shadow: 0 0 0 1px $text-200
+						transition: box-shadow .3s ease
+						&.swiper-slide-thumb-active
+							pointer-events: none
+							box-shadow: 0 0 0 2px $green
+						&:hover:not(.swiper-slide-thumb-active)
+							cursor: pointer
+							box-shadow: 0 0 0 1px $yellow
+
+		// Price & Add to cart form
+		&-summary
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			justify-content: space-between
+			margin-top: 40px
+			padding-top: 32px
+			border-top: 1px solid $text-200
+			.price
+				display: flex
+				flex-wrap: wrap
+				ins
+					margin-right: 10px
+					color: $text-500
+					font-size: 22px
+					font-weight: $w-bold
+					line-height: 1
+					text-decoration: none
+				del
+					color: $warning
+					+font-size(xs)
+			.form
+				display: flex
+				align-items: center
+				.quantity
+					margin-right: 16px
+					&-minus,
+					&-plus,
+					&-value
+						height: 48px
+				.btn-submit
+					min-width: 200px

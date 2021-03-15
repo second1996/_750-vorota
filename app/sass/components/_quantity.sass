@@ -41,6 +41,9 @@
 			border-color: $warning
 			background-color: $warning
 			color: $white
+		&:active
+			background-color: lighten($warning, 5%)
+			color: $white
 	&-plus
 		border-radius: 0 5px 5px 0
 		border-left: 0
@@ -48,4 +51,7 @@
 		&:hover
 			border-color: #27AE60
 			background-color: #27AE60
+			color: $white
+		&:active
+			background-color: lighten(#27AE60, 5%)
 			color: $white

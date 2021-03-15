@@ -13,6 +13,23 @@
 </head>
 <body>
 
+	<!-- Shop Promo -->
+	<div class="shop-promo d-none">
+		<div class="container">
+			<div class="shop-promo-wrapper">
+				<div class="shop-promo-content">
+					<p>Скидка на лучшие товары −35%</p>
+				</div>
+				<div class="shop-promo-close">
+					<button type="button" class="btn btn-close">
+						<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Site header -->
 	<header class="header">
 
 		<div class="header-top">
@@ -44,11 +61,11 @@
 					</div><!-- /.header-top-adress -->
 
 					<div class="col-auto header-top-btns">
-						<button class="btn btn-yellow btn-sm">
+						<button type="button" class="btn btn-yellow btn-sm" data-toggle="modal" data-target="#freeAdviceModal">
 							<svg class="icon icon-support"><use xlink:href="images/symbol-defs.svg#support"></use></svg>
 							<span>Бесплатная консультация</span>
 						</button>
-						<button class="btn btn-secondary btn-sm">Что с моим заказом?</button>
+						<button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#checkOrderStatusModal">Что с моим заказом?</button>
 					</div><!-- /.header-top-btns -->
 
 					<div class="col-auto header-top-nav">

@@ -6,9 +6,15 @@ window.$ = $
 // Import vendor jQuery plugin (not module)
 require('../../node_modules/popper.js/dist/popper.min.js') // Popper lib
 require('../../node_modules/bootstrap/js/dist/util.js') // Bootstrap Util lib
+require('../../node_modules/bootstrap/js/dist/modal.js') // Bootstrap Modal
 require('../../node_modules/bootstrap/js/dist/dropdown.js') // Bootstrap Dropdown
 require('../../node_modules/bootstrap/js/dist/tab.js') // Bootstrap Tab
 require('../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js') // jQuery Mask
+
+// Import Fancybox
+require('../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js') // Fancybox
+$.fancybox.defaults.animationEffect = 'fade'
+$.fancybox.defaults.buttons = ['zoom', 'thumbs', 'close']
 
 document.addEventListener('DOMContentLoaded', () => {
 	/**
@@ -44,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	$('.header-middle-search .heading .btn-close').on('click', function() {
+		$('body').removeClass('lock-scroll')
 		searchEl.removeClass('_is-focused')
 		searchEl.find('.search-results').removeClass('_is-opened')
 	})
@@ -59,6 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('body').append('<div class="mmenu-backdrop fade"></div>')
 			$('.mmenu-backdrop').delay(5).queue(function() {
 				$(this).addClass('show').dequeue()
+				$(this).on('click', function () {
+					mmenuBackdrop()
+					$('body').removeClass('lock-scroll')
+					$('.mmenu').removeClass('_is-active')
+				})
 			})
 		} else {
 			$('.mmenu-backdrop').remove()

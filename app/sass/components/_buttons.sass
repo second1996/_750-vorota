@@ -1,3 +1,6 @@
+/* ==========================================================================
+	 Base customize for button
+	 ========================================================================== */
 .btn, button
 	display: inline-flex
 	align-items: center
@@ -11,7 +14,7 @@
 	color: $text-400
 	font-family: inherit
 	font-size: 15px
-	font-weight: $w-bold
+	font-weight: $w-medium
 	line-height: 1
 	text-align: center
 	white-space: nowrap
@@ -32,7 +35,11 @@
 	&:focus
 		box-shadow: 0 0 0 4px rgba($text-300, 0.25)
 
-	// Themes
+
+/* ==========================================================================
+	 Button themes
+	 ========================================================================== */
+.btn
 	&.btn-yellow
 		background-color: $yellow
 		color: $text-500
@@ -57,7 +64,11 @@
 		&:focus
 			background-color: $white
 
-	// Sizes
+
+/* ==========================================================================
+	 Button sizes
+	 ========================================================================== */
+.btn
 	&.btn-sm
 		height: 32px
 		padding-left: 12px
@@ -70,127 +81,175 @@
 	&.btn-lg
 		height: 64px
 
-	// Dropdown button
-	&.btn-dropdown
-		height: auto
-		padding-left: 0
-		padding-right: 0
+
+/* ==========================================================================
+	 Go up button
+	 ========================================================================== */
+.go-up
+	pointer-events: none
+	position: fixed
+	bottom: 20px
+	right: -20px
+	width: 40px
+	z-index: 199
+	visibility: hidden
+	opacity: 0
+	transform-origin: bottom left
+	transform: rotate(-90deg) translateY(12px)
+	transition: $trs
+	&._is-shown
+		pointer-events: auto
+		visibility: visible
+		opacity: 1
+		transform: rotate(-90deg) translateY(0)
+	&-btn
+		height: 40px
+		padding: 12px
+		box-shadow: $box-shadow
+		background-color: $white
 		color: $text-500
-		font-size: 13px
-		font-weight: $w-regular
-		&::after
-			content: ''
-			display: inline-block
-			width: 16px
-			height: 16px
-			margin-left: 4px
-			transition: transform .3s ease
-			background: url('../images/dist/icons/dropdown-arrow.svg') no-repeat center/16px
-
-	// Add to cart button
-	&.btn-cart
-		padding-left: 30px
-		padding-right: 30px
-		font-weight: $w-medium
-		white-space: normal
-		text-align: left
-		&._added
-			border: 2px solid $green
-			background-color: $white
-			&:hover,
-			&:focus
-				box-shadow: none
-				background-color: $white
-			.before-added
-				display: none
-			.after-added
-				display: flex
-				align-items: center
-				.icon
-					flex: 0 0 auto
-					fill: $green
-					width: 16px
-					height: 16px
-				span
-					margin-left: 12px
-					color: $text-500
-					+font-size(xxs)
-					font-weight: $w-regular
-					> a
-						color: #219653
-						font-weight: $w-bold
-						&:hover
-							text-decoration: underline
-		&:not(._added)
-			.before-added
-				display: block
-			.after-added
-				display: none
-
-	// Close button
-	&.btn-close
-		height: auto
-		padding-left: 0
-		padding-right: 0
-		.icon
-			width: 24px
-			height: 24px
 		&:hover
-			color: $warning
-		&:focus,
-		&:active
-			box-shadow: 0 0 0 3px rgba($warning, 0.25)
-
-	// Action buttons
-	&.btn-search,
-	&.btn-compare,
-	&.btn-wishlist,
-	&.btn-shopping-cart
-		width: 48px
-		height: 48px
-		padding-left: 0
-		padding-right: 0
-		border-radius: 50%
-		color: $text-300
-		+media-breakpoint-down(sm)
-			width: 40px
-			height: 40px
-		+media-breakpoint-down(xxs)
-			width: 36px
-			height: 36px
-		&:hover
-			border-color: $text-200
-			background-color: $text-200
-			color: $text-500
-		.icon
-			width: 22px
-			height: 22px
-			+media-breakpoint-down(sm)
-				width: 18px
-				height: 18px
-		.badge
-			overflow: hidden
-			position: absolute
-			top: -8px
-			left: 32px
-			z-index: 2
-			display: flex
-			align-items: center
-			justify-content: center
-			width: 24px
-			height: 24px
-			border-radius: 50%
+			box-shadow: none
 			background-color: $yellow
 			color: $text-500
-			font-size: 12px
-			font-weight: $w-medium
-			text-align: center
-			+media-breakpoint-down(sm)
-				left: 25px
-			+media-breakpoint-down(xxs)
-				left: 22px
-				width: 20px
-				height: 20px
-				font-size: 11px
-	&.btn-shopping-cart
-		color: $green
+		.icon
+			width: 16px
+			height: 16px
+
+
+/* ==========================================================================
+	 Dropdown button
+	 ========================================================================== */
+.btn-dropdown
+	height: auto
+	padding-left: 0
+	padding-right: 0
+	color: $text-500
+	font-size: 13px
+	font-weight: $w-regular
+	&::after
+		content: ''
+		display: inline-block
+		width: 16px
+		height: 16px
+		margin-left: 4px
+		transition: transform .3s ease
+		background: url('../images/dist/icons/dropdown-arrow.svg') no-repeat center/16px
+
+
+/* ==========================================================================
+	 Add to cart button
+	 ========================================================================== */
+.btn-cart
+	padding-left: 0
+	padding-right: 0
+	white-space: normal
+	text-align: left
+	&._added
+		border: 2px solid $green
+		background-color: $white
+		&:hover,
+		&:focus
+			box-shadow: none
+			background-color: $white
+		.before-added
+			display: none
+		.after-added
+			display: flex
+			align-items: center
+			.icon
+				flex: 0 0 auto
+				fill: $green
+				width: 16px
+				height: 16px
+			span
+				margin-left: 12px
+				color: $text-500
+				+font-size(xxs)
+				font-weight: $w-regular
+				+media-breakpoint-down(md)
+					margin-left: 6px
+					font-size: 12px
+				> a
+					color: #219653
+					font-weight: $w-bold
+					&:hover
+						text-decoration: underline
+	&:not(._added)
+		.before-added
+			display: block
+		.after-added
+			display: none
+
+
+/* ==========================================================================
+	 Close button
+	 ========================================================================== */
+.btn-close
+	height: auto
+	padding-left: 0
+	padding-right: 0
+	.icon
+		width: 24px
+		height: 24px
+	&:hover
+		color: $warning
+	&:focus,
+	&:active
+		box-shadow: 0 0 0 3px rgba($warning, 0.25)
+
+
+/* ==========================================================================
+	 Search, Compare, Wishlist, Shopping cart buttons
+	 ========================================================================== */
+.btn-search,
+.btn-compare,
+.btn-wishlist,
+.btn-shopping-cart
+	width: 48px
+	height: 48px
+	padding-left: 0
+	padding-right: 0
+	border-radius: 50%
+	color: $text-300
+	+media-breakpoint-down(sm)
+		width: 40px
+		height: 40px
+	+media-breakpoint-down(xxs)
+		width: 36px
+		height: 36px
+	&:hover
+		border-color: $text-200
+		background-color: $text-200
+		color: $text-500
+	.icon
+		width: 22px
+		height: 22px
+		+media-breakpoint-down(sm)
+			width: 18px
+			height: 18px
+	.badge
+		overflow: hidden
+		position: absolute
+		top: -8px
+		left: 32px
+		z-index: 2
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		background-color: $yellow
+		color: $text-500
+		font-size: 12px
+		text-align: center
+		+media-breakpoint-down(sm)
+			left: 25px
+		+media-breakpoint-down(xxs)
+			left: 22px
+			width: 20px
+			height: 20px
+			font-size: 11px
+.btn-shopping-cart
+	color: $green

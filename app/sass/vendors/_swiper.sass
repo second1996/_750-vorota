@@ -1,26 +1,32 @@
-@import 'node_modules/swiper/swiper.scss' // Swiper core
-@import 'node_modules/swiper/components/pagination/pagination.scss' // Pagination module
+/* ==========================================================================
+	 Import Swiper
+	 ========================================================================== */
+@import 'node_modules/swiper/swiper.scss'
+@import 'node_modules/swiper/components/pagination/pagination.scss'
 
+
+/* ==========================================================================
+	 Base customize for Swiper
+	 ========================================================================== */
 .swiper-slider
 	position: relative
 	.swiper-slide
 		height: auto
 
 .products-slider
-	margin-left: -4px
-	margin-right: -4px
-	margin-bottom: -4px
+	margin: -5px
 	.swiper-container
-		padding-left: 4px
-		padding-right: 4px
-		padding-bottom: 4px
+		padding: 5px
 	&-nav
 		.btn.swiper-button-prev,
 		.btn.swiper-button-next
 			top: 22%
 			transform: translateY(-22%)
 
-// Navigation customize
+
+/* ==========================================================================
+	 Navigation customize
+	 ========================================================================== */
 .btn.swiper-button-prev,
 .btn.swiper-button-next
 	position: absolute
@@ -33,7 +39,7 @@
 	padding-right: 0
 	border-radius: 50%
 	border: 0
-	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25)
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15)
 	background-color: $white
 	+media-breakpoint-down(sm)
 		width: 32px
@@ -41,15 +47,14 @@
 		margin-top: -16px
 	&:hover,
 	&:focus
-		background-color: $green
-		.icon
-			fill: $white
-	&:focus
 		box-shadow: none
-	&:active
-		background-color: darken($green, 6%)
+		background-color: $yellow
 		.icon
-			fill: $white
+			fill: $text-500
+	&:active
+		background-color: lighten($yellow, 10%)
+		.icon
+			fill: $text-500
 	.icon
 		width: 26px
 		height: 26px
@@ -69,7 +74,10 @@
 	+media-breakpoint-down(xs)
 		right: -10px
 
-// Pagination customize
+
+/* ==========================================================================
+	 Pagination customize
+	 ========================================================================== */
 .swiper-dots
 	margin-top: 32px
 	min-height: 4px

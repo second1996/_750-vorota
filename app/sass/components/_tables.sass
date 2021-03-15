@@ -1,0 +1,37 @@
+/* ==========================================================================
+	 Base customize for tables
+	 ========================================================================== */
+table
+	width: 100%
+
+
+/* ==========================================================================
+	 Product attributes table
+	 ========================================================================== */
+.table-attributes
+	max-width: 560px
+	tr
+		.attribute,
+		.value
+			position: relative
+			padding-top: 8px
+			padding-bottom: 8px
+			z-index: 1
+			color: $text-500
+			+font-size(xs)
+			> span
+				display: inline-block
+				padding-right: 6px
+				background-color: $white
+
+		.attribute
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 15px
+				z-index: -1
+				border-bottom: 1px dotted $text-300
+		.value
+			padding-left: 24px

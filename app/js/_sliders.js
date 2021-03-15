@@ -1,9 +1,12 @@
 // Import Swiper slider bundle
-import SwiperCore, { Autoplay, Navigation, Pagination, Swiper } from 'swiper/core'
-SwiperCore.use([Autoplay, Navigation, Pagination])
+import SwiperCore, { Autoplay, Navigation, Pagination, Thumbs, Swiper } from 'swiper/core'
+SwiperCore.use([Autoplay, Navigation, Pagination, Thumbs])
 
-
-// Home page: Heroes main slider
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Home page: Heroes main slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
 new Swiper('.h-heroes-slider', {
 	loop: true,
 	autoplay: {
@@ -15,7 +18,12 @@ new Swiper('.h-heroes-slider', {
 	},
 })
 
-// Home page: Heroes product slider
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Home page: Heroes product slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
 new Swiper('.h-heroes-product-slider', {
 	loop: true,
 	navigation: {
@@ -28,7 +36,12 @@ new Swiper('.h-heroes-product-slider', {
 	},
 })
 
-// Products slider for each section
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Products slider for each section
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
 $('.products-slider').each(function (index, element) {
 	let id = index;
 
@@ -63,7 +76,12 @@ $('.products-slider').each(function (index, element) {
 	})
 })
 
-// Home page: Partners slider
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Home page: Partners slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
 new Swiper('.h-partners-slider .swiper-container', {
 	slidesPerView: 3,
 	spaceBetween: 16,
@@ -96,7 +114,12 @@ new Swiper('.h-partners-slider .swiper-container', {
 	}
 })
 
-// Home page: Testimonials slider
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Home page: Testimonials slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
 new Swiper('.h-testimonials-slider .swiper-container', {
 	slidesPerView: 1,
 	spaceBetween: 16,
@@ -117,3 +140,41 @@ new Swiper('.h-testimonials-slider .swiper-container', {
 		}
 	}
 })
+
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Quick View gallery slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
+const initQuickViewModal = function () {
+	// Thumbs slider
+	const qvGalleryThumbsSlider = new Swiper('.modal-quick-view .product-gallery-thumbs .swiper-container', {
+		observer: true,
+		observeParents: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		allowTouchMove: false,
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		loop: false
+	})
+
+	// Main slider
+	const qvGallerySlider = new Swiper('.modal-quick-view .product-gallery-slider .swiper-container', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 16,
+		loop: false,
+		speed: 450,
+		navigation: {
+			nextEl: '.modal-quick-view .product-gallery-slider-nav .swiper-button-next',
+			prevEl: '.modal-quick-view .product-gallery-slider-nav .swiper-button-prev',
+		},
+		thumbs: {
+			swiper: qvGalleryThumbsSlider
+		}
+	})
+}
+initQuickViewModal()

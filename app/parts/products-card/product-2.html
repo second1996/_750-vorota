@@ -1,6 +1,6 @@
 <div class="card card-product">
 	<div class="card-quick-view">
-		<a href="#" class="btn btn-sm btn-secondary">Быстрый просмотр</a>
+		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
 	</div>
 	<div class="card-label card-label--red">Хит продаж</div>
 	<a href="#" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
@@ -38,7 +38,7 @@
 				<a href="#" class="btn btn-secondary">
 					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
 				</a>
-				<a href="#" class="btn btn-secondary">
+				<a href="#" class="btn btn-secondary _added">
 					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
@@ -46,10 +46,10 @@
 				<div class="before-added">В корзину</div>
 				<div class="after-added">
 					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен в <a href="#">корзину</a></span>
+					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
 				</div>
 			</button>
-			<button class="btn btn-sm btn-secondary btn-quick-buy">Купить в 1 клик</button>
+			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
 	</div>
 	<div class="card-attributes">

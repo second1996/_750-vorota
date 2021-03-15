@@ -1,3 +1,44 @@
+/* ==========================================================================
+	 Shop Promo
+	 ========================================================================== */
+.shop-promo
+	padding-top: 8px
+	padding-bottom: 8px
+	background-color: #219653
+	&-wrapper
+		position: relative
+	&-content
+		+font-size(xs)
+		text-align: center
+		p
+			margin-bottom: 0
+			color: $white
+		a
+			color: $yellow
+			&:hover
+				text-decoration: underline
+	&-close
+		position: absolute
+		top: 50%
+		right: 0
+		height: 20px
+		transform: translateY(-50%)
+		.btn-close
+			color: $white
+			.icon
+				width: 16px
+				height: 16px
+			&:hover
+				background-color: $yellow
+				color: $text-500
+			&:focus,
+			&:active
+				box-shadow: 0 0 0 3px rgba($yellow, 0.25)
+
+
+/* ==========================================================================
+	 Site header
+	 ========================================================================== */
 .header
 	position: relative
 
