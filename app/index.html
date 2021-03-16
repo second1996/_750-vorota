@@ -1,32 +1,74 @@
-<!--#set var="title" value="Главная страница" -->
-<!--#include virtual="/parts/header.html" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Автоматика для ворот</title>
+	<meta name="description" content="Автоматика для ворот 750">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<main>
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
 
-	<!--#include virtual="/parts/home/heroes.html" -->
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
 
-	<!--#include virtual="/parts/home/advantages.html" -->
+	<main>
+		<div class="container">
 
-	<!--#include virtual="/parts/home/questions.html" -->
+			<style>
+				main {
+					padding-top: 32px;
+				}
+				.pages-list {
+					counter-reset: page;
+					padding-left: 0;
+				}
+				.pages-list li {
+					list-style: none;
+					margin-bottom: 8px;
+				}
+				.pages-list li::before {
+					counter-increment: page;
+					content: counter(page);
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 26px;
+					height: 26px;
+					margin-right: 12px;
+					border-radius: 50%;
+					background-color: #F8CB2D;
+					font-size: 14px;
+					font-weight: 500;
+					transition: .3s ease;
+				}
+				.pages-list li a {
+					display: inline-block;
+					font-weight: 500;
+				}
+			</style>
 
-	<!--#include virtual="/parts/home/popular-categories.html" -->
+			<div class="pages-logo mb-48">
+				<img src="images/logo.svg" alt="Автоматика для ворот">
+			</div>
+			<div class="row row-items-24">
+				<div class="col-sm-6">
+					<h3 class="mb-20 text-md">Общие страницы</h3>
+					<ol class="pages-list">
+						<li><a href="page-home.html">Главная страница</a></li>
+					</ol>
+				</div>
+				<div class="col-sm-6">
+					<h3 class="mb-20 text-md">Страницы магазина</h3>
+					<ol class="pages-list">
+						<li><a href="page-shop-catalog.html">Каталог</a></li>
+					</ol>
+				</div>
+			</div>
 
-	<!--#include virtual="/parts/home/popular-products.html" -->
+		</div><!-- /.container -->
+	</main>
 
-	<!--#include virtual="/parts/home/new-products.html" -->
-
-	<!--#include virtual="/parts/home/promo-products.html" -->
-
-	<!--#include virtual="/parts/home/partners.html" -->
-
-	<!--#include virtual="/parts/home/testimonials.html" -->
-
-	<!--#include virtual="/parts/home/articles.html" -->
-
-	<!--#include virtual="/parts/home/trust.html" -->
-
-	<!--#include virtual="/parts/seo-articles/article-1.html" -->
-
-</main>
-
-<!--#include virtual="/parts/footer.html" -->
+</body>
+</html>

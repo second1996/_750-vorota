@@ -1,0 +1,18 @@
+.shop-catalog
+	&-item
+		.photo
+			height: 184px
+			+media-breakpoint-down(sm)
+				height: 168px
+		.category
+			font-size: 12px
+		.subcategories
+			max-width: 90%
+			> li
+				&:not(:last-child)
+					margin-bottom: 8px
+				> a
+					display: block
+					+font-size(xs)
+					+media-breakpoint-down(lg)
+						+font-size(xxs)

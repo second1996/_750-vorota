@@ -36,6 +36,8 @@
 		border-bottom: 0
 		opacity: 0
 		transition: opacity .15s ease
+		+media-breakpoint-down(sm)
+			display: none
 	&:hover
 		z-index: 2
 		&::before

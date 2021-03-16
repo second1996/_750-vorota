@@ -1,0 +1,48 @@
+.shop-brands
+
+	// Brands alphabet
+	&-alphabet
+		.alphabet
+			display: flex
+			flex-wrap: wrap
+			align-items: baseline
+			justify-content: center
+			margin: -4px
+			&-letter
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				width: 32px
+				height: 32px
+				margin: 4px
+				background-color: $white
+				text-align: center
+				&:hover
+					border-color: $trsp
+					background-color: $yellow
+					color: $text-500
+
+	// Brands list
+	&-list
+		.brand
+			text-align: center
+			&:hover
+				.brand-logo
+					border-color: $blue
+				.brand-name
+					color: $blue
+			&-logo
+				height: 64px
+				padding: 8px
+				margin-bottom: 10px
+				transition: border .3s ease
+				img
+					max-width: 104px
+					max-height: 48px
+			&-name
+				margin-bottom: 0
+				color: $text-400
+				font-size: 12px
+				letter-spacing: .11em
+				word-break: break-word
+				transition: color .3s ease
