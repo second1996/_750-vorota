@@ -1,0 +1,129 @@
+.compare
+
+
+	// CompareMain
+	&-main
+		display: flex
+		+media-breakpoint-down(sm)
+			display: block
+
+		// Compare Actions
+		&-actions
+			flex: 0 0 200px
+			margin-right: 24px
+			+media-breakpoint-down(sm)
+				margin-right: 0
+				margin-bottom: 28px
+			.options
+				margin-bottom: 32px
+				&-btn
+					position: relative
+					display: flex
+					align-items: center
+					color: $text-400
+					+font-size(xs)
+					+media-breakpoint-down(md)
+						font-size: 13px
+					&:not(:last-child)
+						margin-bottom: 16px
+					&::before
+						content: ''
+						display: inline-block
+						width: 24px
+						height: 24px
+						margin-right: 12px
+						border-radius: 50%
+						border: 1px solid $text-200
+						background-color: $white
+						transition: background-color .3s ease, border .3s ease
+					&::after
+						content: ''
+						position: absolute
+						top: 8px
+						left: 8px
+						width: 8px
+						height: 8px
+						border-radius: 50%
+						background-color: $white
+						transition: background-color .3s ease
+					&:hover:not(._active)
+						color: $text-500
+						&::after
+							background-color: $green
+					&._active
+						pointer-events: none
+						color: $text-500
+						&::before
+							border-color: $trsp
+							background-color: $green
+
+		// Compare Products slider
+		&-products
+			flex: 1 1 auto
+			min-width: 0
+
+	// Compare Table
+	&-table
+		&-heading
+			display: flex
+			align-items: flex-end
+		&-title
+			flex: 0 0 224px
+			+media-breakpoint-down(sm)
+				display: none
+		&-scrollbar
+			flex: 1 1 auto
+		&-wrapper
+			display: flex
+			+media-breakpoint-down(sm)
+				display: block
+		&-keys
+			flex: 0 0 224px
+			+media-breakpoint-down(sm)
+				display: none
+		&-key
+			display: flex
+			align-items: center
+			height: 48px
+			padding-left: 16px
+			padding-right: 16px
+			background-color: $background
+			color: $text-500
+			font-size: 15px
+			line-height: 1.2
+			+media-breakpoint-down(md)
+				font-size: 13px
+		&-values
+			flex: 1 1 auto
+			position: relative
+			min-width: 0
+		&-value
+			overflow: hidden
+			position: relative
+			display: flex
+			align-items: center
+			height: 48px
+			padding-left: 16px
+			padding-right: 16px
+			border-right: 1px solid $border
+			background-color: $white
+			color: $text-500
+			font-size: 15px
+			line-height: 1.2
+			+media-breakpoint-down(md)
+				font-size: 13px
+			+media-breakpoint-down(sm)
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				height: auto
+				padding-top: 8px
+				padding-bottom: 8px
+				border-right: 0
+				&::before
+					content: attr(data-compare-title)
+					display: block
+					margin-bottom: 8px
+					color: $text-400
+					font-size: 13px
+					line-height: 1.2

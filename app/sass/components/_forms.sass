@@ -32,7 +32,8 @@ label
 .form
 	position: relative
 	&-control,
-	&-textarea
+	&-textarea,
+	&-select
 		appearance: none
 		display: block
 		width: 100%
@@ -46,10 +47,13 @@ label
 		line-height: 1.5
 		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .3s ease-in-out
 		&:focus
-			box-shadow: 0 0 0 3px rgba($yellow, 0.25)
+			outline: none
+			border-color: $trsp
+			box-shadow: 0 0 0 2px $text-200
 
 	// Input
-	&-control
+	&-control,
+	&-select
 		height: 64px
 		padding-left: 16px
 		padding-right: 16px
@@ -111,6 +115,14 @@ label
 					border-color: $green
 		input:checked + label::after
 			opacity: 1
+
+	// Select
+	&-select
+		color: $text-400
+		background: $white url('../images/dist/icons/dropdown-arrow.svg') no-repeat right 8px center / 26px
+		&:focus
+			color: $text-500
+			box-shadow: 0 0 0 2px #7BE693
 
 	// Form group
 	&:not(.form-inline)
@@ -209,8 +221,6 @@ label
 		+media-breakpoint-down(sm)
 			margin-right: 0
 			margin-bottom: 16px
-	.form-control:focus
-		box-shadow: 0 0 0 1px $text-200
 	.btn-submit
 		padding-left: 16px
 		padding-right: 16px

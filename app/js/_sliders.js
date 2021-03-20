@@ -1,6 +1,6 @@
 // Import Swiper slider bundle
-import SwiperCore, { Autoplay, Navigation, Pagination, Thumbs, Swiper } from 'swiper/core'
-SwiperCore.use([Autoplay, Navigation, Pagination, Thumbs])
+import SwiperCore, { Swiper, Autoplay, Navigation, Pagination, Thumbs, Scrollbar, Controller } from 'swiper/core'
+SwiperCore.use([Autoplay, Navigation, Pagination, Thumbs, Scrollbar, Controller])
 
 /**
  *-------------------------------------------------------------------------------------------------------------------------------------------
@@ -147,7 +147,7 @@ new Swiper('.h-testimonials-slider .swiper-container', {
  * Quick View gallery slider
  *-------------------------------------------------------------------------------------------------------------------------------------------
 */
-const initQuickViewModal = function () {
+window.initQuickViewModal = function () {
 	// Thumbs slider
 	const qvGalleryThumbsSlider = new Swiper('.modal-quick-view .product-gallery-thumbs .swiper-container', {
 		observer: true,
@@ -178,3 +178,56 @@ const initQuickViewModal = function () {
 	})
 }
 initQuickViewModal()
+
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Shop Compare slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
+const compareProductsSlider = new Swiper('.compare-products-slider .swiper-container', {
+	slidesPerView: 2,
+	spaceBetween: 12,
+	navigation: {
+		prevEl: '.compare-products-slider-nav .swiper-button-prev',
+		nextEl: '.compare-products-slider-nav .swiper-button-next',
+	},
+	breakpoints: {
+		576: {
+			slidesPerView: 3,
+		},
+		992: {
+			slidesPerView: 4,
+		},
+		1240: {
+			slidesPerView: 5,
+			spaceBetween: 24,
+		}
+	}
+})
+const compareTableSlider = new Swiper('.compare-table-values .swiper-container', {
+	slidesPerView: 2,
+	spaceBetween: 0,
+	scrollbar: {
+		el: '.compare-table-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		576: {
+			slidesPerView: 3,
+		},
+		992: {
+			slidesPerView: 4,
+		},
+		1240: {
+			slidesPerView: 5,
+			spaceBetween: 24,
+		}
+	}
+})
+
+// Sync Compare sliders
+if( $('.compare .compare-products-slider, .compare .compare-table-values').length ) {
+	compareProductsSlider.controller.control = compareTableSlider
+	compareTableSlider.controller.control = compareProductsSlider
+}

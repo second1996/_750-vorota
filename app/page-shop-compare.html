@@ -1,0 +1,183 @@
+<!--#set var="title" value="Сравнение товаров" -->
+<!--#include virtual="/parts/header.html" -->
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Сравнение товаров</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="section-heading mb-32">
+				<h1 class="title">Сравнение товаров</h1>
+			</div>
+
+			<!-- Compare -->
+			<div class="compare">
+
+				<!-- Compare empty -->
+				<!-- <div class="shop-message">
+					<p>Нет товаров для сравнения. Вы можете добавить товары в сравнение со страницы каталога или карточек товаров.</p>
+				</div> -->
+
+				<!-- Compare main -->
+				<div class="compare-main">
+
+					<!-- Compare Actions -->
+					<div class="compare-main-actions">
+						<div class="options">
+							<h4 class="mb-24">Параметры</h4>
+							<a href="#" class="options-btn _active" type="button" rel="nofollow">Все характеристики</a>
+							<a href="#" class="options-btn" type="button" rel="nofollow">Различающиеся</a>
+						</div>
+						<div class="categories">
+							<h4 class="mb-24">Категории</h4>
+							<select name="category_id" id="compare-categories" class="form-select">
+								<option value="0">Все</option>
+								<option value="1">Автоматика для ворот</option>
+								<option value="2">Ворота</option>
+								<option value="3">Шлагбаумы</option>
+							</select>
+						</div>
+					</div><!-- /.compare-main-actions -->
+
+					<!-- Products slider -->
+					<div class="compare-main-products">
+						<div class="mb-32 text-gray-400 text-xxs">В сравнении: <span class="text-gray-500 w-bold">8 товаров</span></div>
+						<div class="compare-products-slider swiper-slider">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!--#include virtual="/parts/products-card/product-1.html" -->
+									</div><!-- /.slide -->
+									<div class="swiper-slide">
+										<!--#include virtual="/parts/products-card/product-2.html" -->
+									</div><!-- /.slide -->
+									<div class="swiper-slide">
+										<!--#include virtual="/parts/products-card/product-3.html" -->
+									</div><!-- /.slide -->
+									<div class="swiper-slide">
+										<!--#include virtual="/parts/products-card/product-4.html" -->
+									</div><!-- /.slide -->
+									<div class="swiper-slide">
+										<!--#include virtual="/parts/products-card/product-5.html" -->
+									</div><!-- /.slide -->
+									<div class="swiper-slide">
+										<!--#include virtual="/parts/products-card/product-6.html" -->
+									</div><!-- /.slide -->
+								</div><!-- /.swiper-wrapper -->
+							</div><!-- /.swiper-container -->
+							<div class="compare-products-slider-nav swiper-nav">
+								<button class="swiper-button-prev btn">
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</button>
+								<button class="swiper-button-next btn">
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</button>
+							</div><!-- /.compare-products-slider-nav -->
+						</div><!-- /.compare-products-slider -->
+					</div><!-- /.compare-main-products -->
+
+				</div>
+				<!-- End Compare main -->
+
+				<div class="mt-32"></div>
+
+				<!-- Compare Table -->
+				<div class="compare-table">
+					<div class="compare-table-heading mb-24">
+						<h4 class="compare-table-title">Характеристики</h4>
+						<div class="compare-table-scrollbar swiper-scrollbar"></div>
+					</div>
+					<div class="compare-table-wrapper">
+						<div class="compare-table-keys">
+							<div class="compare-table-key">Масса ворот до, кг</div>
+							<div class="compare-table-key">Питание редуктора, В</div>
+							<div class="compare-table-key">Масса ворот до, кг</div>
+							<div class="compare-table-key">Комплектация</div>
+							<div class="compare-table-key">Страна производства</div>
+							<div class="compare-table-key">Тип</div>
+							<div class="compare-table-key">Размеры, м</div>
+						</div>
+						<div class="compare-table-values swiper-slider">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="compare-table-slide swiper-slide">
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1093,5</div>
+										<div class="compare-table-value" data-compare-title="Питание редуктора, В">165</div>
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1230</div>
+										<div class="compare-table-value" data-compare-title="Комплектация">Полная</div>
+										<div class="compare-table-value" data-compare-title="Страна производства">Италия</div>
+										<div class="compare-table-value" data-compare-title="Тип">Врезные сверху</div>
+										<div class="compare-table-value" data-compare-title="Размеры, м">5 х 2 м</div>
+									</div><!-- /.compare-table-slide -->
+									<div class="compare-table-slide swiper-slide">
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1093,5</div>
+										<div class="compare-table-value" data-compare-title="Питание редуктора, В">165</div>
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1230</div>
+										<div class="compare-table-value" data-compare-title="Комплектация">Полная</div>
+										<div class="compare-table-value" data-compare-title="Страна производства">Италия</div>
+										<div class="compare-table-value" data-compare-title="Тип">Врезные сверху</div>
+										<div class="compare-table-value" data-compare-title="Размеры, м">5 х 2 м</div>
+									</div><!-- /.compare-table-slide -->
+									<div class="compare-table-slide swiper-slide">
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1093,5</div>
+										<div class="compare-table-value" data-compare-title="Питание редуктора, В">165</div>
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1230</div>
+										<div class="compare-table-value" data-compare-title="Комплектация">Полная</div>
+										<div class="compare-table-value" data-compare-title="Страна производства">Италия</div>
+										<div class="compare-table-value" data-compare-title="Тип">Врезные сверху</div>
+										<div class="compare-table-value" data-compare-title="Размеры, м">5 х 2 м</div>
+									</div><!-- /.compare-table-slide -->
+									<div class="compare-table-slide swiper-slide">
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1093,5</div>
+										<div class="compare-table-value" data-compare-title="Питание редуктора, В">165</div>
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1230</div>
+										<div class="compare-table-value" data-compare-title="Комплектация">Полная</div>
+										<div class="compare-table-value" data-compare-title="Страна производства">Италия</div>
+										<div class="compare-table-value" data-compare-title="Тип">Врезные сверху</div>
+										<div class="compare-table-value" data-compare-title="Размеры, м">5 х 2 м</div>
+									</div><!-- /.compare-table-slide -->
+									<div class="compare-table-slide swiper-slide">
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1093,5</div>
+										<div class="compare-table-value" data-compare-title="Питание редуктора, В">165</div>
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1230</div>
+										<div class="compare-table-value" data-compare-title="Комплектация">Полная</div>
+										<div class="compare-table-value" data-compare-title="Страна производства">Италия</div>
+										<div class="compare-table-value" data-compare-title="Тип">Врезные сверху</div>
+										<div class="compare-table-value" data-compare-title="Размеры, м">5 х 2 м</div>
+									</div><!-- /.compare-table-slide -->
+									<div class="compare-table-slide swiper-slide">
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1093,5</div>
+										<div class="compare-table-value" data-compare-title="Питание редуктора, В">165</div>
+										<div class="compare-table-value" data-compare-title="Масса ворот до, кг">1230</div>
+										<div class="compare-table-value" data-compare-title="Комплектация">Полная</div>
+										<div class="compare-table-value" data-compare-title="Страна производства">Италия</div>
+										<div class="compare-table-value" data-compare-title="Тип">Врезные сверху</div>
+										<div class="compare-table-value" data-compare-title="Размеры, м">5 х 2 м</div>
+									</div><!-- /.compare-table-slide -->
+								</div><!-- /.swiper-wrapper -->
+							</div><!-- /.swiper-container -->
+						</div><!-- /.compare-table-values -->
+					</div>
+				</div>
+				<!-- End Compare Table -->
+
+			</div>
+			<!-- End Compare -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+<!--#include virtual="/parts/footer.html" -->

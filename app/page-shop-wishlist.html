@@ -1,0 +1,106 @@
+<!--#set var="title" value="Избранные товары" -->
+<!--#include virtual="/parts/header.html" -->
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Избранное</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="section-heading mb-32">
+				<h1 class="title">Избранное</h1>
+			</div>
+
+			<!-- Wishlist -->
+			<div class="wishlist">
+
+				<!-- List of products -->
+				<div class="shop-products">
+					<div class="row row-items-40 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6">
+						<div class="col">
+							<!--#include virtual="/parts/products-card/product-1.html" -->
+						</div><!-- /.col -->
+						<div class="col">
+							<!--#include virtual="/parts/products-card/product-2.html" -->
+						</div><!-- /.col -->
+						<div class="col">
+							<!--#include virtual="/parts/products-card/product-3.html" -->
+						</div><!-- /.col -->
+						<div class="col">
+							<!--#include virtual="/parts/products-card/product-4.html" -->
+						</div><!-- /.col -->
+						<div class="col">
+							<!--#include virtual="/parts/products-card/product-5.html" -->
+						</div><!-- /.col -->
+						<div class="col">
+							<!--#include virtual="/parts/products-card/product-6.html" -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+
+					<!-- Show more button -->
+					<div class="mb-32">
+						<button type="button" class="btn btn-secondary w-100">Показать ещё</button>
+					</div>
+
+					<!-- Pagination -->
+					<div class="pagination">
+						<ul class="pagination-wrapper">
+							<li class="pagination-button pagination-button-prev _disabled">
+								<a href="#">
+									<svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg>
+									<span>Предыдущая</span>
+								</a>
+							</li>
+							<li class="pagination-item">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="pagination-item">
+								<a class="page-link" href="#">2</a>
+							</li>
+							<li class="pagination-item _current">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="pagination-item">
+								<a class="page-link" href="#">4</a>
+							</li>
+							<li class="pagination-item">
+								<a class="page-link" href="#">5</a>
+							</li>
+							<li class="pagination-item pagination-item--dots">
+								<span>...</span>
+							</li>
+							<li class="pagination-item">
+								<a class="page-link" href="#">12</a>
+							</li>
+							<li class="pagination-button pagination-button-next">
+								<a class="page-link" href="#">
+									<span>Следующая</span>
+									<svg class="icon icon-arrow"><use xlink:href="/images/symbol-defs.svg#arrow"></use></svg>
+								</a>
+							</li>
+						</ul>
+						<div class="pagination-start">
+							<a href="#">В начало</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- End Wishlist -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Wishlist -->
+
+</main>
+
+<!--#include virtual="/parts/footer.html" -->
