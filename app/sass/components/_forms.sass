@@ -4,6 +4,20 @@
 ::placeholder
 	color: $text-400
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+	display: none
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+input[type=number]
+	-moz-appearance: textfield
+
 input, textarea
 	outline: none
 	font-family: $userfont
@@ -54,6 +68,9 @@ label
 	// Checkbox
 	&-checkbox
 		position: relative
+		display: flex
+		flex-wrap: wrap
+		align-items: center
 		input[type="checkbox"]
 			position: absolute
 			top: 0
@@ -62,25 +79,31 @@ label
 		&-label
 			user-select: none
 			position: relative
-			display: block
-			margin-bottom: 10px
-			padding-left: 28px
+			width: 100%
+			min-height: 20px
+			margin-bottom: 8px
+			padding-top: 2px
+			padding-left: 32px
 			color: $text-500
-			+font-size(xs)
+			+font-size(xxs)
+			sup
+				color: $text-400
 			&::before,
 			&::after
 				content: ''
+				flex: 0 0 auto
 				position: absolute
 				top: 0
 				left: 0
-				width: 24px
-				height: 24px
+				width: 20px
+				height: 20px
 				border-radius: 2px
 				border: 1px solid $text-200
 				background-color: $white
 				transition: border .3s ease, opacity .15s ease
 			&::after
-				background: url('../images/dist/icons/checked.svg') no-repeat center/14px
+				border-color: $green
+				background: $green url('../images/dist/icons/checked-white.svg') no-repeat center/10px
 				opacity: 0
 			&:hover
 				&::before,
@@ -97,7 +120,10 @@ label
 		.switch-input-mask
 			margin-top: 10px
 			.form-checkbox-label
+				display: block
+				min-height: auto
 				margin-bottom: 0
+				padding-top: 0
 				padding-left: 25px
 				color: $text-400
 				+font-size(xxs)
@@ -107,7 +133,7 @@ label
 					height: 16px
 					border-radius: 2px
 				&::after
-					background-size: 10px
+					background: url('../images/dist/icons/checked.svg') no-repeat center/10px
 
 	// Form group label
 	&-group-label

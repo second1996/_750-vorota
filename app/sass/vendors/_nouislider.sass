@@ -1,0 +1,44 @@
+/* ==========================================================================
+	 Import noUiSlider
+	 ========================================================================== */
+@import 'node_modules/nouislider/distribute/nouislider.min'
+
+
+/* ==========================================================================
+	 noUiSlider customize
+	 ========================================================================== */
+.noUi-target
+	background-color: $text-200
+
+.noUi-horizontal
+	height: 1px
+	border: 0
+	.noUi-handle
+		top: -9px
+		right: -9px
+		width: 18px
+		height: 18px
+
+.noUi-handle
+	cursor: pointer
+	outline: none
+	border-radius: 50%
+	background-color: $yellow
+	border: none
+	box-shadow: none
+	&::before
+		display: none
+	&::after
+		top: 50%
+		left: 50%
+		width: 5px
+		height: 5px
+		border-radius: 50%
+		background-color: $white
+		transform: translate(-50%, -50%)
+
+.noUi-connects
+	overflow: visible
+.noUi-connect
+	height: 2px
+	background-color: $text-200

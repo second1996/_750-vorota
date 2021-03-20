@@ -19,7 +19,7 @@ $('.shop-promo .btn-close').on('click', function () {
 })
 
 // Check if «hide-shop-promo set «true» in sessionStorage...
-if( sessionStorage.getItem('shop-promo') == 'hide' ) {
+if (sessionStorage.getItem('shop-promo') == 'hide') {
 	// ... and then hide this
 	$('.shop-promo').hide()
 } else {
@@ -37,7 +37,7 @@ function switch_phone_mask(selector) {
 	var switch_phone_mask_checkbox = $(selector).find('input[type="checkbox"]'),
 			switch_phone_mask_input = switch_phone_mask_checkbox.parents('.form-group').find('input[type="tel"]');
 
-	if( switch_phone_mask_checkbox.is(':checked') ) {
+	if (switch_phone_mask_checkbox.is(':checked')) {
 		switch_phone_mask_input.mask('+7 (999) 999-99-99')
 		switch_phone_mask_input.attr('placeholder', '+7 (___) ___ __ __')
 	} else {
@@ -62,7 +62,7 @@ $('.switch-input-mask').each(function(index, element) {
  * Product card gallery slideshow on hover
  *-------------------------------------------------------------------------------------------------------------------------------------------
 */
-if( window.matchMedia('(min-width: 992px)').matches ) {
+if (window.matchMedia('(min-width: 992px)').matches) {
 	$(document).on('mouseenter', '.card-product .card-gallery-item', function() {
 		$(this).siblings().removeClass('_active')
 		$(this).addClass('_active')

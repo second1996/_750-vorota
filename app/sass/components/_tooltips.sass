@@ -1,0 +1,21 @@
+.tooltip
+	&.show
+		opacity: 1
+	&.bs-tooltip-top
+		.arrow::before
+			border-top-color: $text-500
+	&.bs-tooltip-left
+		.arrow::before
+			border-left-color: $text-500
+	&.bs-tooltip-right
+		.arrow::before
+			border-right-color: $text-500
+	&.bs-tooltip-bottom
+		.arrow::before
+			border-bottom-color: $text-500
+	&-inner
+		padding: 16px
+		border-radius: 8px
+		box-shadow: $box-shadow
+		background-color: $text-500
+		+font-size(xxs)

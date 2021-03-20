@@ -1,2 +1,74 @@
 @import '../helpers/helpers'
 
+.page-aside
+	flex: 0 0 auto
+	width: 200px
+	margin-right: 24px
+	box-sizing: content-box
+	+media-breakpoint-down(md)
+		pointer-events: none
+		overflow-x: hidden
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 999
+		padding: 24px 32px
+		background-color: $white
+		visibility: hidden
+		opacity: 0
+		transform: translateX(-10px)
+		transition: $trs
+		+media-breakpoint-down(xs)
+			width: 100%
+			max-width: 375px
+			box-sizing: border-box
+			padding: 16px 16px 24px
+	&._is-active
+		pointer-events: auto
+		visibility: visible
+		opacity: 1
+		transform: none
+
+
+	.widget
+		&-item
+			&:not(:first-child)
+				margin-top: 24px
+				padding-top: 24px
+				border-top: 1px solid $text-200
+		&-title
+		&-inner
+			.categories
+				> li
+					&:not(:last-child)
+						margin-bottom: 8px
+					> a
+						display: block
+			.managers
+				.manager
+					display: flex
+					flex-direction: column
+					align-items: center
+					padding: 24px 16px
+					border-radius: 8px
+					background-color: $background
+					text-align: center
+					&:not(:last-child)
+						margin-bottom: 8px
+					&-photo
+						width: 112px
+						height: 112px
+						border-radius: 50%
+					&-name
+						display: block
+						margin-top: 12px
+						color: $text-500
+						font-size: 15px
+						line-height: 20px
+					&-post
+						display: block
+						margin-top: 4px
+						color: $text-400
+						+font-size(xxs)

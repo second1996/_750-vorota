@@ -9,7 +9,10 @@ require('../../node_modules/bootstrap/js/dist/util.js') // Bootstrap Util lib
 require('../../node_modules/bootstrap/js/dist/modal.js') // Bootstrap Modal
 require('../../node_modules/bootstrap/js/dist/dropdown.js') // Bootstrap Dropdown
 require('../../node_modules/bootstrap/js/dist/tab.js') // Bootstrap Tab
+require('../../node_modules/bootstrap/js/dist/collapse.js') // Bootstrap Collapse (Accordion)
+require('../../node_modules/bootstrap/js/dist/tooltip.js') // Bootstrap Tooltip
 require('../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js') // jQuery Mask
+require('../../node_modules/nouislider/distribute/nouislider.min.js') // noUiSlider (JavaScript Range Slider)
 
 // Import Fancybox
 require('../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js') // Fancybox
@@ -24,6 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	*/
 	require('./_scripts.js')
 	require('./_sliders.js')
+	require('./_shop.js')
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Bootstrap Tooltip
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('[data-toggle="tooltip"]').tooltip()
 
 
 	/**

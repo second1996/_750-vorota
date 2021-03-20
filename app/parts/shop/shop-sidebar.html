@@ -1,0 +1,188 @@
+<!-- Shop filters -->
+<div class="widget-item shop-filters">
+	<div class="shop-filters-heading mb-24">
+		<span class="title text-sm w-medium">Фильтры</span>
+		<button class="btn btn-close">
+			<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+		</button>
+	</div>
+	<div class="widget-inner">
+		<form class="filter form" id="shop-filters">
+			<div class="filter-item">
+				<div class="filter-header mb-16">Цена, руб</div>
+				<div class="filter-slider">
+					<div class="filter-slider-handle" data-slidermin="500" data-slidermax="28850"></div>
+					<div class="filter-slider-range">
+						<input type="number" name="p-price-from" id="p-price-from" value="2500" class="form-control filter-slider-from">
+						<input type="number" name="p-price-to" id="p-price-to" value="10000" class="form-control filter-slider-to">
+					</div>
+				</div>
+			</div><!-- /.filter-item -->
+			<div class="filter-item">
+				<div class="filter-header" id="filter-header-1">
+					<button class="btn btn-dropdown" type="button" data-toggle="collapse" data-target="#filter-body-1" aria-expanded="true" aria-controls="filter-body-1">
+						Бренды
+					</button>
+					<span class="hint" data-toggle="tooltip" data-placement="bottom" title="Компания-производитель"></span>
+				</div>
+				<div id="filter-body-1" class="filter-collapse collapse show" aria-labelledby="filter-header-1">
+					<div class="filter-body">
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-1">
+							<label for="filter-brands-1" class="form-checkbox-label"><a href="#" class="blue-link">Came</a> <sup>11</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-2">
+							<label for="filter-brands-2" class="form-checkbox-label"><a href="#" class="blue-link">Nice</a> <sup>78</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-3">
+							<label for="filter-brands-3" class="form-checkbox-label"><a href="#" class="blue-link">FAAC</a> <sup>78</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-4">
+							<label for="filter-brands-4" class="form-checkbox-label"><a href="#" class="blue-link">DoorHan</a> <sup>45</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-brands-5">
+							<label for="filter-brands-5" class="form-checkbox-label"><a href="#" class="blue-link">AN-Motors</a> <sup>56</sup></label>
+						</div>
+						<!-- Hidden content -->
+						<div class="filter-more">
+							<button type="button" class="filter-more-btn btn">Показать все</button>
+							<div class="filter-more-content">
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-brands-6">
+									<label for="filter-brands-6" class="form-checkbox-label"><a href="#" class="blue-link">Comunello</a> <sup>78</sup></label>
+								</div>
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-brands-7">
+									<label for="filter-brands-7" class="form-checkbox-label"><a href="#" class="blue-link">Came</a> <sup>44</sup></label>
+								</div>
+							</div>
+						</div>
+						<!-- End Hidden content -->
+					</div>
+				</div>
+			</div><!-- /.filter-item -->
+			<div class="filter-item">
+				<div class="filter-header" id="filter-header-2">
+					<button class="btn btn-dropdown" type="button" data-toggle="collapse" data-target="#filter-body-2" aria-expanded="true" aria-controls="filter-body-2">Тип привода</button>
+					<span class="hint" data-toggle="tooltip" data-placement="bottom" title="Тип привода откатных ворот"></span>
+				</div>
+				<div id="filter-body-2" class="filter-collapse collapse show" aria-labelledby="filter-header-2">
+					<div class="filter-body">
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-1">
+							<label for="filter-pryvod-1" class="form-checkbox-label">Линейный <sup>11</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-2" checked>
+							<label for="filter-pryvod-2" class="form-checkbox-label">Осевой <sup>24</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-3">
+							<label for="filter-pryvod-3" class="form-checkbox-label">Откатной <sup>32</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-pryvod-4">
+							<label for="filter-pryvod-4" class="form-checkbox-label">Подъемной-поворотный <sup>146</sup></label>
+						</div>
+						<!-- Hidden content -->
+						<div class="filter-more">
+							<button type="button" class="filter-more-btn btn">Показать все</button>
+							<div class="filter-more-content">
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-pryvod-5">
+									<label for="filter-pryvod-5" class="form-checkbox-label">Потолочный <sup>14</sup></label>
+								</div>
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-pryvod-6">
+									<label for="filter-pryvod-6" class="form-checkbox-label">Рычажный <sup>11</sup></label>
+								</div>
+							</div>
+						</div>
+						<!-- End Hidden content -->
+					</div><!-- /.filter-body -->
+				</div><!-- /.filter-collapse -->
+			</div><!-- /.filter-item -->
+			<div class="filter-item">
+				<div class="filter-header" id="filter-header-3">
+					<button class="btn btn-dropdown" type="button" data-toggle="collapse" data-target="#filter-body-3" aria-expanded="true" aria-controls="filter-body-3">Тип изделия</button>
+				</div>
+				<div id="filter-body-3" class="filter-collapse collapse show" aria-labelledby="filter-header-3">
+					<div class="filter-body">
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-1">
+							<label for="filter-profil-1" class="form-checkbox-label">Зубчатая рейка <sup>8</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-2">
+							<label for="filter-profil-2" class="form-checkbox-label">Крепеж <sup>19</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-3">
+							<label for="filter-profil-3" class="form-checkbox-label">Крепеж для рейки <sup>4</sup></label>
+						</div>
+						<div class="form-checkbox">
+							<input type="checkbox" id="filter-profil-4">
+							<label for="filter-profil-4" class="form-checkbox-label">Профиль направляющий <sup>37</sup></label>
+						</div>
+						<!-- Hidden content -->
+						<div class="filter-more">
+							<button type="button" class="filter-more-btn btn">Показать все</button>
+							<div class="filter-more-content">
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-profil-5">
+									<label for="filter-profil-5" class="form-checkbox-label">Потолочный <sup>14</sup></label>
+								</div>
+								<div class="form-checkbox">
+									<input type="checkbox" id="filter-profil-6">
+									<label for="filter-profil-6" class="form-checkbox-label">Рычажный <sup>11</sup></label>
+								</div>
+							</div>
+						</div>
+						<!-- End Hidden content -->
+					</div><!-- /.filter-body -->
+				</div><!-- /.filter-collapse -->
+			</div><!-- /.filter-item -->
+		</form>
+	</div><!-- /.widget-inner -->
+</div><!-- /.widget-item -->
+<!-- End Shop filters -->
+
+<!-- Categories -->
+<div class="widget-item">
+	<h4 class="widget-title mb-24 text-sm w-medium">Смежные категории</h4>
+	<div class="widget-inner">
+		<ul class="categories">
+			<li><a href="#">Видеонаблюдение</a></li>
+			<li><a href="#">Контроль доступа</a></li>
+			<li><a href="#">Шлагбаумы</a></li>
+			<li><a href="#">Домофоны</a></li>
+		</ul>
+	</div><!-- /.widget-inner -->
+</div><!-- /.widget-item -->
+
+<!-- Managers -->
+<div class="widget-item">
+	<h4 class="widget-title mb-16 text-sm w-medium">Вас проконсультируют специалисты</h4>
+	<div class="widget-inner">
+		<div class="managers">
+			<div class="manager">
+				<div class="manager-photo img-cover">
+					<img src="images/dist/manager-1.png" alt="Алексей Иванов">
+				</div>
+				<span class="manager-name">Алексей Иванов</span>
+				<span class="manager-post">Менеджер по продажам</span>
+			</div><!-- /.manager -->
+			<div class="manager">
+				<div class="manager-photo img-cover">
+					<img src="images/dist/manager-2.png" alt="Марина Константиновская">
+				</div>
+				<span class="manager-name">Марина Константиновская</span>
+				<span class="manager-post">Менеджер по продажам</span>
+			</div><!-- /.manager -->
+		</div><!-- /.managers -->
+	</div><!-- /.widget-inner -->
+</div><!-- /.widget-item -->
