@@ -1,0 +1,61 @@
+/* ==========================================================================
+	 Base customize for Rating stars
+	 ========================================================================== */
+.rating
+	display: flex
+	align-items: center
+	.icon-rating
+		width: 24px
+		height: 24px
+		+media-breakpoint-down(sm)
+			width: 20px
+			height: 20px
+		&:not(:last-child)
+			margin-right: 4px
+		&:not(.icon-rating--filled)
+			fill: $text-200
+		&--filled
+			fill: $yellow
+
+
+/* ==========================================================================
+	 Form Rating stars
+	 ========================================================================== */
+.rating-stars
+	display: flex
+	> fieldset
+		position: relative
+		display: inline-block
+		margin-left: -2px
+		margin-right: -2px
+		border: none
+		&:not(:checked)
+			> label
+				cursor: pointer
+				float: right
+				overflow: hidden
+				white-space: nowrap
+				padding-left: 2px
+				padding-right: 2px
+				font-size: 0
+				&::before
+					content: ''
+					display: inline-block
+					width: 24px
+					height: 24px
+					background-image: url('../images/dist/icons/star.svg')
+					background-size: cover
+					background-position: center center
+				&:hover:before,
+				&:hover ~ label:before
+					background-image: url('../images/dist/icons/star-filled.svg')
+			> input
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+				clip: rect(0,0,0,0)
+		> label
+			margin-bottom: 0
+		input:checked ~ label:before
+			background-image: url('../images/dist/icons/star-filled.svg')

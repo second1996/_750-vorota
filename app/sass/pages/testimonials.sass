@@ -1,0 +1,27 @@
+.testimonials
+	&-form
+		position: relative
+		padding: 24px
+		background-color: $background
+		+media-breakpoint-down(lg)
+			margin-top: 48px
+		+media-breakpoint-down(xs)
+			padding-left: 0
+			padding-right: 0
+			background-color: $trsp
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: -100%
+				right: -100%
+				bottom: 0
+				z-index: -1
+				background-color: $background
+		.btn-submit
+			width: 100%
+			max-width: 260px
+			+media-breakpoint-down(sm)
+				max-width: 100%
+		&-rating
+			padding-left: 8px

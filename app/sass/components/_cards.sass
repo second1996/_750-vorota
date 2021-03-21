@@ -11,6 +11,25 @@
 
 
 /* ==========================================================================
+	 Simple card
+	 ========================================================================== */
+.card-simple
+	&:hover
+		.card-photo img
+			transform: scale(1.1)
+	.card-photo
+		height: 190px
+		margin-bottom: 16px
+		border: 1px solid $border
+		background-color: $background
+		img
+			transform: scale(1.01)
+			transition: transform .35s ease
+	.card-meta
+		margin-top: 16px
+
+
+/* ==========================================================================
 	 Product card
 	 ========================================================================== */
 .products-slider,
@@ -294,21 +313,6 @@
 		+media-breakpoint-down(xxs)
 			flex-direction: column
 			align-items: flex-start
-		.rating
-			display: flex
-			align-items: center
-			.icon-rating
-				width: 24px
-				height: 24px
-				+media-breakpoint-down(sm)
-					width: 20px
-					height: 20px
-				&:not(:last-child)
-					margin-right: 4px
-				&:not(.icon-rating--filled)
-					fill: $text-200
-				&--filled
-					fill: $yellow
 		.date
 			color: $text-400
 			font-size: 13px

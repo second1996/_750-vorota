@@ -11,7 +11,7 @@ article, .article
 	ul,
 	ol,
 	blockquote, table
-		margin-bottom: 32px
+		margin-bottom: 24px
 		+media-breakpoint-down(md)
 			margin-bottom: 16px
 
@@ -36,17 +36,27 @@ article, .article
 		> li
 			position: relative
 			display: flex
+			padding-top: 8px
+			+media-breakpoint-down(xs)
+				padding-top: 0
 			&:not(:last-child)
-				margin-bottom: 16px
+				margin-bottom: 8px
+				+media-breakpoint-down(xs)
+					margin-bottom: 16px
 			&::before
 				content: ''
 				flex: 0 0 auto
+				position: relative
+				top: -8px
 				display: block
 				width: 40px
 				height: 40px
 				margin-right: 16px
 				border-radius: 50%
 				background: $yellow url('../images/dist/icons/checked-dark.svg') no-repeat center/14px
+				+media-breakpoint-down(sm)
+					top: -10px
 				+media-breakpoint-down(xs)
+					top: -4px
 					width: 30px
 					height: 30px

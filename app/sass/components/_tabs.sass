@@ -24,3 +24,101 @@
 
 .tab-content
 	margin-top: 32px
+
+
+/* ==========================================================================
+	 Dark theme for tabs
+	 ========================================================================== */
+.nav-tabs--dark
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	border-bottom: 1px solid $text-200
+	> .nav-link
+		padding: 0 0 20px
+		border-radius: 0
+		margin-right: 32px
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -1px
+			border-bottom: 2px solid $text-500
+			opacity: 0
+			transition: opacity .3s ease
+		&.active
+			cursor: default
+			background-color: $white
+			&::after
+				opacity: 1
+		&:hover
+			background-color: $white
+
+
+/* ==========================================================================
+	 Tabs & Accordion
+	 ========================================================================== */
+.tabs-accordion
+	.nav-tabs
+		display: none
+	.tab-content
+		margin-top: 46px
+		+media-breakpoint-down(md)
+			margin-top: 32px
+		+media-breakpoint-down(xs)
+			margin-top: 24px
+	.tab-pane-body article,
+	.tab-pane-body .article,
+	.tab-pane-body .table-attributes
+		max-width: 870px
+
+	// Show tabs on <xxl> screens
+	+media-breakpoint-up(xxl)
+		.nav-tabs
+			display: flex
+		.tab-pane
+			border: none
+			&-header
+				display: none
+			&-collapse
+				display: block
+
+	// Hide tabs on <xl> screens and shot accordions
+	+media-breakpoint-down(xl)
+		.tab-pane
+			display: block !important
+			opacity: 1
+			&-header
+				a
+					position: relative
+					display: flex
+					align-items: center
+					justify-content: space-between
+					padding-top: 16px
+					padding-bottom: 16px
+					text-transform: uppercase
+					&::before
+						position: absolute
+						content: ''
+						top: 0
+						left: 0
+						right: 0
+						border-top: 1px solid $border
+						+media-breakpoint-down(sm)
+							left: -100%
+							right: -100%
+					.icon
+						fill: $text-400
+						width: 16px
+						height: 16px
+						transition: transform .3s ease
+					&[aria-expanded="false"]
+						.icon
+							transform: rotate(90deg)
+					&[aria-expanded="true"]
+						.icon
+							transform: rotate(-90deg)
+			&-body
+				padding-top: 8px
+				padding-bottom: 32px
