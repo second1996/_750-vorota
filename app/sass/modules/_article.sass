@@ -1,6 +1,6 @@
 @import '../helpers/helpers'
 
-article
+article, .article
 	margin-bottom: -32px
 	+media-breakpoint-down(md)
 		margin-bottom: -16px
@@ -34,8 +34,8 @@ article
 
 	ul
 		> li
-			display: flex
 			position: relative
+			display: flex
 			&:not(:last-child)
 				margin-bottom: 16px
 			&::before

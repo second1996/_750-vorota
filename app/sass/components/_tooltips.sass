@@ -1,3 +1,6 @@
+/* ==========================================================================
+	 Base customize for Tooltip
+	 ========================================================================== */
 .tooltip
 	&.show
 		opacity: 1
@@ -19,3 +22,32 @@
 		box-shadow: $box-shadow
 		background-color: $text-500
 		+font-size(xxs)
+
+
+/* ==========================================================================
+	 Hint flag
+	 ========================================================================== */
+.hint
+	position: relative
+	display: flex
+	width: 16px
+	height: 16px
+	margin-left: 6px
+	border-radius: 50%
+	background-color: $text-300
+	transition: background-color .3s ease
+	&::after
+		content: '?'
+		position: absolute
+		top: 50%
+		left: 50%
+		color: $white
+		font-size: 13px
+		font-weight: $w-bold
+		transform: translate(-50%, -50%)
+		transition: color .3s ease
+	&:hover
+		cursor: help
+		background-color: $yellow
+		&::after
+			color: $text-500

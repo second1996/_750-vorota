@@ -275,3 +275,42 @@
 						height: 48px
 				.btn-submit
 					min-width: 200px
+
+
+/* ==========================================================================
+	 Privacy policy modal
+	 ========================================================================== */
+.modal-policy
+	.modal-dialog
+		max-width: 875px
+
+	.modal-header
+		+media-breakpoint-up(lg)
+			padding: 48px 32px
+			justify-content: center
+			.title
+				padding-right: 0
+			.btn-close
+				position: absolute
+				top: 16px
+				right: 16px
+
+	.modal-body
+		+media-breakpoint-up(lg)
+			padding: 0px 32px 32px
+
+		ul
+			margin-bottom: 16px
+			> li
+				position: relative
+				display: flex
+				&:not(:last-child)
+					margin-bottom: 4px
+				&::before
+					content: ''
+					width: 6px
+					height: 6px
+					margin-top: 8px
+					margin-right: 12px
+					border-radius: 50%
+					background: $text-400

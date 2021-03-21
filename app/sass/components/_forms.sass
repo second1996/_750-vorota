@@ -67,7 +67,7 @@ label
 	// Textarea
 	&-textarea
 		resize: none
-		padding: 8px 16px
+		padding: 16px
 
 	// Checkbox
 	&-checkbox
@@ -75,6 +75,7 @@ label
 		display: flex
 		flex-wrap: wrap
 		align-items: center
+		margin-bottom: 8px
 		input[type="checkbox"]
 			position: absolute
 			top: 0
@@ -84,12 +85,11 @@ label
 			user-select: none
 			position: relative
 			width: 100%
-			min-height: 20px
-			margin-bottom: 8px
-			padding-top: 2px
+			margin-bottom: 0
 			padding-left: 32px
 			color: $text-500
-			+font-size(xxs)
+			font-size: 15px
+			line-height: 20px
 			sup
 				color: $text-400
 			&::before,
@@ -116,6 +116,73 @@ label
 		input:checked + label::after
 			opacity: 1
 
+	// Checkbox
+	&-radio
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-bottom: 8px
+		input[type="radio"]
+			position: absolute
+			top: 0
+			left: 3px
+			opacity: 0
+		&-label
+			user-select: none
+			position: relative
+			width: 100%
+			padding-top: 2px
+			margin-bottom: 0
+			padding-left: 32px
+			color: $text-500
+			font-size: 15px
+			line-height: 20px
+			sup
+				color: $text-400
+			&::before
+				content: ''
+				flex: 0 0 auto
+				position: absolute
+				top: 0
+				left: 0
+				width: 24px
+				height: 24px
+				border-radius: 50%
+				border: 1px solid $text-200
+				background-color: $white
+				transition: $trs
+			&::after
+				content: ''
+				flex: 0 0 auto
+				position: absolute
+				top: 8px
+				left: 8px
+				z-index: 2
+				display: block
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background-color: $white
+				opacity: 0
+				transition: $trs
+			&:hover
+				&::before,
+				&::after
+					border-color: $green
+		input:checked + label
+			&::before
+				border-color: $trsp
+				background-color: $green
+			&::after
+				opacity: 1
+		&-descr
+			flex: 0 0 100%
+			padding-top: 2px
+			padding-left: 32px
+			color: $text-400
+			+font-size(xxs)
+
 	// Select
 	&-select
 		color: $text-400
@@ -130,11 +197,11 @@ label
 			margin-bottom: 24px
 	&-group
 		.switch-input-mask
+			margin-bottom: 0
 			margin-top: 10px
 			.form-checkbox-label
 				display: block
 				min-height: auto
-				margin-bottom: 0
 				padding-top: 0
 				padding-left: 25px
 				color: $text-400
