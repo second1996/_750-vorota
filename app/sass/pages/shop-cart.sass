@@ -1,3 +1,6 @@
+/* ==========================================================================
+	 Shop Cart/Checkout
+	 ========================================================================== */
 .s-cart
 
 	// Cart table
@@ -229,6 +232,22 @@
 		margin-top: 48px
 		padding-left: 24px
 		padding-right: 40px
+		+media-breakpoint-down(md)
+			padding-left: 24px
+			padding-right: 24px
+		+media-breakpoint-down(sm)
+			padding-left: 0
+			padding-right: 0
+			background-color: $trsp
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: -100%
+				right: -100%
+				bottom: 0
+				z-index: -1
+				background-color: $background
 		.checkout
 			counter-reset: checkout-step
 
@@ -250,19 +269,32 @@
 						font-size: 20px
 					.checkbox
 						margin-top: 6px
+						.form-checkbox-label
+							+media-breakpoint-down(sm)
+								+font-size(xxs)
+							&::before
+								border: 2px solid $green
 				&-form
 					display: none
 					margin-top: 16px
 					padding-left: 56px
+					+media-breakpoint-down(sm)
+						padding-left: 0
+					+media-breakpoint-down(xs)
+						.form-group
+							margin-top: 24px
 					&._is-active
 						display: block
-			
+					.btn-submit
+						width: 100%
+
 			// Checkout steps
 			&-steps
 				margin-top: 24px
 				border-top: 1px solid $border
 				&._is-hidden
 					display: none
+
 			// Checkout step
 			&-step
 				padding-top: 24px
@@ -294,6 +326,8 @@
 						margin-top: 8px
 				&-body
 					padding-left: 56px
+					+media-breakpoint-down(sm)
+						padding-left: 0
 					[class="col-auto"]
 						flex-basis: 292px
 					.form-radio
@@ -305,6 +339,10 @@
 							position: absolute
 							top: 3px
 							left: 100%
+					table
+						max-width: 480px
+						td
+							width: 50%
 
 			// Checkout Guarantee block
 			&-guarantee
@@ -318,18 +356,27 @@
 					margin-bottom: 24px
 					padding: 16px 32px
 					border: 1px solid $text-200
+					+media-breakpoint-down(md)
+						flex-direction: column
+						height: auto
+						padding: 0
+						border: none
 					.photo
 						flex: 0 0 auto
 						width: 104px
 						height: 104px
 					.text
 						margin-left: 40px
+						+media-breakpoint-down(md)
+							margin-top: 16px
+							margin-left: 0
+							text-align: center
 
 			// Checkout Summary
 			&-summary
-				margin-top: 24px
 				padding-top: 32px
-				border-top: 1px solid $border
+				+media-breakpoint-down(md)
+					margin-top: 0
 				&-heading
 					display: flex
 					.picture
@@ -352,13 +399,136 @@
 					align-items: center
 					margin-top: 56px
 					padding-left: 56px
+					+media-breakpoint-down(sm)
+						margin-top: 24px
+						padding-left: 0
+					+media-breakpoint-down(xs)
+						flex-direction: column
 					.btn-submit
 						flex: 0 1 430px
+						+media-breakpoint-down(xs)
+							order: 1
+							flex: 0 0 auto
+							width: 100%
 					.policy
 						display: inline-block
 						max-width: 350px
 						margin-left: 32px
+						+media-breakpoint-down(xs)
+							order: 0
+							max-width: 100%
+							margin-left: 0
+							margin-bottom: 16px
+							padding-top: 24px
+							border-top: 1px solid $border
 						> a
 							color: $green
 							&:hover
 								text-decoration: underline
+
+
+/* ==========================================================================
+	 Shop Order complete
+	 ========================================================================== */
+.s-order
+
+	// Order message
+	&-message
+		display: flex
+		align-items: center
+		padding: 24px 30px
+		border: 1px solid $text-200
+		background-color: $white
+		+media-breakpoint-down(sm)
+			padding: 16px 24px
+		+media-breakpoint-down(xs)
+			flex-direction: column
+			padding: 0
+			border: none
+		.picture
+			flex: 0 0 auto
+			img
+				width: 120px
+				height: 120px
+		.message
+			margin-left: 35px
+			+media-breakpoint-down(xs)
+				margin-top: 16px
+				margin-left: 0
+				text-align: center
+			&-title
+				margin-bottom: 8px
+			&-descr
+				margin-bottom: 0
+
+	// Order details
+	&-details
+		padding-left: 24px
+		padding-right: 24px
+		+media-breakpoint-down(xs)
+			padding: 32px 0
+			background-color: $trsp
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: -100%
+				right: -100%
+				bottom: 0
+				z-index: -1
+				background-color: $background
+		.order
+
+			// Checkout steps
+			&-steps
+				counter-reset: checkout-step
+
+			// Checkout step
+			&-step
+				padding-top: 24px
+				&:not(:last-child)
+					padding-bottom: 32px
+					border-bottom: 1px solid $border
+				&-heading
+					display: flex
+					margin-bottom: 16px
+					.number
+						flex: 0 0 auto
+						position: relative
+						display: inline-flex
+						align-items: center
+						justify-content: center
+						width: 40px
+						height: 40px
+						margin-right: 16px
+						border-radius: 50%
+						background-color: $yellow
+						color: $text-500
+						font-size: 20px
+						&::before
+							counter-increment: checkout-step
+							content: counter(checkout-step)
+							+font-size(xs)
+							font-weight: $w-bold
+					.title
+						margin-top: 8px
+				&-body
+					padding-left: 56px
+					+media-breakpoint-down(sm)
+						padding-left: 0
+					table
+						max-width: 480px
+						.value, .key
+							width: 50%
+							padding-top: 2px
+							padding-bottom: 2px
+						.value
+							vertical-align: top
+
+	// Order back
+	&-back
+		.btn
+			width: 100%
+			max-width: 280px
+			+media-breakpoint-down(sm)
+				max-width: 100%

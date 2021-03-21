@@ -308,9 +308,12 @@
 					margin-bottom: 4px
 				&::before
 					content: ''
+					flex: 0 0 auto
 					width: 6px
 					height: 6px
 					margin-top: 8px
 					margin-right: 12px
 					border-radius: 50%
 					background: $text-400
+					+media-breakpoint-down(sm)
+						margin-top: 7px

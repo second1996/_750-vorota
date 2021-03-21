@@ -186,7 +186,7 @@
 				<!-- End Cart actions -->
 
 				<!-- Checkout -->
-				<div class="s-cart-checkout section-blue rounded-8">
+				<section class="s-cart-checkout section section-blue rounded-8">
 					<h2 class="mb-32 text-center">Оформление заказа</h2>
 					<form class="s-cart-checkout-form checkout form">
 
@@ -202,14 +202,14 @@
 								</div>
 							</div>
 							<div class="checkout-support-form">
-								<div class="row">
-									<div class="col-3">
+								<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+									<div class="col">
 										<div class="form-group-label">
 											<input type="text" class="form-control" id="quick-order-name" placeholder="Имя" autocomplete="off" required>
 											<label for="quick-order-name">Имя</label>
 										</div>
 									</div><!-- /.col -->
-									<div class="col-3">
+									<div class="col">
 										<div class="form-group">
 											<div class="form-group-label">
 												<input type="tel" class="form-control" id="quick-order-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
@@ -220,6 +220,9 @@
 												<label for="quick-order-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
 											</div>
 										</div>
+									</div><!-- /.col -->
+									<div class="col">
+										<button type="submit" class="btn btn-lg btn-yellow btn-submit">Заказать</button>
 									</div><!-- /.col -->
 								</div><!-- /.row -->
 							</div><!-- /.checkout-support-form -->
@@ -235,6 +238,7 @@
 
 						<!-- Checkout Steps -->
 						<div class="checkout-steps">
+
 							<!-- Checkout step #1 -->
 							<div class="checkout-step">
 								<div class="checkout-step-heading">
@@ -242,14 +246,14 @@
 									<div class="title text-sm w-medium">Контактная информация</div>
 								</div><!-- /.checkout-step-heading -->
 								<div class="checkout-step-body">
-									<div class="row">
-										<div class="col-3">
+									<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-name" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-name">Имя</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group">
 												<div class="form-group-label">
 													<input type="tel" class="form-control" id="checkout-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
@@ -261,7 +265,7 @@
 												</div>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="email" class="form-control" id="checkout-email" placeholder="E-mail" autocomplete="off" required>
 												<label for="checkout-email">E-mail</label>
@@ -269,7 +273,8 @@
 										</div><!-- /.col -->
 									</div><!-- /.row -->
 								</div><!-- /.checkout-step-body -->
-							</div>
+							</div><!-- /.checkout-step -->
+
 							<!-- Checkout step #2 -->
 							<div class="checkout-step">
 								<div class="checkout-step-heading">
@@ -277,8 +282,8 @@
 									<div class="title text-sm w-medium">Доставка, самовывоз</div>
 								</div><!-- /.checkout-step-heading -->
 								<div class="checkout-step-body">
-									<div class="row">
-										<div class="col-3">
+									<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+										<div class="col">
 											<div class="form-group form-radio">
 												<input type="radio" name="checkout-delivery[]" id="checkout-delivery-1" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-delivery-1" class="form-radio-label">
@@ -288,7 +293,7 @@
 												<span class="form-radio-descr">Бесплатно</span>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-radio">
 												<input type="radio" name="checkout-delivery[]" id="checkout-delivery-2" placeholder="Имя" autocomplete="off" required checked>
 												<label for="checkout-delivery-2" class="form-radio-label">
@@ -298,7 +303,7 @@
 												<span class="form-radio-descr">От 5 000 руб. бесплатно</span>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-radio">
 												<input type="radio" name="checkout-delivery[]" id="checkout-delivery-3" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-delivery-3" class="form-radio-label">
@@ -309,20 +314,20 @@
 											</div>
 										</div><!-- /.col -->
 									</div><!-- /.row -->
-									<div class="row">
-										<div class="col-3">
+									<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-delivery-city" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-delivery-city">Город</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-delivery-street" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-delivery-street">Улица, дом, квартира</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group">
 												<select class="form-select" name="checkout-delivery-hours" required>
 													<option value="" selected disabled hidden>Время доставки</option>
@@ -334,6 +339,7 @@
 									</div><!-- /.row -->
 								</div><!-- /.checkout-step-body -->
 							</div><!-- /.checkout-step-->
+
 							<!-- Checkout step #3 -->
 							<div class="checkout-step">
 								<div class="checkout-step-heading">
@@ -341,8 +347,8 @@
 									<div class="title text-sm w-medium">Оплата</div>
 								</div><!-- /.checkout-step-heading -->
 								<div class="checkout-step-body">
-									<div class="row">
-										<div class="col-3">
+									<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+										<div class="col">
 											<div class="form-group form-radio">
 												<input type="radio" name="checkout-payments[]" id="checkout-payments-1" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-1" class="form-radio-label">
@@ -351,7 +357,7 @@
 												</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-radio">
 												<input type="radio" name="checkout-payments[]" id="checkout-payments-2" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-2" class="form-radio-label">
@@ -360,7 +366,7 @@
 												</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-radio">
 												<input type="radio" name="checkout-payments[]" id="checkout-payments-3" placeholder="Имя" autocomplete="off" required checked>
 												<label for="checkout-payments-3" class="form-radio-label">
@@ -370,56 +376,56 @@
 											</div>
 										</div><!-- /.col -->
 									</div><!-- /.row -->
-									<div class="row">
-										<div class="col-3">
+									<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-company" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-company">Компания / ИП</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-inn" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-inn">ИНН</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-bank" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-bank">Банк получателя</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-rs" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-rs">Р/С</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-ks" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-ks">К/С</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-kpp" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-kpp">КПП банка</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-ogrn" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-ogrn">ОГРН/ОГРНИП</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-bik" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-bik">БИК</label>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-3">
+										<div class="col">
 											<div class="form-group form-group-label">
 												<input type="text" class="form-control" id="checkout-payments-inn-bank" placeholder="Имя" autocomplete="off" required>
 												<label for="checkout-payments-inn-bank">ИНН банка</label>
@@ -428,6 +434,7 @@
 									</div><!-- /.row -->
 								</div><!-- /.checkout-step-body -->
 							</div><!-- /.checkout-step-->
+
 							<!-- Checkout step #4 -->
 							<div class="checkout-step">
 								<div class="checkout-step-heading">
@@ -435,11 +442,11 @@
 									<div class="title text-sm w-medium">Подтверждение</div>
 								</div><!-- /.checkout-step-heading -->
 								<div class="checkout-step-body">
-									<div class="checkout-guarantee row">
-										<div class="col-6">
+									<div class="checkout-guarantee row row-cols-1 row-cols-lg-2">
+										<div class="col">
 											<textarea class="checkout-guarantee-message form-textarea" placeholder="Комментарий"></textarea>
 										</div><!-- /.col -->
-										<div class="col-6">
+										<div class="col">
 											<div class="checkout-guarantee-block rounded-8">
 												<div class="photo img-scale">
 													<img src="images/dist/guarantee.svg" alt="14 дней на возврат денег">
@@ -450,24 +457,26 @@
 									</div><!-- /.row -->
 								</div><!-- /.checkout-step-body -->
 							</div><!-- /.checkout-step-->
-						</div><!-- /.checkout-steps-->
 
-						<!-- Checkout Summary-->
-						<div class="checkout-summary">
-							<div class="checkout-summary-heading">
-								<div class="picture">
-									<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+							<!-- Checkout Summary-->
+							<div class="checkout-summary">
+								<div class="checkout-summary-heading">
+									<div class="picture">
+										<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+									</div>
+									<div class="title title text-sm w-medium">Ваш заказ будет обработан в течении <span class="text-green">30 минут</span> рабочего времени (с 9-00 до 18-00 с понедельника по пятницу)</div>
 								</div>
-								<div class="title title text-sm w-medium">Ваш заказ будет обработан в течении <span class="text-green">30 минут</span> рабочего времени (с 9-00 до 18-00 с понедельника по пятницу)</div>
-							</div>
-							<div class="checkout-summary-submit">
-								<button type="submit" class="btn btn-lg btn-green btn-submit">Оформить заказ</button>
-								<span class="policy text-gray-400 text-xxs">Нажимая кнопку "Оформить заказ" вы соглашаетесь на обработку <a href="#privacyPolicyModal" data-toggle="modal">персональных данных.</a></span>
-							</div>
-						</div><!-- /.checkout-summary -->
+								<div class="checkout-summary-submit">
+									<button type="submit" class="btn btn-lg btn-green btn-submit">Оформить заказ</button>
+									<span class="policy text-gray-400 text-xxs">Нажимая кнопку "Оформить заказ" вы соглашаетесь на обработку <a href="#privacyPolicyModal" data-toggle="modal">персональных данных.</a></span>
+								</div>
+							</div><!-- /.checkout-summary -->
+
+						</div>
+						<!-- End Checkout Steps -->
 
 					</form><!-- /.s-cart-checkout-form -->
-				</div>
+				</section>
 				<!-- End Checkout -->
 
 			</div>
