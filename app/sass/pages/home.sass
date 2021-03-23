@@ -111,51 +111,6 @@
 				right: 0
 				bottom: 0
 
-// Section: Advantages
-.h-advantages
-	&-wrapper
-		+media-breakpoint-down(md)
-			overflow-x: auto
-			flex-wrap: nowrap
-			> [class*="col"]
-				flex-basis: 45%
-				max-width: 45%
-				+media-breakpoint-down(xs)
-					flex-basis: 70%
-					max-width: 70%
-	&-item
-		padding: 8px
-		.picture
-			position: relative
-			margin-bottom: 24px
-			+media-breakpoint-down(md)
-				margin-bottom: 16px
-			img
-				position: absolute
-				left: 24px
-				bottom: 24px
-				z-index: 2
-				width: 24px
-				height: 24px
-			.blur
-				position: relative
-				z-index: 1
-				display: block
-				width: 64px
-				height: 64px
-				background: url('../images/icon-bg.png') no-repeat center/100%
-		.title
-			margin-bottom: 8px
-			+media-breakpoint-down(lg)
-				+font-size(xxs)
-				font-weight: $w-bold
-		.descr
-			margin-bottom: 0
-			color: $text-400
-			+media-breakpoint-down(lg)
-				font-size: 13px
-				line-height: 20px
-
 // Section: Questions form
 .h-questions
 	+media-breakpoint-down(md)

@@ -29,7 +29,8 @@
 	 ========================================================================== */
 .hint
 	position: relative
-	display: flex
+	display: inline-block
+	vertical-align: baseline
 	width: 16px
 	height: 16px
 	margin-left: 6px
@@ -47,7 +48,6 @@
 		transform: translate(-50%, -50%)
 		transition: color .3s ease
 	&:hover
-		cursor: help
 		background-color: $yellow
 		&::after
 			color: $text-500

@@ -1,0 +1,29 @@
+.faq
+	&-section
+		&-title
+		&-list
+			margin-bottom: 0
+		&-question
+			position: relative
+			padding: 24px
+			border-radius: 8px
+			background-color: $yellow
+			&::after
+				content: ''
+				position: absolute
+				top: 100%
+				left: 32px
+				display: block
+				width: 10px
+				height: 10px
+				border: 10px solid $trsp
+				border-top-color: $yellow
+		&-answer
+			margin-top: 16px
+			margin-bottom: 0
+			padding: 24px
+			border-radius: 8px
+			border: 1px solid $text-200
+			background-color: $white
+			&:not(:last-child)
+				margin-bottom: 24px

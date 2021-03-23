@@ -3473,6 +3473,9 @@ body {
   font-size: 15px;
   line-height: 24px
 }
+body.modal-open {
+  padding-right: 0!important
+}
 body.lock-scroll {
   overflow: hidden;
   height: 100%
@@ -3714,7 +3717,7 @@ hr {
 }
 .article,
 article {
-  margin-bottom: -32px
+  margin-bottom: -24px
 }
 .article blockquote,
 .article h1,
@@ -6113,6 +6116,21 @@ button:focus {
 .btn.btn-secondary:focus {
   background-color: #fff
 }
+.btn.btn-secondary-green {
+  border-color: #dfe3e8;
+  background-color: #fff;
+  color: #27ae60
+}
+.btn.btn-secondary-green:hover {
+  background-color: #27ae60;
+  color: #fff
+}
+.btn.btn-secondary-green:focus {
+  -webkit-box-shadow: 0 0 0 4px rgba(39,174,96,.25);
+  box-shadow: 0 0 0 4px rgba(39,174,96,.25);
+  background-color: #27ae60;
+  color: #fff
+}
 .btn.btn-sm {
   height: 32px;
   padding-left: 12px;
@@ -6326,6 +6344,9 @@ button:focus {
   min-width: 0;
   height: 100%
 }
+.card .card-body {
+  margin-top: 20px
+}
 .card-simple:hover .card-photo img {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -6383,6 +6404,9 @@ button:focus {
 }
 .card-product:hover::before {
   opacity: 1
+}
+.card-product .card-body {
+  margin-top: 0
 }
 .card-product .card-quick-view {
   position: absolute;
@@ -6710,6 +6734,48 @@ button:focus {
 .card-article .card-meta .date {
   display: block;
   color: #6f7278
+}
+.card-instruction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.card-instruction .card-photo {
+  padding: 16px 16px 0
+}
+.card-instruction .card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+.card-instruction .card-meta {
+  margin-bottom: 20px
+}
+.card-instruction .card-meta .title {
+  display: block;
+  line-height: 20px
+}
+.card-instruction .card-meta .descr {
+  margin-top: 8px;
+  margin-bottom: 0;
+  line-height: 20px
+}
+.card-instruction .card-buttons {
+  margin-top: auto
+}
+.card-instruction .card-buttons .btn {
+  width: 100%
 }
 .dropdown.show .btn-dropdown {
   color: #2f80ed
@@ -7211,6 +7277,32 @@ label {
 .img-scale img {
   -o-object-fit: scale-down;
   object-fit: scale-down
+}
+.info-box-picture {
+  position: relative;
+  margin-bottom: 24px
+}
+.info-box-picture img {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 2;
+  width: 24px;
+  height: 24px
+}
+.info-box-picture .blur {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: url(../images/icon-bg.png) no-repeat center/100%
+}
+.info-box-title {
+  margin-bottom: 8px
+}
+.info-box-descr {
+  margin-bottom: 0
 }
 .card-label {
   position: absolute;
@@ -7848,6 +7940,24 @@ a.blue-link:hover {
 table {
   width: 100%
 }
+.table-border thead th {
+  padding-bottom: 20px
+}
+.table-border tbody td {
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #dfe3e8
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch
+}
+.table-responsive table {
+  min-width: 500px
+}
 .table-attributes {
   max-width: 560px
 }
@@ -7992,9 +8102,8 @@ table {
 }
 .hint {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
+  vertical-align: baseline;
   width: 16px;
   height: 16px;
   margin-left: 6px;
@@ -8020,11 +8129,41 @@ table {
   transition: color .3s ease
 }
 .hint:hover {
-  cursor: help;
   background-color: #f8cb2d
 }
 .hint:hover::after {
   color: #2a2b2e
+}
+.faq-section-list {
+  margin-bottom: 0
+}
+.faq-section-question {
+  position: relative;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #f8cb2d
+}
+.faq-section-question::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 32px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 10px solid transparent;
+  border-top-color: #f8cb2d
+}
+.faq-section-answer {
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #dfe3e8;
+  background-color: #fff
+}
+.faq-section-answer:not(:last-child) {
+  margin-bottom: 24px
 }
 .h-heroes-product-slider .btn.swiper-button-next,
 .h-heroes-product-slider .btn.swiper-button-prev,
@@ -8124,36 +8263,6 @@ table {
   left: 0;
   right: 0;
   bottom: 0
-}
-.h-advantages-item {
-  padding: 8px
-}
-.h-advantages-item .picture {
-  position: relative;
-  margin-bottom: 24px
-}
-.h-advantages-item .picture img {
-  position: absolute;
-  left: 24px;
-  bottom: 24px;
-  z-index: 2;
-  width: 24px;
-  height: 24px
-}
-.h-advantages-item .picture .blur {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 64px;
-  height: 64px;
-  background: url(../images/icon-bg.png) no-repeat center/100%
-}
-.h-advantages-item .title {
-  margin-bottom: 8px
-}
-.h-advantages-item .descr {
-  margin-bottom: 0;
-  color: #6f7278
 }
 .h-questions-inner {
   padding-top: 24px;
@@ -8380,6 +8489,33 @@ table {
   border-radius: 4px;
   border: 1px solid #dfe3e8;
   background-color: #fff
+}
+.instructions-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -4px
+}
+.instructions-categories > li {
+  padding: 4px
+}
+.instructions-categories > li > a {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #dfe3e8;
+  background-color: #f8faff
+}
+.instructions-categories > li > a._current {
+  pointer-events: none;
+  border-color: transparent;
+  background-color: #f8cb2d;
+  color: #2a2b2e
+}
+.instructions-categories > li > a:hover {
+  background-color: #f0f0f0
 }
 .shop-brands-alphabet .alphabet {
   display: -webkit-box;
@@ -14254,6 +14390,15 @@ table {
     font-size: 13px;
     line-height: 20px
   }
+  .info-box-title {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700
+  }
+  .info-box-descr {
+    font-size: 13px;
+    line-height: 20px
+  }
   .h-heroes-product-slider .product-photo {
     width: 130px;
     height: 130px
@@ -14271,15 +14416,6 @@ table {
   .h-heroes-product-slider .product-meta .price {
     margin-top: 8px;
     font-size: 13px
-  }
-  .h-advantages-item .title {
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 700
-  }
-  .h-advantages-item .descr {
-    font-size: 13px;
-    line-height: 20px
   }
   .h-questions-form {
     margin-top: 16px
@@ -14572,6 +14708,19 @@ table {
   .card-product .card-buttons .btn-quick-buy {
     font-size: 13px
   }
+  .info-boxes {
+    overflow-x: auto;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap
+  }
+  .info-boxes > [class*=col] {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+    max-width: 45%
+  }
+  .info-box-picture {
+    margin-bottom: 16px
+  }
   .modal-quick-buy .qb-product .card-photo {
     width: 160px;
     height: 160px
@@ -14589,19 +14738,6 @@ table {
   }
   .h-heroes-product-slider .product-meta {
     margin-top: 8px
-  }
-  .h-advantages-wrapper {
-    overflow-x: auto;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap
-  }
-  .h-advantages-wrapper > [class*=col] {
-    -ms-flex-preferred-size: 45%;
-    flex-basis: 45%;
-    max-width: 45%
-  }
-  .h-advantages-item .picture {
-    margin-bottom: 16px
   }
   .h-questions {
     background-color: #f8faff
@@ -14752,7 +14888,7 @@ table {
     box-sizing: border-box;
     padding: 16px 16px 24px
   }
-  .h-advantages-wrapper > [class*=col] {
+  .info-boxes > [class*=col] {
     -ms-flex-preferred-size: 70%;
     flex-basis: 70%;
     max-width: 70%
@@ -14886,6 +15022,14 @@ table {
   .card-testimonial .card-meta {
     margin-top: 16px
   }
+  .card-instruction .card-meta .title {
+    font-size: 13px;
+    line-height: 16px
+  }
+  .card-instruction .card-meta .descr {
+    font-size: 13px;
+    line-height: 16px
+  }
   .form-inline {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -14978,6 +15122,11 @@ table {
   }
   .h-articles .tab-pane > .text-right {
     text-align: center
+  }
+  .instructions-categories > li > a {
+    padding: 8px;
+    font-size: 13px;
+    line-height: 16px
   }
   .s-cart-table .product {
     -ms-flex-preferred-size: 100%;
