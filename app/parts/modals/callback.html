@@ -1,0 +1,28 @@
+<!-- Modal: Callback -->
+<div class="modal fade" id="callbackModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold">Заказать обратный звонок</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="form-group">
+						<div class="form-group-label">
+							<input type="tel" class="form-control" id="callback-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+							<label for="callback-form-phone">Телефон</label>
+						</div>
+						<div class="form-checkbox switch-input-mask">
+							<input type="checkbox" id="callback-form-phone-mask" checked>
+							<label for="callback-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-lg btn-green btn-submit">Заказать</button>
+				</form>
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>

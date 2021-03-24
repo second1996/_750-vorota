@@ -101,6 +101,15 @@
 	display: flex
 	justify-content: center
 	width: 100%
+	margin-top: -4px
+	margin-bottom: -4px
+	padding-top: 4px
+	padding-bottom: 4px
+	&--light
+		.swiper-pagination-bullet
+			background-color: $white
+			&-active
+				box-shadow: 0 0 0 2px $white
 	&--dark
 		.swiper-pagination-bullet
 			background-color: $text-500

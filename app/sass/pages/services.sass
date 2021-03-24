@@ -1,0 +1,328 @@
+/* ==========================================================================
+	 Services page
+	 ========================================================================== */
+.services
+
+	// List of services
+	&-item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 100%
+		padding: 24px
+		border-radius: 8px
+		background-color: $text-500
+		+media-breakpoint-down(md)
+			padding: 16px
+		&:hover
+			background-color: $green
+			.title
+				color: $white
+			.icon
+				fill: $white
+		.title
+			padding-right: 12px
+			color: $yellow
+			font-size: 12px
+			font-weight: $w-bold
+			line-height: 16px
+			letter-spacing: 0.1em
+			text-transform: uppercase
+			transition: color .3s ease
+		.icon
+			flex: 0 0 auto
+			width: 24px
+			height: 24px
+			fill: $yellow
+			transition: fill .3s ease
+
+	// Section: Repair service
+	.info-boxes
+		+media-breakpoint-down(md)
+			overflow: visible
+			flex-wrap: wrap
+			> [class*="col"]
+				flex-basis: 33.33333%
+				max-width: 33.33333%
+		+media-breakpoint-down(sm)
+			> [class*="col"]
+				flex-basis: 100%
+				max-width: 100%
+				text-align: center
+			.info-box
+				max-width: 290px
+				margin-left: auto
+				margin-right: auto
+				&-picture
+					> img,
+					.blur
+						margin-left: auto
+						margin-right: auto
+					> img
+						right: 16px
+
+
+/* ==========================================================================
+	 Single Services page
+	 ========================================================================== */
+.services-single
+
+	// Section: Heroes
+	.s-heroes
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 45px
+		background-size: cover
+		+media-breakpoint-down(lg)
+			padding: 30px
+		+media-breakpoint-down(md)
+			padding: 0
+			background: none !important
+		&-content
+			flex: 0 0 400px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding: 32px
+			border-radius: 8px
+			background-color: $text-500
+			+media-breakpoint-down(md)
+				flex-basis: 100%
+				padding: 24px
+			+media-breakpoint-down(xs)
+				padding: 16px
+			.heading
+				&-title
+					margin-bottom: 16px
+					+media-breakpoint-down(md)
+						margin-bottom: 8px
+				&-descr
+					+media-breakpoint-down(md)
+						+font-size(xs)
+					+media-breakpoint-down(sm)
+						+font-size(xxs)
+			.quick-service
+				display: flex
+				padding-top: 16px
+				border-top: 1px solid rgba($white, 0.05)
+				&-icon
+					flex: 0 0 auto
+					width: 40px
+					height: 40px
+					fill: $yellow
+				&-title
+					margin-left: 16px
+		&-form
+			flex: 0 0 376px
+			height: 100%
+			padding: 24px
+			border-radius: 8px
+			background-color: $background
+			.form-group:nth-child(1)
+				margin-bottom: 16px
+			+media-breakpoint-down(md)
+				flex-basis: 100%
+				margin-top: 24px
+				border: 1px solid $text-200
+			+media-breakpoint-down(xs)
+				padding: 16px
+
+	// Section: Repair service
+	.info-boxes
+		+media-breakpoint-down(md)
+			overflow: visible
+			flex-wrap: wrap
+			> [class*="col"]
+				flex-basis: 33.33333%
+				max-width: 33.33333%
+		+media-breakpoint-down(sm)
+			> [class*="col"]
+				flex-basis: 100%
+				max-width: 100%
+				text-align: center
+			.info-box
+				max-width: 290px
+				margin-left: auto
+				margin-right: auto
+				&-picture
+					> img,
+					.blur
+						margin-left: auto
+						margin-right: auto
+					> img
+						right: 16px
+
+	// Section: Gates
+	.s-gates
+		&-item
+			position: relative
+			height: 100%
+			padding: 16px
+			border-radius: 8px
+			border: 1px solid $text-200
+			background-color: $background
+			transition: background-color .15s ease
+			&:hover
+				z-index: 2
+				border-radius: 8px 8px 0 0
+				background-color: $white
+				+media-breakpoint-down(md)
+					border-radius: 8px
+				.s-gates-btn
+					visibility: visible
+					opacity: 1
+		&-photo
+			height: 184px
+		&-meta
+			.title
+				letter-spacing: 0.1em
+			.descr
+				padding-bottom: 16px
+				line-height: 20px
+		&-btn
+			position: absolute
+			left: -1px
+			right: -1px
+			top: 100%
+			padding: 0 16px 16px
+			border-radius: 0 0 8px 8px
+			border: 1px solid $text-200
+			border-top: 0
+			background-color: $white
+			visibility: hidden
+			opacity: 0
+			+media-breakpoint-down(md)
+				border-radius: 8px
+				visibility: visible
+				opacity: 1
+				position: static
+				padding: 0
+				border: none
+				background-color: $trsp
+			.btn
+				padding-left: 16px
+				padding-right: 16px
+
+	// Section: Pricelist
+	.s-pricelist
+		&-table
+		&-section
+			.service
+				position: relative
+				display: flex
+				justify-content: space-between
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 7px
+					z-index: -1
+					border-bottom: 1px dotted $text-300
+				&-title
+					padding-right: 4px
+					background-color: $white
+					font-weight: $w-bold
+				&-price
+					flex: 0 0 auto
+					padding-left: 4px
+					background-color: $white
+					color: $green
+					font-weight: $w-bold
+			.includes
+				> li
+					display: flex
+					align-items: baseline
+					margin-top: 8px
+					color: $text-400
+					&::before
+						content: ''
+						flex: 0 0 auto
+						position: relative
+						top: 2px
+						display: inline-block
+						width: 14px
+						height: 14px
+						margin-right: 8px
+						background: url('../images/dist/icons/checked.svg') no-repeat center/100%
+		&-download
+			.btn
+				width: 100%
+				> img
+					width: 26px
+					margin-right: 8px
+
+	// Section: FAQ
+	.s-faq
+		&-list
+			margin: -4px
+			> [class*="col"]
+				padding: 4px
+		&-item
+			padding: 12px
+			border-radius: 8px
+			background-color: $yellow
+			+media-breakpoint-down(sm)
+				padding: 8px
+			&-header
+				a
+					display: flex
+					align-items: center
+					justify-content: space-between
+					padding: 12px
+					+media-breakpoint-down(sm)
+						padding: 8px
+					&:hover
+						color: darken($text-500, 10%)
+					&::after
+						content: '+'
+						flex: 0 0 auto
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 24px
+						height: 24px
+						font-size: 24px
+					&[aria-expanded="true"]::after
+						content: '–'
+			&-body
+				padding: 12px
+				+media-breakpoint-down(sm)
+					padding: 8px
+				> p:last-child
+					margin-bottom: 0
+
+	// Section: Support
+	.s-support
+		&-list
+			counter-reset: support-step
+			> li
+				position: relative
+				padding-left: 56px
+				&:not(:last-child)
+					margin-bottom: 16px
+				&::before
+					counter-increment: support-step
+					content: counter(support-step)
+					position: absolute
+					top: 0
+					left: 0
+					flex: 0 0 auto
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					background-color: $yellow
+					color: $text-500
+					+font-size(xs)
+					font-weight: $w-bold
+
+	// Section: Testimonials
+	.s-testimonials
+		.card-testimonial
+			+media-breakpoint-down(xs)
+				margin-left: 12px
+				margin-right: 12px

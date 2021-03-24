@@ -16,6 +16,10 @@ new Swiper('.h-heroes-slider', {
 		prevEl: '.h-heroes-slider-nav .swiper-button-prev',
 		nextEl: '.h-heroes-slider-nav .swiper-button-next',
 	},
+	pagination: {
+		el: '.h-heroes-slider-dots .swiper-pagination',
+		type: 'bullets',
+	},
 })
 
 
@@ -231,3 +235,33 @@ if( $('.compare .compare-products-slider, .compare .compare-table-values').lengt
 	compareProductsSlider.controller.control = compareTableSlider
 	compareTableSlider.controller.control = compareProductsSlider
 }
+
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Service single page: Testimonials slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
+new Swiper('.s-testimonials-slider .swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 16,
+	autoHeight: true,
+	navigation: {
+		prevEl: '.s-testimonials-slider-nav .swiper-button-prev',
+		nextEl: '.s-testimonials-slider-nav .swiper-button-next',
+	},
+	pagination: {
+		el: '.s-testimonials-slider-dots .swiper-pagination',
+		type: 'bullets',
+	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			autoHeight: false,
+		},
+		1468: {
+			slidesPerView: 3,
+			spaceBetween: 24,
+		}
+	}
+})

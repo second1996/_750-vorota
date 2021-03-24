@@ -27,7 +27,7 @@
 	+media-breakpoint-down(xs)
 		margin-left: -8px
 		margin-right: -8px
-		[class*="col"]
+		> [class*="col"]
 			padding-left: 8px
 			padding-right: 8px
 
@@ -48,3 +48,9 @@
 		margin-bottom: 24px
 		+media-breakpoint-down(xs)
 			margin-bottom: 16px
+
+.row-items-16
+	> [class*="col"]
+		margin-bottom: 16px
+		+media-breakpoint-down(xs)
+			margin-bottom: 8px
