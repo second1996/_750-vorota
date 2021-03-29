@@ -237,6 +237,7 @@ if( $('.compare .compare-products-slider, .compare .compare-table-values').lengt
 }
 
 
+
 /**
  *-------------------------------------------------------------------------------------------------------------------------------------------
  * Service single page: Testimonials slider
@@ -263,5 +264,43 @@ new Swiper('.s-testimonials-slider .swiper-container', {
 			slidesPerView: 3,
 			spaceBetween: 24,
 		}
+	}
+})
+
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Product single page: Gallery slider
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+*/
+// Thumbs slider
+const productGalleryThumbsSlider = new Swiper('.s-product .product-gallery-thumbs .swiper-container', {
+	observer: true,
+	observeParents: true,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+	slidesPerView: 6,
+	spaceBetween: 8,
+	loop: false,
+	freeMode: true,
+	pagination: {
+		el: '.s-product .product-gallery-slider-dots .swiper-pagination'
+	}
+})
+
+// Main slider
+const productGallerySlider = new Swiper('.s-product .product-gallery-slider .swiper-container', {
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 16,
+	loop: false,
+	speed: 450,
+	navigation: {
+		nextEl: '.s-product .product-gallery-slider-nav .swiper-button-next',
+		prevEl: '.s-product .product-gallery-slider-nav .swiper-button-prev',
+	},
+	thumbs: {
+		swiper: productGalleryThumbsSlider
 	}
 })

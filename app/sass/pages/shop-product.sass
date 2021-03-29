@@ -1,0 +1,443 @@
+/* ==========================================================================
+	 Product single page
+	 ========================================================================== */
+.s-product
+	&-heading
+		.title
+			+media-breakpoint-down(sm)
+				font-size: 20px
+				line-height: 24px
+
+	// --------- Product main ---------
+	.s-product-main
+
+	// --------- Product tabs ---------
+	.s-product-tabs
+		+media-breakpoint-down(sm)
+			margin-top: 0
+			.tab-content
+				margin-top: 0
+			.table-attributes
+				tr
+					display: flex
+					justify-content: space-between
+					.attribute,
+					.value
+						padding-top: 4px
+						padding-bottom: 4px
+					.attribute
+						flex: 1 1 auto
+						+font-size(xxs)
+						&::after
+							bottom: 12px
+					.value
+						flex: 0 0 auto
+						padding-left: 4px
+						+font-size(xxs)
+						font-weight: $w-bold
+		.product-documents-list
+			margin: 0
+			.document
+				padding: 0
+
+	// SKU
+	.product-sku
+		display: flex
+		align-items: baseline
+		justify-content: space-between
+		margin-bottom: 20px
+
+	// Gallery
+	.product-gallery
+		+media-breakpoint-down(md)
+			margin-bottom: 32px
+		+media-breakpoint-down(sm)
+			margin-bottom: 0
+
+		// Main slider
+		&-slider
+			max-width: 424px
+			margin: 0 auto
+			+media-breakpoint-down(md)
+				max-width: 100%
+			.card-label
+				top: 8px
+				left: 8px
+			.swiper-slide
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 424px
+				+media-breakpoint-down(sm)
+					height: 100%
+					max-height: 300px
+				.photo
+					user-select: none
+					&::before
+						content: ''
+						position: absolute
+						top: 50%
+						left: 50%
+						z-index: 1
+						display: block
+						width: 64px
+						height: 64px
+						margin-top: -32px
+						margin-left: -32px
+						border-radius: 50%
+						background: rgba($text-400, 0.3) url('../images/dist/icons/plus-circle.svg') no-repeat center/32px
+						opacity: 0
+						transform: scale(0.9)
+						transition: $trs
+					&:hover
+						&::before
+							opacity: 1
+							transform: none
+
+			&-nav
+				.btn.swiper-button-prev
+					left: -56px
+					+media-breakpoint-down(lg)
+						left: -20px
+					+media-breakpoint-down(sm)
+						left: -16px
+				.btn.swiper-button-next
+					right: -56px
+					+media-breakpoint-down(lg)
+						right: -20px
+					+media-breakpoint-down(sm)
+						right: -16px
+
+		// Thumbs slider
+		&-thumbs
+			max-width: 380px
+			margin: 8px auto 0
+			.swiper-container
+				margin: -4px
+				padding: 4px
+			.swiper-wrapper
+				// justify-content: center
+			.swiper-slide
+				user-select: none
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 16.66667%
+				height: 100%
+				box-shadow: 0 0 0 1px $text-200
+				transition: box-shadow .3s ease
+				&.swiper-slide-thumb-active
+					pointer-events: none
+					box-shadow: 0 0 0 2px $green
+				&:hover:not(.swiper-slide-thumb-active)
+					cursor: pointer
+					box-shadow: 0 0 0 1px $yellow
+			.swiper-dots
+				margin-top: 16px
+
+	// Attributes
+	.product-attributes
+		.excerpt
+			font-size: 13px
+			line-height: 20px
+		.table-attributes
+			tr
+				display: flex
+				justify-content: space-between
+				.attribute,
+				.value
+					padding-top: 4px
+					padding-bottom: 4px
+				.attribute
+					flex: 1 1 auto
+					color: $text-400
+					+font-size(xxs)
+					&::after
+						bottom: 12px
+				.value
+					padding-left: 4px
+					+font-size(xxs)
+					font-weight: $w-bold
+
+	// Documents
+	.product-documents
+		&-list
+			display: flex
+			flex-wrap: wrap
+			margin: -12px
+			.document
+				padding: 12px
+				&:hover
+					.document-title
+						color: $green
+				&-title
+					margin-top: 8px
+					color: $blue
+					transition: color .3s ease
+
+	// Product Info
+	.product-info
+		position: relative
+		padding: 24px
+		border-radius: 8px
+		background-color: $background
+		+media-breakpoint-down(sm)
+			padding-left: 0
+			padding-right: 0
+			border-radius: 0
+			background-color: $trsp
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: -100%
+				right: -100%
+				bottom: 0
+				z-index: -1
+				background-color: $background
+
+		// Print button
+		&-print
+			position: absolute
+			top: 16px
+			right: 16px
+			+media-breakpoint-down(sm)
+				right: -8px
+			.btn
+				height: auto
+				padding: 8px
+				color: $text-300
+				&:hover
+					color: $green
+				.icon
+					width: 24px
+					height: 24px
+
+		// Price
+		&-price
+			.price
+				display: flex
+				align-items: flex-end
+				ins
+					margin-right: 10px
+					color: $text-500
+					font-size: 27px
+					font-weight: $w-bold
+					line-height: 1
+					text-decoration: none
+					+media-breakpoint-down(xxs)
+						font-size: 20px
+				del
+					color: $warning
+					font-size: 15px
+					line-height: 1
+
+		// Order form
+		&-order
+			.configuration
+				margin-top: 12px
+				&-item
+					margin-top: 6px
+					.form-checkbox-label
+						+media-breakpoint-down(sm)
+							+font-size(xxs)
+						&::after,
+						&::before
+							top: 1px
+							+media-breakpoint-down(xs)
+								top: -2px
+						&::before
+							border: 2px solid $green
+				&-price
+					padding-left: 10px
+					+media-breakpoint-down(xs)
+						+font-size(xxs)
+			.purchase
+				display: flex
+				margin-top: 12px
+				&-quantity
+					flex: 0 0 auto
+				&-button
+					flex: 1 1 auto
+					margin-left: 16px
+					.btn-purchase
+						width: 100%
+						height: 100%
+						padding-left: 12px
+						padding-right: 12px
+						&._added .after-added span br
+							display: none
+
+		// Quick buy form
+		&-quickbuy
+			margin-top: 16px
+			.quickbuy-form-wrapper
+				display: flex
+				width: 100%
+				> .form-control
+					flex: 1 1 auto
+					height: 48px
+					border-radius: 4px 0 0 4px
+					border-right: 0
+				> .btn
+					flex: 0 0 190px
+					position: relative
+					padding-left: 16px
+					padding-right: 16px
+					z-index: 1
+					border-radius: 0 4px 4px 0
+					color: #219653
+					font-weight: $w-regular
+					+media-breakpoint-down(xs)
+						flex: 0 0 auto
+					&:hover
+						background-color: $green
+						color: $white
+					&:focus
+						box-shadow: 0 0 0 3px rgba($green, 0.25)
+
+		// Wishlist & Compate buttons
+		&-actions
+			margin-top: 16px
+			.buttons
+				display: flex
+				align-items: center
+				border-radius: 4px
+				> .btn
+					flex-grow: 1
+					width: 100%
+					padding-left: 0
+					padding-right: 0
+					color: $text-300
+					font-weight: $w-regular
+					line-height: 40px
+					> span
+						color: $text-400
+						+media-breakpoint-down(xs)
+							display: none
+					&._added
+						border-color: $trsp
+						background-color: $yellow
+						color: $text-500
+						> span
+							color: $text-500
+					&:not(:first-child)
+						border-top-left-radius: 0
+						border-bottom-left-radius: 0
+						border-left-width: 0
+					&:not(:last-child)
+						border-top-right-radius: 0
+						border-bottom-right-radius: 0
+					&:hover
+						background-color: $yellow
+						border-color: $trsp
+						color: $text-500
+						> span
+							color: $text-500
+					&:active
+						box-shadow: 0 0 0 4px rgba($yellow, 0.25)
+						background-color: lighten($yellow, 8%)
+						color: $text-500
+					&:focus
+						z-index: 1
+
+		// Cheaper modal link
+		&-cheaper
+			margin-top: 16px
+
+		// Other info
+		&-other
+			&-item
+				margin-top: 16px
+				.title
+					display: flex
+					flex-wrap: wrap
+					align-items: center
+					> img
+						margin-left: 16px
+				.descr
+					> p
+						margin-bottom: 4px
+						&:last-child
+							margin-bottom: 0
+
+	// Complectation
+	.product-complectation
+		max-width: 600px
+		&-item
+			display: flex
+			width: 100%
+			&:not(:last-child)
+				margin-bottom: 16px
+			&:hover
+				.product-complectation-photo
+					border-color: $green
+				.product-complectation-meta .title
+					color: $green
+		&-photo
+			flex: 0 0 auto
+			width: 48px
+			height: 48px
+			margin-right: 16px
+			border: 1px solid $text-200
+			transition: border .3s ease
+			img
+				padding: 2px
+		&-meta
+			display: flex
+			width: 100%
+			align-items: flex-start
+			justify-content: space-between
+			.title
+				color: $blue
+				transition: color .3s ease
+			.count
+				flex: 0 0 auto
+				padding-left: 12px
+
+	// Product article
+	.product-article
+		h1, h2, h3, h4, h5, h6, ul, img
+			margin-bottom: 16px
+		p
+			margin-bottom: 8px
+
+	// Product return
+	.product-return
+		display: flex
+		max-width: 780px
+		margin-left: auto
+		margin-right: auto
+		+media-breakpoint-down(xs)
+			flex-direction: column
+		.photo
+			flex: 0 0 auto
+			width: 176px
+			height: 176px
+			+media-breakpoint-down(xs)
+				margin: 0 auto
+		.text
+			margin-left: 48px
+			+media-breakpoint-down(xs)
+				margin-top: 16px
+				margin-left: 0
+
+	// Info boxes
+	.info-boxes
+		+media-breakpoint-down(md)
+			overflow: visible
+			flex-wrap: wrap
+			> [class*="col"]
+				flex-basis: 33.33333%
+				max-width: 33.33333%
+		+media-breakpoint-down(sm)
+			> [class*="col"]
+				flex-basis: 100%
+				max-width: 100%
+			.info-box
+				max-width: 290px
+				&-picture
+					> img
+						right: 16px

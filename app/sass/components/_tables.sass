@@ -33,6 +33,7 @@ table
 		.attribute,
 		.value
 			position: relative
+			vertical-align: bottom
 			padding-top: 8px
 			padding-bottom: 8px
 			z-index: 1
@@ -42,6 +43,13 @@ table
 				display: inline-block
 				padding-right: 6px
 				background-color: $white
+			a
+				color: $blue
+				&:hover
+					color: $green
+		.hint
+			top: 2px
+			margin-left: 4px
 
 		.attribute
 			&::after

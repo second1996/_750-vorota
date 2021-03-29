@@ -76,6 +76,24 @@
 	.card-body
 		margin-top: 0
 
+	// Delete button
+	.card-delete
+		position: absolute
+		top: -5px
+		left: -50px
+		z-index: 2
+		&-btn
+			display: inline-flex
+			height: 40px
+			align-items: center
+			color: $text-300
+			font-size: 24px
+			line-height: 1
+			+media-breakpoint-down(sm)
+				font-size: 20px
+			&:hover
+				color: $warning
+
 	// Quick view
 	.card-quick-view
 		position: absolute
