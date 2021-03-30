@@ -45,6 +45,12 @@
 	 ========================================================================== */
 .header
 	position: relative
+	+media-breakpoint-down(xl)
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 98
 
 	// Top header
 	&-top
@@ -146,6 +152,7 @@
 	&-middle
 		padding-top: 24px
 		padding-bottom: 24px
+		background-color: $white
 		+media-breakpoint-down(xl)
 			border-bottom: 1px solid $border
 		+media-breakpoint-down(sm)

@@ -18,10 +18,11 @@
 	background-color: $green
 	color: $white
 
-html, body
-	overflow-x: hidden
+// html, body
+// 	overflow-x: hidden
 
 body
+	overflow-x: hidden
 	position: relative
 	min-width: 320px
 	color: $text-500
@@ -31,8 +32,8 @@ body
 	+media-breakpoint-down(sm)
 		font-size: 13px
 		line-height: 20px
-	&.modal-open
-		padding-right: 0!important
+	// &.modal-open
+		// padding-right: 0!important
 	&.compensate-for-scrollbar
 		margin-right: 0
 	&.lock-scroll
@@ -125,8 +126,10 @@ hr
 	max-width: 100% !important
 
 @media print
+	.shop-promo,
 	header.header,
 	.f-questions,
 	footer.footer,
-	.breadcrumbs
+	.breadcrumbs,
+	.pagination
 		display: none

@@ -70,8 +70,8 @@ window.priceFilter = function () {
 			start: [inputMinPrice, inputMaxPrice],
 			connect: true,
 			range: {
-					'min': filterMinPrice,
-					'max': filterMaxPrice
+				'min': filterMinPrice,
+				'max': filterMaxPrice
 			}
 		})
 
@@ -130,7 +130,6 @@ window.priceFilter = function () {
 }
 priceFilter()
 
-
 // // Reinit filter
 // reinitFilterSlider = function() {
 // 	$('.filter-toggle-header._toggled, .widget-header._toggled').next().css('display', 'block');
@@ -138,3 +137,52 @@ priceFilter()
 // 	filterSlider = document.querySelectorAll('.filter-slider-handle');
 // 	initFilterSliders()
 // }
+
+
+/**
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ * Single Product: Discount Modal (noUiSlider)
+ *-------------------------------------------------------------------------------------------------------------------------------------------
+ */
+const discountSlider = document.querySelector('#m-discount-slider');
+
+if( typeof(discountSlider) != 'undefined' && discountSlider != null ) {
+	const discountSliderMin = parseInt( discountSlider.dataset.slidermin );
+	const discountSliderMax = parseInt( discountSlider.dataset.slidermax );
+	const discountSliderStart = parseInt( discountSlider.dataset.sliderstart );
+	const discountSliderInputValue = document.querySelector('.discount-slider-value');
+
+	// Create noUiSlide
+	noUiSlider.create(discountSlider, {
+		start: discountSliderStart,
+		step: 1,
+		connect: [true, false],
+		range: {
+			'min': discountSliderMin,
+			'max': discountSliderMax
+		}
+	})
+
+	// Set default value
+	discountSliderInputValue.value = Math.round(discountSlider.noUiSlider.get()) + '%';
+
+	// Set pins
+	document.querySelector('.form-group-slider-values > .from').innerHTML = discountSliderMin + '%';
+	document.querySelector('.form-group-slider-values > .to').innerHTML = discountSliderMax + '%';
+
+	// Change value on toggle slider
+	discountSlider.noUiSlider.on('update', function (value) {
+		discountSliderInputValue.value = Math.round(value) + '%';
+		discountNewPrice(value);
+	})
+
+	// Calculate new price
+	function discountNewPrice(value) {
+		const productPriceEl = document.querySelector('.s-product .product-info-price .price ins').dataset.finalPrice;
+		const productPriceValue = parseInt(productPriceEl);
+		const discountNewPriceInput = document.querySelector('.discount-new-price');
+		const discountNewPriceValue = productPriceValue * Math.round(value) / 100;
+
+		discountNewPriceInput.value = Math.round(productPriceValue - discountNewPriceValue).toLocaleString('ru') + ' руб.';
+	}
+}

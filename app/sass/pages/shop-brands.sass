@@ -46,3 +46,50 @@
 				letter-spacing: .11em
 				word-break: break-word
 				transition: color .3s ease
+
+
+/* ==========================================================================
+	 Brands single page
+	 ========================================================================== */
+.s-brands
+	&-products
+		&-item
+			display: flex
+			width: 100%
+			&:not(:last-child)
+				margin-bottom: 16px
+			&:hover
+				.s-brands-products-meta .title
+					color: $green
+		&-photo
+			flex: 0 0 auto
+			width: 64px
+			height: 64px
+			margin-right: 16px
+		&-meta
+			display: flex
+			flex-direction: column
+			width: 100%
+			align-items: flex-start
+			justify-content: space-between
+			.title
+				margin-bottom: 8px
+				color: $blue
+				transition: color .3s ease
+			.price
+				display: flex
+				flex-wrap: wrap
+				min-height: 30px
+				ins
+					display: block
+					margin-right: 8px
+					color: $text-500
+					font-size: 13px
+					font-weight: $w-bold
+					line-height: 1
+					text-decoration: none
+				del
+					display: block
+					color: $warning
+					font-size: 13px
+					line-height: 1

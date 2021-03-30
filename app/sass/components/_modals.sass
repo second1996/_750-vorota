@@ -22,6 +22,19 @@
 		margin-right: auto
 		padding-left: 8px
 		padding-right: 8px
+		.modal-header
+			+media-breakpoint-up(lg)
+				padding: 48px 32px
+				justify-content: center
+				.title
+					padding-right: 0
+				.btn-close
+					position: absolute
+					top: 16px
+					right: 16px
+
+	.modal-dialog-lg
+		max-width: 875px
 
 	.modal-content
 		border-radius: 16px
@@ -45,27 +58,10 @@
 	 Buy in one lick
 	 ========================================================================== */
 .modal-quick-buy
-	.modal-dialog
-		max-width: 875px
-
-	.modal-header
-		+media-breakpoint-up(lg)
-			padding: 48px 32px
-			justify-content: center
-			.title
-				padding-right: 0
-			.btn-close
-				position: absolute
-				top: 16px
-				right: 16px
-
-	.modal-body
-		+media-breakpoint-up(lg)
-			padding: 0px 32px 62px
-
 	.qb-product
 		display: flex
 		padding-top: 0
+		padding-bottom: 16px
 		+media-breakpoint-down(sm)
 			flex-direction: column
 		&::before
@@ -120,23 +116,9 @@
 	+media-breakpoint-down(sm)
 		display: none !important
 
-	.modal-dialog
-		max-width: 875px
-
 	.modal-content
 		overflow: hidden
 		padding: 0
-
-	.modal-header
-		+media-breakpoint-up(lg)
-			padding: 48px 32px
-			justify-content: center
-			.title
-				padding-right: 0
-			.btn-close
-				position: absolute
-				top: 16px
-				right: 16px
 
 	.qv-product
 		// Title
@@ -282,24 +264,7 @@
 	 Privacy policy modal
 	 ========================================================================== */
 .modal-policy
-	.modal-dialog
-		max-width: 875px
-
-	.modal-header
-		+media-breakpoint-up(lg)
-			padding: 48px 32px
-			justify-content: center
-			.title
-				padding-right: 0
-			.btn-close
-				position: absolute
-				top: 16px
-				right: 16px
-
 	.modal-body
-		+media-breakpoint-up(lg)
-			padding: 0px 32px 32px
-
 		ul
 			margin-bottom: 16px
 			> li
@@ -318,3 +283,26 @@
 					background: $text-400
 					+media-breakpoint-down(sm)
 						margin-top: 7px
+
+
+/* ==========================================================================
+	 Discount product
+	 ========================================================================== */
+.modal-discount
+	.modal-body
+		max-width: 576px
+		margin-left: auto
+		margin-right: auto
+
+	.discount-product
+		width: 100%
+		padding: 0
+		border-radius: 0
+		border: none
+		height: auto
+		+font-size(xs)
+		font-weight: $w-bold
+		white-space: normal
+		word-break: break-word
+		&:focus
+			box-shadow: none

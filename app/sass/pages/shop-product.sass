@@ -441,3 +441,36 @@
 				&-picture
 					> img
 						right: 16px
+
+
+/* ==========================================================================
+	 Product print medias
+	 ========================================================================== */
+@media print
+	.tabs-accordion
+		.nav-tabs
+			display: none
+		.tab-pane
+			border: none
+			&-header
+				display: none
+			&-collapse
+				display: block
+	.s-product
+		.product-gallery-slider
+			.swiper-nav,
+			.swiper-dots
+				display: none
+			.swiper-wrapper
+				.swiper-slide:not(:first-child)
+					display: none
+		.product-gallery-thumbs,
+		.product-info-print,
+		.product-info-quickbuy,
+		.product-info-actions,
+		.product-info-cheaper,
+		.product-info-order .purchase,
+		.testimonials-form,
+		.product-return .photo,
+		#collapse-9
+			display: none

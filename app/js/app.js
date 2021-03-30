@@ -114,5 +114,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.mmenu-main-catalog > .submenu > .submenu-back-btn, .mmenu-main-nav .menu-item > .submenu > .submenu-back-btn').on('click', function() {
 		$(this).parent().removeClass('_is-opened')
 	})
-
 })

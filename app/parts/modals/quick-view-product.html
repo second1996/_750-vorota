@@ -1,6 +1,6 @@
-<!-- Modal: Quick View product -->
+<!-- Modal: Быстрый просмотр товара -->
 <div class="modal modal-quick-view fade" id="quickViewProductModal" tabindex="-1" role="dialog">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="title text-lg w-bold text-center">Быстрый просмотр</h5>
@@ -16,8 +16,8 @@
 
 					<!-- Tabs -->
 					<div class="qv-product-nav nav nav-tabs" role="tablist">
-						<a class="nav-link active" id="qv-attributes-tab" data-toggle="tab" href="#qv-attributes" role="tab" aria-controls="qv-attributes" aria-selected="true">Характеристики</a>
-						<a class="nav-link" id="qv-gallery-tab" data-toggle="tab" href="#qv-gallery" role="tab" aria-controls="qv-gallery" aria-selected="false">Фото</a>
+						<a class="nav-link active" id="qv-gallery-tab" data-toggle="tab" href="#qv-gallery" role="tab" aria-controls="qv-gallery" aria-selected="true">Фото</a>
+						<a class="nav-link" id="qv-attributes-tab" data-toggle="tab" href="#qv-attributes" role="tab" aria-controls="qv-attributes" aria-selected="false">Характеристики</a>
 						<a class="permalink blue-link" href="#" class="product-link">
 							<span>Подробнее о товаре</span>
 							<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
@@ -27,40 +27,8 @@
 					<!-- Content -->
 					<div class="qv-product-content tab-content">
 
-						<!-- Attributes -->
-						<div class="tab-pane fade show active" id="qv-attributes" role="tabpanel" aria-labelledby="qv-attributes-tab">
-							<table class="table-attributes">
-								<tbody>
-									<tr>
-										<td class="attribute"><span>Напряжение электропитания</span></td>
-										<td class="value"><span>230В, 50/60 Гц</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Напряжение питания двигателя</span></td>
-										<td class="value"><span>230В, 50/60 Гц</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Потребляемая мощность в режиме ожидания</span></td>
-										<td class="value"><span>4,5 Вт</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Потребляемая мощность с модулем Green Рower</span></td>
-										<td class="value"><span>0,8 Вт</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Мощность</span></td>
-										<td class="value"><span>530 Вт</span></td>
-									</tr>
-									<tr>
-										<td class="attribute"><span>Толкающее усилие</span></td>
-										<td class="value"><span>800 Н</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div><!-- /.tab -->
-
 						<!-- Gallery -->
-						<div class="tab-pane fade" id="qv-gallery" role="tabpanel" aria-labelledby="qv-gallery-tab">
+						<div class="tab-pane fade show active" id="qv-gallery" role="tabpanel" aria-labelledby="qv-gallery-tab">
 							<div class="product-gallery">
 
 								<!-- Main slider -->
@@ -139,6 +107,38 @@
 								</div><!-- /.product-gallery-thumbs -->
 
 							</div><!-- /.product-gallery -->
+						</div><!-- /.tab -->
+
+						<!-- Attributes -->
+						<div class="tab-pane fade" id="qv-attributes" role="tabpanel" aria-labelledby="qv-attributes-tab">
+							<table class="table-attributes">
+								<tbody>
+									<tr>
+										<td class="attribute"><span>Напряжение электропитания</span></td>
+										<td class="value"><span>230В, 50/60 Гц</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Напряжение питания двигателя</span></td>
+										<td class="value"><span>230В, 50/60 Гц</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Потребляемая мощность в режиме ожидания</span></td>
+										<td class="value"><span>4,5 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Потребляемая мощность с модулем Green Рower</span></td>
+										<td class="value"><span>0,8 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Мощность</span></td>
+										<td class="value"><span>530 Вт</span></td>
+									</tr>
+									<tr>
+										<td class="attribute"><span>Толкающее усилие</span></td>
+										<td class="value"><span>800 Н</span></td>
+									</tr>
+								</tbody>
+							</table>
 						</div><!-- /.tab -->
 
 					</div><!-- /.qv-product-content -->
