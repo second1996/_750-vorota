@@ -99,5 +99,9 @@ go_up_btn.on('click', function(e) {
 if ($(window).width() <= 1467.98) {
 	const headerHeight = $('header.header').outerHeight()
 
-	$('main.page-main').css('margin-top', headerHeight)
+	$('main.page-main').css('padding-top', headerHeight + 24)
+
+	setTimeout(() => {
+		$('.hint').tooltip('update')
+	}, 1000);
 }
