@@ -89,19 +89,3 @@ go_up_btn.on('click', function(e) {
 	e.preventDefault()
 	$('html, body').animate({scrollTop:0}, 1000)
 })
-
-
-/**
- *-------------------------------------------------------------------------------------------------------------------------------------------
- * Sticky header
- *-------------------------------------------------------------------------------------------------------------------------------------------
-*/
-if ($(window).width() <= 1467.98) {
-	const headerHeight = $('header.header').outerHeight()
-
-	$('main.page-main').css('padding-top', headerHeight + 24)
-
-	setTimeout(() => {
-		$('.hint').tooltip('update')
-	}, 1000);
-}

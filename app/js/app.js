@@ -14,6 +14,9 @@ require('../../node_modules/bootstrap/js/dist/tooltip.js') // Bootstrap Tooltip
 require('../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js') // jQuery Mask
 require('../../node_modules/nouislider/distribute/nouislider.min.js') // noUiSlider (JavaScript Range Slider)
 
+// Import Headhesive.js — creates a sticky header
+import Headhesive from 'headhesive'
+
 // Import Fancybox
 require('../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js') // Fancybox
 $.fancybox.defaults.animationEffect = 'fade'
@@ -43,8 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	 * Toggle Search results
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	const searchEl = $('.header-middle-search')
-	$('#header-search-field, .header-middle-actions .search').on('click', function() {
+	$(document).on('click', '.header-middle:not(.header--clone) #header-search-field, .header-middle-actions .search', function() {
+		const searchEl = $('.header-middle-search')
+
 		searchEl.addClass('_is-focused')
 		searchEl.find('.search-results').addClass('_is-opened')
 
@@ -61,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
-	$('.header-middle-search .heading .btn-close').on('click', function() {
+	$(document).on('click', '.header-middle-search .heading .btn-close', function() {
+		const searchEl = $('.header-middle-search')
+
 		$('body').removeClass('lock-scroll')
 		searchEl.removeClass('_is-focused')
 		searchEl.find('.search-results').removeClass('_is-opened')
@@ -90,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// Open menu
-	$('.toggle-mmenu-btn').on('click', function() {
+	$(document).on('click', '.toggle-mmenu-btn', function() {
 		mmenuBackdrop()
 
 		$('body').addClass('lock-scroll')
@@ -114,4 +120,23 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.mmenu-main-catalog > .submenu > .submenu-back-btn, .mmenu-main-nav .menu-item > .submenu > .submenu-back-btn').on('click', function() {
 		$(this).parent().removeClass('_is-opened')
 	})
+
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	* Sticky header
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	new Headhesive('.header-middle', {
+		offset: 400,
+		classes: {
+			clone:   'header--clone',
+			stick:   'header--stick',
+			unstick: 'header--unstick'
+		},
+		onInit: function() {
+			$('.header--clone').find('.search-results').remove()
+		}
+	})
+
 })

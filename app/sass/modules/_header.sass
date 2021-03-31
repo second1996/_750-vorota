@@ -41,16 +41,43 @@
 
 
 /* ==========================================================================
+	 Sticky header
+	 ========================================================================== */
+.header-middle
+	&.header--clone
+		position: fixed
+		z-index: 90
+		top: 0
+		left: 0
+		right: 0
+		padding-top: 12px
+		padding-bottom: 12px
+		border-bottom: 1px solid $border
+		transform: translateY(-100%)
+		transition: transform .3s ease-in-out
+		+media-breakpoint-down(sm)
+			padding-top: 6px
+			padding-bottom: 6px
+		.header-middle-burger
+			display: block
+		.header-middle-search
+			max-width: 100%
+			margin-right: 30px
+			.form
+				width: 100%
+		.header-middle-contacts
+			display: none
+	&.header--stick
+		transform: translateY(0%)
+
+
+/* ==========================================================================
 	 Site header
 	 ========================================================================== */
 .header
 	position: relative
-	+media-breakpoint-down(xl)
-		position: fixed
-		top: 0
-		left: 0
-		right: 0
-		z-index: 98
+	z-index: 91
+	background-color: $white
 
 	// Top header
 	&-top
@@ -164,6 +191,8 @@
 
 		// Mmenu burger button
 		&-burger
+			+media-breakpoint-up(xxl)
+				display: none
 			.toggle-mmenu-btn
 				width: 24px
 				padding-left: 0
@@ -748,3 +777,4 @@
 											display: inline-block
 											padding: 4px 0
 											+font-size(xxs)
+

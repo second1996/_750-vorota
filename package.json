@@ -36,6 +36,7 @@
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
+		"headhesive": "^1.2.4",
 		"jquery": "^3.6.0",
 		"jquery-mask-plugin": "^1.14.16",
 		"nouislider": "^14.6.4",
