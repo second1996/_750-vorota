@@ -1,34 +1,43 @@
 <div class="card card-product">
-	<div class="card-quick-view">
-		<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+	<div class="card-preview">
+		<div class="card-quick-view">
+			<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
+		</div>
+		<div class="card-label card-label--red">Хит продаж</div>
+		<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
+			<div class="card-gallery-item _active">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/dist/products/2.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/dist/products/3.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/dist/products/4.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+			<div class="card-gallery-item">
+				<span class="card-gallery-item-nav"></span>
+				<img class="lazy" src="./images/dist/products/5.jpg" alt="">
+				<div class="lazy-spin"></div>
+			</div>
+		</a>
 	</div>
-	<div class="card-label card-label--red">Хит продаж</div>
-	<a href="page-shop-product.html" class="card-gallery" title="AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот">
-		<div class="card-gallery-item _active">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-		<div class="card-gallery-item">
-			<span class="card-gallery-item-nav"></span>
-			<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-			<div class="lazy-spin"></div>
-		</div>
-	</a>
+	<div class="card-meta">
+		<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
+		<ul class="attributes">
+			<li><div class="attr"><span>Производитель:</span></div> <div class="value"><span>Siemens</span></li>
+			<li><div class="attr"><span>Страна произв.:</span></div> <div class="value"><span>Германия</span></div></li>
+			<li><div class="attr"><span>Артикул:</span></div> <div class="value"><span>12453453</span></div></li>
+		</ul>
+	</div>
 	<div class="card-body">
-		<div class="card-meta">
+		<div class="card-price">
 			<div class="stock stock-in">В наличии</div>
-			<a href="page-shop-product.html" class="permalink blue-link">AN-Motors ASL500KIT FULL комплект автоматики для откатных ворот</a>
 			<div class="price">
 				<ins>23 600 Руб.</ins>
 			</div>
@@ -36,25 +45,22 @@
 		<div class="card-buttons">
 			<div class="card-buttons-group">
 				<a href="#" class="btn btn-secondary">
-					<svg class="icon icon-compare"><use xlink:href="images/symbol-defs.svg#compare"></use></svg>
+					<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
 				</a>
 				<a href="#" class="btn btn-secondary _added">
-					<svg class="icon icon-star"><use xlink:href="images/symbol-defs.svg#star"></use></svg>
+					<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
 				</a>
 			</div>
-			<button class="btn btn-green btn-purchase">
-				<div class="before-added">В корзину</div>
-				<div class="after-added">
-					<svg class="icon icon-checked"><use xlink:href="images/symbol-defs.svg#checked"></use></svg>
-					<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-				</div>
-			</button>
+			<form class="card-buttons-purchase">
+				<button class="btn btn-green btn-purchase">
+					<div class="before-added">В корзину</div>
+					<div class="after-added">
+						<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
+						<span>Товар добавлен<br> в <a href="#">корзину</a></span>
+					</div>
+				</button>
+			</form>
 			<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
 		</div>
-	</div>
-	<div class="card-attributes">
-		<div>Производитель: <b>Siemens</b></div>
-		<div>Страна произв.: <b>Германия</b></div>
-		<div>Артикул: <b>12453453</b></div>
 	</div>
 </div>

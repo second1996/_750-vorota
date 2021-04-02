@@ -32,17 +32,17 @@ body
 	+media-breakpoint-down(sm)
 		font-size: 13px
 		line-height: 20px
-	// &.modal-open
-		// padding-right: 0!important
-	&.compensate-for-scrollbar
-		margin-right: 0
+	&.modal-open,
+	&.compensate-for-scrollbar,
+	&.lock-scroll
+		+media-breakpoint-up(xl)
+			.header-middle.header--clone
+				padding-right: 17px
 	&.lock-scroll
 		overflow: hidden
 		height: 100%
 		+media-breakpoint-up(xl)
 			padding-right: 17px
-			.header-middle.header--clone
-				padding-right: 17px
 
 *
 	box-sizing: border-box

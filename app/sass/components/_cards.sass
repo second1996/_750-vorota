@@ -37,7 +37,7 @@
 .products-slider,
 .compare-products-slider
 	.card-product::before,
-	.card-attributes
+	.card-meta .attributes
 		display: none
 
 .card-product
@@ -69,7 +69,7 @@
 				visibility: hidden
 				opacity: 0
 			.card-quick-view,
-			.card-attributes
+			.card-meta .attributes
 				visibility: visible
 				opacity: 1
 				transform: none
@@ -93,6 +93,9 @@
 				font-size: 20px
 			&:hover
 				color: $warning
+
+	.card-preview
+		position: relative
 
 	// Quick view
 	.card-quick-view
@@ -184,10 +187,53 @@
 
 	// Card meta props
 	.card-meta
+		margin-top: 8px
+		// Permalink
+		.permalink
+			overflow: hidden
+			display: block
+			height: 60px
+			font-size: 15px
+			line-height: 20px
+			+media-breakpoint-down(md)
+				height: 65px
+				+font-size(xxs)
+		// Attributes
+		.attributes
+			position: absolute
+			top: 100%
+			left: -16px
+			right: -16px
+			z-index: -1
+			padding: 16px
+			border: 1px solid $text-200
+			border-top: 0
+			background-color: $white
+			visibility: hidden
+			opacity: 0
+			transform: translate3d(0, 3px, 0)
+			transition: all .15s ease
+			> li
+				position: relative
+				z-index: 1
+				display: flex
+				+font-size(xxs)
+				&:not(:last-child)
+					margin-bottom: 8px
+				.attr
+					padding-right: 4px
+					color: $text-400
+				.value
+					color: $text-500
+					font-weight: $w-bold
+
+	// Card stock & price
+	.card-price,
+	.card-meta
 		// Stock
 		.stock
 			display: block
-			padding: 8px 5px
+			padding: 8px 5px 0
 			color: $text-400
 			+font-size(xxs)
 			white-space: nowrap
@@ -211,16 +257,6 @@
 			&-archive::before,
 			&-removed::before
 				background-color: $text-300
-		// Permalink
-		.permalink
-			overflow: hidden
-			display: block
-			height: 60px
-			font-size: 15px
-			line-height: 20px
-			+media-breakpoint-down(md)
-				height: 65px
-				+font-size(xxs)
 		// Price
 		.price
 			display: flex
@@ -247,7 +283,7 @@
 			del
 				color: $warning
 				+font-size(xxs)
-	
+
 	// Card buttons (Compare, Wishlist, Add to cart)
 	.card-buttons
 		display: flex
@@ -287,6 +323,8 @@
 					color: $text-500
 				&:focus
 					z-index: 1
+		&-purchase > .btn
+			width: 100%
 		// Quick buy button
 		.btn-quick-buy
 			margin-top: 8px
@@ -295,28 +333,134 @@
 			+media-breakpoint-down(md)
 				font-size: 13px
 
-	// Card attributes
-	.card-attributes
-		position: absolute
-		top: 100%
-		left: -16px
-		right: -16px
-		z-index: -1
-		padding: 16px
-		border: 1px solid $text-200
-		border-top: 0
-		background-color: $white
-		visibility: hidden
-		opacity: 0
-		transform: translate3d(0, 3px, 0)
-		transition: all .15s ease
-		> div
-			color: $text-400
-			+font-size(xxs)
-			> b, > strong
-				color: $text-500
-			&:not(:last-child)
-				margin-bottom: 8px
+
+
+/* ==========================================================================
+	 Product card horizontal
+	 ========================================================================== */
+.shop-products-horizontal
+	> [class*="row-cols-"] > *
+		flex: 0 0 100%
+		max-width: 100%
+
+	.card-product
+		display: flex
+		padding-top: 0
+		+media-breakpoint-down(sm)
+			flex-direction: column
+		&::before
+			border-bottom: 1px solid $text-200
+		.card-preview
+			flex: 0 0 200px
+			margin-right: 24px
+			+media-breakpoint-down(md)
+				flex-basis: 164px
+				margin-right: 16px
+			+media-breakpoint-down(sm)
+				position: absolute
+				top: 0
+				left: 0
+				flex: 0 0 auto
+				width: 72px
+				height: 72px
+				margin-right: 0
+			.card-photo,
+			.card-gallery-item
+				height: 200px
+				+media-breakpoint-down(md)
+					height: 160px
+				+media-breakpoint-down(sm)
+					height: 72px
+		.card-meta
+			flex: 1 1 auto
+			margin-top: 0
+			+media-breakpoint-down(sm)
+				padding-left: 88px
+			.permalink
+				overflow: visible
+				height: auto
+			.attributes
+				position: static
+				max-width: 380px
+				margin-top: 24px
+				padding: 0
+				border: none
+				visibility: visible
+				opacity: 1
+				transform: none
+				+media-breakpoint-down(sm)
+					display: none
+				> li
+					justify-content: space-between
+					&::after
+						content: ''
+						position: absolute
+						left: 0
+						right: 0
+						bottom: 3px
+						z-index: -1
+						border-bottom: 1px dotted $text-300
+					.attr > span,
+					.value > span
+						background-color: $white
+					.attr > span
+						padding-right: 8px
+					.value > span
+						padding-left: 4px
+		.card-body
+			flex: 0 0 200px
+			margin-left: 24px
+			+media-breakpoint-down(md)
+				margin-left: 16px
+			+media-breakpoint-down(sm)
+				flex: 0 0 auto
+				margin-left: 0
+		.card-price
+			display: flex
+			flex-direction: column-reverse
+			+media-breakpoint-down(sm)
+				flex-direction: column
+				padding-left: 88px
+			.stock
+				+media-breakpoint-down(sm)
+					padding-bottom: 8px
+			.price
+				padding-top: 0
+				height: auto
+				+media-breakpoint-down(md)
+					> ins,
+					> del
+						flex: 0 0 auto
+					> ins
+						order: 0
+						margin-right: 8px
+					> del
+						order: 1
+		.card-buttons
+			position: relative
+			+media-breakpoint-down(sm)
+				&-group
+					width: 50%
+					margin-bottom: 0
+					> .btn
+						height: 32px
+						.icon
+							width: 16px
+							height: 16px
+				&-purchase
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					width: 50%
+					padding-left: 8px
+					> .btn
+						height: 100%
+				.btn-quick-buy
+					width: 50%
+					height: 24px
+
+
 
 
 /* ==========================================================================
