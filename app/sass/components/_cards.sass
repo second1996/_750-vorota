@@ -43,7 +43,6 @@
 .card-product
 	min-width: 0
 	z-index: 1
-	padding-top: 16px
 	background-color: $white
 	&::before
 		content: ''
@@ -94,8 +93,10 @@
 			&:hover
 				color: $warning
 
+	// Photo/Gallery
 	.card-preview
 		position: relative
+		padding-top: 16px
 
 	// Quick view
 	.card-quick-view
@@ -177,6 +178,7 @@
 	.card-photo
 		display: block
 		height: 164px
+		transition: none
 		img
 			width: 100%
 			height: 100%
@@ -212,7 +214,7 @@
 			visibility: hidden
 			opacity: 0
 			transform: translate3d(0, 3px, 0)
-			transition: all .15s ease
+			transition: visibility .15s ease, opacity .15s ease, transform .15s ease
 			> li
 				position: relative
 				z-index: 1
@@ -345,7 +347,6 @@
 
 	.card-product
 		display: flex
-		padding-top: 0
 		+media-breakpoint-down(sm)
 			flex-direction: column
 		&::before
@@ -353,6 +354,7 @@
 		.card-preview
 			flex: 0 0 200px
 			margin-right: 24px
+			padding-top: 0
 			+media-breakpoint-down(md)
 				flex-basis: 164px
 				margin-right: 16px
@@ -364,6 +366,8 @@
 				width: 72px
 				height: 72px
 				margin-right: 0
+				.card-label
+					display: none
 			.card-photo,
 			.card-gallery-item
 				height: 200px
@@ -371,6 +375,8 @@
 					height: 160px
 				+media-breakpoint-down(sm)
 					height: 72px
+					img
+						padding-top: 0
 		.card-meta
 			flex: 1 1 auto
 			margin-top: 0
