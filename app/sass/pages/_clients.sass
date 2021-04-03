@@ -1,0 +1,28 @@
+/* ==========================================================================
+	 Clients page
+	 ========================================================================== */
+.clients
+
+	&-list
+		display: flex
+		flex-wrap: wrap
+		margin: -20px
+		+media-breakpoint-down(sm)
+			margin: -15px
+	&-item
+		padding: 20px
+		flex: 0 0 14.25%
+		max-width: 14.25%
+		+media-breakpoint-down(md)
+			flex-basis: 16.66667%
+			max-width: 16.66667%
+		+media-breakpoint-down(sm)
+			flex-basis: 20%
+			max-width: 20%
+			padding: 15px
+		+media-breakpoint-down(xs)
+			flex-basis: 25%
+			max-width: 25%
+		+media-breakpoint-down(xxs)
+			flex-basis: 33.33333%
+			max-width: 33.33333%
