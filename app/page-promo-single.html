@@ -1,0 +1,123 @@
+@@include('parts/header.html', { title: 'Акция на уцененные товары' })
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><a href="page-promo.html">Акции</a></li>
+				<li><span>Акция на уцененные товары</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="article-heading mb-32">
+				<h1 class="title">Акция на уцененные товары</h1>
+				<div class="date text-gray-400">16 января 2020</div>
+			</div>
+
+			<!-- Promo single page -->
+			<div class="promo-single">
+
+				<div class="row justify-content-center">
+					<div class="col-lg-10 col-xxl-8">
+
+						<!-- Promo image -->
+						<div class="promo-single-photo">
+							<img src="images/portfolio/1.jpg" alt="">
+						</div>
+
+						<!-- Promo duration -->
+						<div class="promo-single-duration">
+							<div class="title w-bold">Акция действует</div>
+							<div class="time w-bold">
+								<svg class="icon icon-clock"><use xlink:href="images/symbol-defs.svg#clock"></use></svg>
+								<span>01.11.2020 — 01.10.2021</span>
+							</div>
+							<div class="left text-green w-bold">Осталось 2 дня!</div>
+						</div>
+
+						<div class="mb-32"></div>
+
+						<!-- Promo content -->
+						<div class="promo-single-content">
+							<article>
+								<h2>Описание акции</h2>
+								<ul>
+									<li>Правильно настроенная система видеонаблюдения является надёжным способом обеспечить безопасность объекта.</li>
+									<li>Мы поможем не только с выбором, но и настроим оборудование, также при необходимости возьмёмся за регулярное его обслуживание.</li>
+									<li>Комплекты видеонаблюдения или отдельные камеры, видеорегистраторы всех типов, комплекты контроля доступа СКУД – мы предлагаем самый широкий ассортимент товаров с официальной сертификацией.</li>
+								</ul>
+							</article>
+						</div>
+
+						<!-- Promo leave application -->
+						<div class="promo-single-application">
+							<button type="button" class="btn btn-lg btn-yellow" data-toggle="modal" data-target="#promoModal">Оставить заявку на акцию</button>
+						</div>
+
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+
+			</div>
+			<!-- End Promo single page -->
+
+			<!-- Section: Товары учавствующие в акции -->
+			<section class="mt-64">
+				<div class="section-heading">
+					<h2 class="title">Товары учавствующие в акции</h2>
+				</div>
+				<div class="row mt-32 row-items-40 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6">
+					<div class="col">
+						@@include('./parts/products-card/product-1.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-2.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-3.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-4.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-5.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-6.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-1.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-2.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-3.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-4.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-5.html')
+					</div><!-- /.col -->
+					<div class="col">
+						@@include('./parts/products-card/product-6.html')
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</section>
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+@@include('parts/modals/promo.html')
+
+@@include('parts/footer.html')

@@ -1,0 +1,47 @@
+<!-- Modal: Оставить заявку на акцию -->
+<div class="modal modal-policy fade" id="promoModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="title text-lg w-bold">Оставить заявку на акцию</h5>
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<svg class="icon icon-close"><use xlink:href="./images/symbol-defs.svg#close"></use></svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="row row-cols-1 row-cols-md-3">
+						<div class="col">
+							<div class="form-group form-group-label">
+								<input type="text" class="form-control" id="promo-form-name" placeholder="Ваше имя" autocomplete="off" required>
+								<label for="promo-form-name">Ваше имя</label>
+							</div>
+						</div><!-- /.col -->
+						<div class="col">
+							<div class="form-group form-group-label">
+								<input type="email" class="form-control" id="promo-form-email" placeholder="E-mail" autocomplete="off" required>
+								<label for="promo-form-email">E-mail</label>
+							</div>
+						</div><!-- /.col -->
+						<div class="col">
+							<div class="form-group">
+								<div class="form-group-label">
+									<input type="tel" class="form-control" id="promo-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+									<label for="promo-form-phone">Телефон</label>
+								</div>
+								<div class="form-checkbox switch-input-mask">
+									<input type="checkbox" id="promo-form-phone-mask" checked>
+									<label for="promo-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+								</div>
+							</div>
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+					<div class="form-group form-group-label">
+						<textarea class="form-textarea" rows="4" placeholder="Комментарий" required></textarea>
+					</div>
+					<button type="submit" class="btn btn-lg btn-green btn-submit">Отправить</button>
+				</form>
+			</div><!-- /.modal-body -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>

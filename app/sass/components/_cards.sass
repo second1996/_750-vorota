@@ -8,25 +8,14 @@
 	height: 100%
 	.card-body
 		margin-top: 20px
-
-
-/* ==========================================================================
-	 Simple card
-	 ========================================================================== */
-.card-simple
-	&:hover
-		.card-photo img
-			transform: scale(1.1)
-	.card-photo
-		height: 190px
-		margin-bottom: 16px
-		border: 1px solid $border
-		background-color: $background
-		img
-			transform: scale(1.01)
-			transition: transform .35s ease
-	.card-meta
-		margin-top: 16px
+	&.card-animated
+		&:hover
+			.card-photo img
+				transform: scale(1.1)
+		.card-photo
+			img
+				transform: scale(1.01)
+				transition: transform .3s ease
 
 
 /* ==========================================================================
@@ -522,7 +511,7 @@
 		+media-breakpoint-down(xs)
 			height: 160px
 		img
-			transition: transform .35s ease
+			transition: transform .3s ease
 	.card-meta
 		margin-top: 24px
 		.title
@@ -593,3 +582,103 @@
 			margin-top: 4px
 			color: $text-400
 			+font-size(xxs)
+
+
+/* ==========================================================================
+	 Card portfolio
+	 ========================================================================== */
+.card-portfolio
+	.card-photo
+		position: relative
+		height: 280px
+		border-radius: 4px
+		border: 1px solid $border
+		background-color: $background
+		+media-breakpoint-down(lg)
+			height: 200px
+		&:hover
+			&::after
+				opacity: 1
+			.card-photo-descr
+				opacity: 1
+				transform: none
+		&::after
+			content: ''
+			pointer-events: none
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba($green, 0.7) url('../images/icons/search-plus.svg') no-repeat center/32px
+			opacity: 0
+			transition: opacity .3s ease
+		> a:not(:first-child)
+			display: none
+		&-descr
+			position: absolute
+			left: 0
+			bottom: 0
+			z-index: 1
+			padding: 20px
+			color: $white
+			line-height: 20px
+			opacity: 0
+			transform: translateY(-3px)
+			transition: $trs
+			> p
+				margin-bottom: 8px
+				&:last-child
+					margin-bottom: 0
+	.card-meta
+		margin-top: 16px
+
+
+/* ==========================================================================
+	 Card promo
+	 ========================================================================== */
+.card-promo
+	&:hover
+		.card-readmore
+			opacity: 1
+			transform: none
+	.card-photo
+		overflow: hidden
+		height: 280px
+		border-radius: 4px
+		+media-breakpoint-down(sm)
+			height: 200px
+	.card-meta
+		margin-top: 20px
+		.title
+			margin-bottom: 16px
+		.duration
+			display: inline-flex
+			align-items: center
+			padding: 4px 8px
+			border-radius: 4px
+			background-color: $green
+			color: $white
+			&--finished
+				background-color: $text-300
+			> .icon
+				flex: 0 0 auto
+				width: 24px
+				height: 24px
+			> span
+				margin-left: 8px
+				font-weight: $w-medium
+	.card-readmore
+		margin-top: 20px
+		color: $green
+		line-height: 1
+		opacity: 0
+		transform: translateY(-3px)
+		transition: $trs
+		+media-breakpoint-down(md)
+			display: none
+		> span
+			font-weight: $w-medium
+		> .icon
+			width: 16px
+			height: 16px

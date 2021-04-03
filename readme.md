@@ -2,7 +2,7 @@
 <p>Lightweight production ready Gulp starter.</p>
 
 <p>
-	<img src="https://raw.githubusercontent.com/agragregra/oh5/master/app/images/src/preview.jpg" alt="Start HTML Template">
+	<img src="https://raw.githubusercontent.com/agragregra/oh5/master/app/images/preview.jpg" alt="Start HTML Template">
 </p>
 
 <p><strong>OptimizedHTML 5</strong> - lightweight startup environment with <strong>Gulp 4</strong>, <strong>Preprocessors (Sass, Scss, Less, Stylus)</strong>, <strong>clean-css</strong>, <strong>Browsersync</strong>, <strong>Autoprefixer</strong>, <strong>webpack-stream</strong>, <strong>Babel</strong>, <strong>Rsync</strong>, <strong>CSS Reboot</strong> (Bootstrap reboot), Server-side <strong>HTML imports</strong> (SSI), <strong>build</strong>. It uses best practices for responsive images, JavaScript, CSS optimizing and contains a <strong>.htaccess</strong> code for resources caching (images, fonts, HTML, CSS, JS and other content types).</p>
@@ -44,8 +44,8 @@
 	<li><strong>Main Sass|Less|Styl</strong> src files located in <strong>app/styles/{preprocessor}/main.*</strong></li>
 	<li>All <strong>compressed styles</strong> located in <strong>app/css/main.min.css</strong></li>
 	<li>Project <strong>styles config</strong> placed in <strong>app/styles/{preprocessor}/_config.*</strong></li>
-	<li>All <strong>src images</strong> placed in <strong>app/images/src/</strong> folder</li>
-	<li>All <strong>compressed images</strong> placed in <strong>app/images/dist/</strong> folder</li>
+	<li>All <strong>src images</strong> placed in <strong>app/images/</strong> folder</li>
+	<li>All <strong>compressed images</strong> placed in <strong>app/images/</strong> folder</li>
 </ol>
 
 <h4>Include parts of HTML code:</h4>

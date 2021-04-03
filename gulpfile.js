@@ -142,7 +142,7 @@ function images() {
 * SVG Sprite generate function
 */
 function svgSprite() {
-	return gulp.src([path.watch.svgIcons])
+	return src(path.watch.svgIcons)
 		.pipe(svgsprite({
 			mode: {
 				symbol: {
