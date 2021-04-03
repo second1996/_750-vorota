@@ -1,5 +1,4 @@
-<!--#set var="title" value="Отзывы" -->
-<!--#include virtual="/parts/header.html" -->
+@@include('parts/header.html', { title: 'Отзывы' })
 
 <main class="page-main">
 
@@ -99,7 +98,7 @@
 						</div><!-- /.card-testimonial -->
 
 						<!-- Pagination -->
-						<!--#include virtual="/parts/pagination.html" -->
+						@@include('./parts/pagination.html')
 					</div><!-- /.col -->
 					<div class="col-xl-5">
 						<div class="testimonials-form rounded-8">
@@ -148,4 +147,4 @@
 
 </main>
 
-<!--#include virtual="/parts/footer.html" -->
+@@include('parts/footer.html')

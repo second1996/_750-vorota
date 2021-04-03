@@ -1,5 +1,4 @@
-<!--#set var="title" value="Производители" -->
-<!--#include virtual="/parts/header.html" -->
+@@include('parts/header.html', { title: 'Производители' })
 
 <main class="page-main">
 
@@ -255,7 +254,7 @@
 					<div class="mt-32"></div>
 
 					<!-- Pagination -->
-					<!--#include virtual="/parts/pagination.html" -->
+					@@include('./parts/pagination.html')
 				</div><!-- /.shop-brands-list -->
 
 			</div>
@@ -267,4 +266,4 @@
 
 </main>
 
-<!--#include virtual="/parts/footer.html" -->
+@@include('parts/footer.html')

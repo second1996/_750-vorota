@@ -1,5 +1,4 @@
-<!--#set var="title" value="Сравнение товаров" -->
-<!--#include virtual="/parts/header.html" -->
+@@include('parts/header.html', { title: 'Сравнение товаров' })
 
 <main class="page-main">
 
@@ -56,22 +55,22 @@
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<!--#include virtual="/parts/products-card/product-1.html" -->
+										@@include('./parts/products-card/product-1.html')
 									</div><!-- /.slide -->
 									<div class="swiper-slide">
-										<!--#include virtual="/parts/products-card/product-2.html" -->
+										@@include('./parts/products-card/product-2.html')
 									</div><!-- /.slide -->
 									<div class="swiper-slide">
-										<!--#include virtual="/parts/products-card/product-3.html" -->
+										@@include('./parts/products-card/product-3.html')
 									</div><!-- /.slide -->
 									<div class="swiper-slide">
-										<!--#include virtual="/parts/products-card/product-4.html" -->
+										@@include('./parts/products-card/product-4.html')
 									</div><!-- /.slide -->
 									<div class="swiper-slide">
-										<!--#include virtual="/parts/products-card/product-5.html" -->
+										@@include('./parts/products-card/product-5.html')
 									</div><!-- /.slide -->
 									<div class="swiper-slide">
-										<!--#include virtual="/parts/products-card/product-6.html" -->
+										@@include('./parts/products-card/product-6.html')
 									</div><!-- /.slide -->
 								</div><!-- /.swiper-wrapper -->
 							</div><!-- /.swiper-container -->
@@ -180,4 +179,4 @@
 
 </main>
 
-<!--#include virtual="/parts/footer.html" -->
+@@include('parts/footer.html')

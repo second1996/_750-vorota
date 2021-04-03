@@ -1,5 +1,4 @@
-<!--#set var="title" value="Корзина" -->
-<!--#include virtual="/parts/header.html" -->
+@@include('parts/header.html', { title: 'Корзина' })
 
 <main class="page-main">
 
@@ -488,6 +487,6 @@
 
 </main>
 
-<!--#include virtual="/parts/modals/privacy-policy.html" -->
+@@include('./parts/modals/privacy-policy.html')
 
-<!--#include virtual="/parts/footer.html" -->
+@@include('parts/footer.html')

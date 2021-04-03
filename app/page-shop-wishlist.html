@@ -1,5 +1,4 @@
-<!--#set var="title" value="Избранные товары" -->
-<!--#include virtual="/parts/header.html" -->
+@@include('parts/header.html', { title: 'Избранные товары' })
 
 <main class="page-main">
 
@@ -32,87 +31,22 @@
 				<div class="shop-products">
 					<div class="row row-items-40 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xxl-6">
 						<div class="col">
-							<div class="card card-product">
-								<div class="card-quick-view">
-									<button class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#quickViewProductModal">Быстрый просмотр</button>
-								</div>
-								<div class="card-label card-label--yellow">−15%</div>
-								<a href="#" class="card-gallery" title="Alutech RTO-1000MKIT автоматика для откатных ворот">
-									<div class="card-gallery-item _active">
-										<span class="card-gallery-item-nav"></span>
-										<img class="lazy" src="./images/dist/products/1.png" alt="">
-										<div class="lazy-spin"></div>
-									</div>
-									<div class="card-gallery-item">
-										<span class="card-gallery-item-nav"></span>
-										<img class="lazy" src="./images/dist/products/2.jpg" alt="">
-										<div class="lazy-spin"></div>
-									</div>
-									<div class="card-gallery-item">
-										<span class="card-gallery-item-nav"></span>
-										<img class="lazy" src="./images/dist/products/3.jpg" alt="">
-										<div class="lazy-spin"></div>
-									</div>
-									<div class="card-gallery-item">
-										<span class="card-gallery-item-nav"></span>
-										<img class="lazy" src="./images/dist/products/4.jpg" alt="">
-										<div class="lazy-spin"></div>
-									</div>
-									<div class="card-gallery-item">
-										<span class="card-gallery-item-nav"></span>
-										<img class="lazy" src="./images/dist/products/5.jpg" alt="">
-										<div class="lazy-spin"></div>
-									</div>
-								</a>
-								<div class="card-body">
-									<div class="card-meta">
-										<div class="stock stock-in">В наличии</div>
-										<a href="#" class="permalink blue-link">Alutech RTO-1000MKIT автоматика для откатных ворот</a>
-										<div class="price">
-											<ins>15 800 Руб.</ins>
-											<del>17 400 Руб.</del>
-										</div>
-									</div>
-									<div class="card-buttons">
-										<div class="card-buttons-group">
-											<a href="#" class="btn btn-secondary _added">
-												<svg class="icon icon-compare"><use xlink:href="./images/symbol-defs.svg#compare"></use></svg>
-											</a>
-											<a href="#" class="btn btn-secondary">
-												<svg class="icon icon-star"><use xlink:href="./images/symbol-defs.svg#star"></use></svg>
-											</a>
-										</div>
-										<button class="btn btn-green btn-purchase _added">
-											<div class="before-added">В корзину</div>
-											<div class="after-added">
-												<svg class="icon icon-checked"><use xlink:href="./images/symbol-defs.svg#checked"></use></svg>
-												<span>Товар добавлен<br> в <a href="#">корзину</a></span>
-											</div>
-										</button>
-										<button class="btn btn-sm btn-secondary btn-quick-buy" data-toggle="modal" data-target="#buyOneClickModal">Купить в 1 клик</button>
-									</div>
-								</div>
-								<div class="card-attributes">
-									<div>Производитель: <b>Siemens</b></div>
-									<div>Страна произв.: <b>Германия</b></div>
-									<div>Артикул: <b>12453453</b></div>
-								</div>
-							</div>
+							@@include('./parts/products-card/product-1.html')
 						</div><!-- /.col -->
 						<div class="col">
-							<!--#include virtual="/parts/products-card/product-2.html" -->
+							@@include('./parts/products-card/product-2.html')
 						</div><!-- /.col -->
 						<div class="col">
-							<!--#include virtual="/parts/products-card/product-3.html" -->
+							@@include('./parts/products-card/product-3.html')
 						</div><!-- /.col -->
 						<div class="col">
-							<!--#include virtual="/parts/products-card/product-4.html" -->
+							@@include('./parts/products-card/product-4.html')
 						</div><!-- /.col -->
 						<div class="col">
-							<!--#include virtual="/parts/products-card/product-5.html" -->
+							@@include('./parts/products-card/product-5.html')
 						</div><!-- /.col -->
 						<div class="col">
-							<!--#include virtual="/parts/products-card/product-6.html" -->
+							@@include('./parts/products-card/product-6.html')
 						</div><!-- /.col -->
 					</div><!-- /.row -->
 
@@ -122,7 +56,7 @@
 					</div>
 
 					<!-- Pagination -->
-					<!--#include virtual="/parts/pagination.html" -->
+					@@include('./parts/pagination.html')
 				</div>
 
 			</div>
@@ -134,4 +68,4 @@
 
 </main>
 
-<!--#include virtual="/parts/footer.html" -->
+@@include('parts/footer.html')
