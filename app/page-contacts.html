@@ -1,0 +1,288 @@
+@@include('parts/header.html', { title: 'Контакты' })
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Контакты</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="section-heading mb-32">
+				<h1 class="title">Контакты</h1>
+			</div>
+
+			<!-- Contacts -->
+			<div class="contacts">
+
+				<!-- Contacts main information -->
+				<div class="contacts-main">
+					<div class="row">
+						<div class="col-lg-4 order-1 order-lg-0">
+							<div class="contacts-info">
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Звонки по России</div>
+									<a href="tel:+74951283027" class="text-md w-bold">+7 (495) 128-30-27</a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Горячая линия</div>
+									<a href="tel:+74951283027" class="text-md w-bold">+7 (495) 128-30-27 <i class="whatsapp"></i><i class="viber"></i></a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Отдел продаж</div>
+									<a href="tel:+74951283027" class="text-md w-bold">+7 (495) 128-30-27</a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Мобильный телефон</div>
+									<a href="tel:+74951283027" class="text-md w-bold">+7 (495) 128-30-27</a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-order">
+									<button type="button" class="btn btn-lg btn-yellow" data-toggle="modal" data-target="#callbackModal">Заказать звонок</button>
+								</div><!-- /.contacts-info-order -->
+							</div><!-- /.contacts-info -->
+							<div class="contacts-info">
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Отдел продаж</div>
+									<a href="mailto:automatika@750automatika.ru" class="text-md w-bold">automatika@750automatika.ru</a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Менеджер</div>
+									<a href="mailto:automatika@750automatika.ru" class="text-md w-bold">automatika@750automatika.ru</a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-item">
+									<div class="text-gray-400">Отдел по работе с тендерами</div>
+									<a href="mailto:automatika@750automatika.ru" class="text-md w-bold">automatika@750automatika.ru</a>
+								</div><!-- /.contacts-info-item -->
+								<div class="contacts-info-order">
+									<button type="button" class="btn btn-lg btn-yellow" data-toggle="modal" data-target="#callbackModal">Оставить заявку на расчет</button>
+								</div><!-- /.contacts-info-order -->
+							</div><!-- /.contacts-info -->
+						</div><!-- /.col -->
+						<div class="col-lg-8 order-0 order-lg-1">
+							<div class="contacts-location">
+								<div class="nav nav-tabs nav-tabs--dark" role="tablist">
+									<a class="nav-link active" id="nav-contacts-tab-1" data-toggle="tab" href="#nav-contacts-1" role="tab" aria-controls="nav-contacts-1" aria-selected="true">Центральный офис</a>
+									<a class="nav-link" id="nav-contacts-tab-2" data-toggle="tab" href="#nav-contacts-2" role="tab" aria-controls="nav-contacts-2" aria-selected="false">Склад</a>
+								</div><!-- /.nav-tabs -->
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="nav-contacts-1" role="tabpanel" aria-labelledby="nav-contacts-tab-1">
+										<div class="contacts-location-map">
+											<iframe src="https://yandex.ru/map-widget/v1/-/CCQ~bGF~dA" frameborder="0"></iframe>
+										</div>
+									</div><!-- /.tab -->
+									<div class="tab-pane fade" id="nav-contacts-2" role="tabpanel" aria-labelledby="nav-contacts-tab-2">
+										<div class="contacts-location-map">
+											<iframe src="https://yandex.ru/map-widget/v1/-/CCQ~bGF~dA" frameborder="0"></iframe>
+										</div>
+									</div><!-- /.tab -->
+								</div>
+							</div><!-- /.tab-content -->
+						</div><!--  /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.contacts-main -->
+
+				<!-- Contacts other information -->
+				<div class="contacts-other">
+					<div class="row justify-content-center">
+						<div class="col-lg-10 col-xxl-8">
+
+							<!-- Адрес офиса, Режим работы, Производство и склад -->
+							<div class="contacts-adress">
+								<div class="info-boxes row">
+									<div class="col-4">
+										<div class="info-box">
+											<figure class="info-box-picture">
+												<img src="./images/icons/map.svg" alt="Адрес офиса">
+												<div class="blur"></div>
+											</figure>
+											<h4 class="info-box-title text-gray-400 text-xs w-regular">Адрес офиса</h4>
+											<p class="info-box-descr text-sm w-medium">г. Москва, м. Сокольники, ул. Стромынка 13А, офис 10</p>
+										</div>
+									</div><!-- /.col -->
+									<div class="col-4">
+										<div class="info-box">
+											<figure class="info-box-picture">
+												<img src="./images/icons/clock.svg" alt="Режим работы">
+												<div class="blur"></div>
+											</figure>
+											<h4 class="info-box-title text-gray-400 text-xs w-regular">Режим работы</h4>
+											<p class="info-box-descr text-sm w-medium">Пн-Пт: 10:00-18:00,<br> Сб-Вс - выходные</p>
+										</div>
+									</div><!-- /.col -->
+									<div class="col-4">
+										<div class="info-box">
+											<figure class="info-box-picture">
+												<img src="./images/icons/office.svg" alt="Производство и склад">
+												<div class="blur"></div>
+											</figure>
+											<h4 class="info-box-title text-gray-400 text-xs w-regular">Производство и склад</h4>
+											<p class="info-box-descr text-sm w-medium">г. Подольск, Цементный проезд д. 6 стр. 1<br> телефон склада +7 (977) 690-85-12</p>
+										</div>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+							</div>
+
+							<!-- Реквизиты компании -->
+							<section class="contacts-requisites mt-64">
+								<div class="section-heading mb-32">
+									<h2 class="title">Реквизиты компании</h2>
+								</div>
+								<table class="contacts-requisites-table table-attributes">
+									<tbody>
+										<tr>
+											<td class="attribute"><span>Полное наименование организации</span></td>
+											<td class="value"><span><b>Индивидуальный предприниматель Синица Ярослав Олегович</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>Краткое наименование организации</span></td>
+											<td class="value"><span><b>ИП Синица ЯО</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>Юридический адрес:</span></td>
+											<td class="value"><span><b>140008, МО, г. Люберцы, ул. Инициативная, д. 76, кв. 73</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>Фактический адрес:</span></td>
+											<td class="value"><span><b>140015, МО, г. Люберцы, ул Инициативная, д. 30-В</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>ИНН</span></td>
+											<td class="value"><span><b>502712356325</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>КПП</span></td>
+											<td class="value"><span><b>отсутствует</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>ОГРН</span></td>
+											<td class="value"><span><b>318502700014081</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>Банк</span></td>
+											<td class="value"><span><b>ПАО СБЕРБАНК</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>БИК</span></td>
+											<td class="value"><span><b>044525225</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>Корпоративный счет</span></td>
+											<td class="value"><span><b>30101810400000000225</b></span></td>
+										</tr>
+										<tr>
+											<td class="attribute"><span>Расчетный счет</span></td>
+											<td class="value"><span><b>40802810140000055472</b></span></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="contacts-requisites-download mt-32">
+									<a href="#" class="btn btn-yellow" download>
+										<svg class="icon icon-download"><use xlink:href="images/symbol-defs.svg#download"></use></svg>
+										<span>Скачать реквизиты</span>
+									</a>
+								</div>
+							</section>
+
+							<!-- Как до нас добраться? -->
+							<section class="contacts-requisites mt-64">
+								<div class="section-heading mb-32">
+									<h2 class="title">Как до нас добраться?</h2>
+								</div>
+								<div class="info-boxes row">
+									<div class="col-6">
+										<div class="info-box">
+											<figure class="info-box-picture">
+												<img src="./images/icons/walk.svg" alt="Пешком">
+												<div class="blur"></div>
+											</figure>
+											<h4 class="info-box-title text-sm w-medium">Пешком</h4>
+											<p class="info-box-descr text-gray-400 text-xs w-regular">м. Сокольники, 15 минут пешком, за зданием Стромынка д. 13, вход бизнес-центр Северный берег, офис 10</p>
+										</div>
+									</div><!-- /.col -->
+									<div class="col-6">
+										<div class="info-box">
+											<figure class="info-box-picture">
+												<img src="./images/icons/car.svg" alt="На авто">
+												<div class="blur"></div>
+											</figure>
+											<h4 class="info-box-title text-sm w-medium">На авто</h4>
+											<p class="info-box-descr text-gray-400 text-xs w-regular">Cъезд с ТТК на Русаковскую улицу, парковка свободная</p>
+										</div>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+							</section>
+
+							<!-- Article -->
+							<section class="contacts-article mt-64">
+								<article>
+									<h2>750 Автоматика для ворот — интернет магазин систем безопасности и автоматики</h2>
+									<p><a href="#">Наша компания</a> имеет за плечами <b>солидный опыт в продажах</b>, установке и обслуживании самого разнообразного оборудования для видеонаблюдения. Наши специалисты всегда готовы оказать клиентам всестороннюю помощь в выборе оптимальной техники под конкретные запросы. Камеры видеонаблюдения, турникеты, шлагбаумы, автоматика ворот — у нас вы можете <u>заказать установку</u> и монтаж самых разнообразных устройств. К каждому заказу мы подходим индивидуально, учитывая все требования и пожелания клиента.</p>
+									<ul>
+										<li>Правильно настроенная система видеонаблюдения является надёжным способом обеспечить безопасность объекта.</li>
+										<li>Мы поможем не только с выбором, но и настроим оборудование, также при необходимости возьмёмся за регулярное его обслуживание.</li>
+										<li>Комплекты видеонаблюдения или отдельные камеры, видеорегистраторы всех типов, комплекты контроля доступа СКУД – мы предлагаем самый широкий ассортимент товаров с официальной сертификацией.</li>
+									</ul>
+									<p>Установка и эксплуатация систем видеонаблюдения может осуществляться на самых разных объектах – квартиры, частные дома, торговые центры, промышленные и складские помещения, публичные места, автомобильные парковки и улицы. В каждом из этих случаев вы получите консультацию высококвалифицированных профессионалов своего дела, которые смогут сэкономить ваш бюджет и помочь вам приобрести аналоговое или IP видеонаблюдение по оптимальной цене. Поставки осуществляются по всей России. Обеспечивается гарантийное и постгарантийное обслуживание. Обращаясь в магазин видеонаблюдения, вы делаете правильный выбор – мы заинтересованы в постоянных клиентах и долгосрочном сотрудничестве и прилагаем все усилия для того, чтобы каждый наш клиент остался доволен.</p>
+								</article>
+							</section>
+
+							<!-- Feedback form -->
+							<section class="contacts-feedback mt-64 rounded-8">
+								<h2 class="contacts-feedback-title mb-32">Форма обратной связи</h2>
+								<form class="form">
+									<div class="row row-cols-1 row-cols-lg-3">
+										<div class="col">
+											<div class="form-group form-group-label">
+												<input type="text" class="form-control" id="feedback-form-name" placeholder="Ваше имя" autocomplete="off" required>
+												<label for="feedback-form-name">Ваше имя</label>
+											</div>
+										</div><!-- /.col -->
+										<div class="col">
+											<div class="form-group form-group-label">
+												<input type="email" class="form-control" id="feedback-form-email" placeholder="E-mail" autocomplete="off" required>
+												<label for="feedback-form-email">E-mail</label>
+											</div>
+										</div><!-- /.col -->
+										<div class="col">
+											<div class="form-group">
+												<div class="form-group-label">
+													<input type="tel" class="form-control" id="feedback-form-phone" placeholder="+7 (___) ___ __ __" minlength="11" autocomplete="off" required>
+													<label for="feedback-form-phone">Телефон</label>
+												</div>
+												<div class="form-checkbox switch-input-mask">
+													<input type="checkbox" id="feedback-form-phone-mask" checked>
+													<label for="feedback-form-phone-mask" class="form-checkbox-label">Отобразить маску ввода телефона</label>
+												</div>
+											</div>
+										</div><!-- /.col -->
+									</div><!-- /.row -->
+									<div class="form-group form-group-label">
+										<textarea class="form-textarea" rows="4" placeholder="Комментарий" required></textarea>
+									</div>
+									<button type="submit" class="btn btn-lg btn-yellow btn-submit">Отправить</button>
+								</form>
+							</div>
+
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.contacts-other -->
+
+				
+
+			</div>
+			<!-- End Contacts -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+@@include('parts/footer.html')
