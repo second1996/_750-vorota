@@ -208,4 +208,19 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop:0}, 1000)
 	})
 
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * Smooth scroll
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('a[data-smoothscroll]').bind('click.smoothscroll', function(){
+		var target = $(this).attr('href'),
+				bl_top = $(target).offset().top - 75;
+
+		$('body, html').animate({scrollTop: bl_top}, 1000)
+
+		return false
+	})
+
 })

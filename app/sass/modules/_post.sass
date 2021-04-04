@@ -1,0 +1,87 @@
+/* ==========================================================================
+	 Single page post
+	 ========================================================================== */
+.post
+
+	.h-questions
+		+media-breakpoint-down(md)
+			padding: 0 16px
+			border-radius: 4px
+
+	&-sections
+		margin-bottom: 24px
+		> li
+			position: relative
+			&:not(:last-child)
+				margin-bottom: 16px
+				+media-breakpoint-down(md)
+					margin-bottom: 8px
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -1px
+				border-bottom: 2px solid $text-500
+				opacity: 0
+				transition: opacity .3s ease
+				+media-breakpoint-down(md)
+					display: none
+			&:hover
+				&::after
+					opacity: 1
+			> a
+				overflow: hidden
+				position: relative
+				display: block
+				padding-bottom: 6px
+				color: $text-500
+				font-size: 12px
+				font-weight: $w-bold
+				line-height: 16px
+				letter-spacing: 0.1em
+				text-transform: uppercase
+				white-space: nowrap
+				text-overflow: ellipsis
+				+media-breakpoint-down(md)
+					&:hover
+						color: $green
+
+	&-photo
+		overflow: hidden
+		border-radius: 4px
+		max-height: 384px
+
+	&-content
+
+	&-navigation
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		> .btn
+			padding-left: 16px
+			padding-right: 16px
+			font-weight: $w-bold
+		&-prev,
+		&-next
+			&.btn
+				color: $text-500
+				+media-breakpoint-down(sm)
+					width: 48px
+					padding-left: 0
+					padding-right: 0
+					> span
+						display: none
+			.icon
+				width: 16px
+				height: 16px
+		&-prev
+			span
+				margin-left: 6px !important
+			.icon
+				transform: scaleX(-1)
+		&-next
+			.icon
+				margin-left: 6px !important
+				+media-breakpoint-down(sm)
+					margin-left: 0 !important

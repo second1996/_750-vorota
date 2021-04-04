@@ -1,0 +1,95 @@
+@@include('parts/header.html', { title: 'Статьи' })
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Статьи</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="section-heading mb-32">
+				<h1 class="title">Статьи</h1>
+			</div>
+
+			<!-- Articles single page -->
+			<div class="articles-single">
+
+				<!-- Articles list -->
+				<div class="row row-items-32 row-cols-1">
+					<div class="col">
+						<a href="page-articles-single.html" class="card card-animated card-article-horizontal">
+							<div class="card-photo img-cover">
+								<img src="./images/portfolio/1.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<div class="card-meta">
+									<h3 class="title">Как выбрать ворота для гаража?</h3>
+									<span class="date text-gray-400">16 января 2020</span>
+									<p class="descr mt-24 text-gray-500">На рынке продается 4 типа гаражных ворот. Выпускают: распашные; секционные; подъемно-поворотные; роллетные. Распашные ворота Конструкция распашных ворот – каркас в виде рамки, жестко закрепленный в проеме, и две створки, подвешенные на металлические петли (под тип дверных).</p>
+								</div>
+								<div class="card-readmore">
+									<span>Читать</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</div>
+						</a>
+					</div><!-- /.col -->
+					<div class="col">
+						<a href="page-articles-single.html" class="card card-animated card-article-horizontal">
+							<div class="card-photo img-cover">
+								<img src="./images/portfolio/2.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<div class="card-meta">
+									<h3 class="title">Что лучше поставить? Ворота, шлагбаум или всё вместе?</h3>
+									<span class="date text-gray-400">16 января 2020</span>
+									<p class="descr mt-24 text-gray-500">Распашные ворота Конструкция распашных ворот – каркас в виде рамки, жестко закрепленный в проеме, и две створки, подвешенные на металлические петли (под тип дверных).</p>
+								</div>
+								<div class="card-readmore">
+									<span>Читать</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</div>
+						</a>
+					</div><!-- /.col -->
+					<div class="col">
+						<a href="page-articles-single.html" class="card card-animated card-article-horizontal">
+							<div class="card-photo img-cover">
+								<img src="./images/portfolio/3.jpg" alt="">
+							</div>
+							<div class="card-body">
+								<div class="card-meta">
+									<h3 class="title">Гаражные секционные ворота Alutech Prestige в Москве и МО</h3>
+									<span class="date text-gray-400">16 января 2020</span>
+									<p class="descr mt-24 text-gray-500">Выпускают: распашные; секционные; подъемно-поворотные; роллетные. Распашные ворота Конструкция распашных ворот – каркас в виде рамки, жестко закрепленный в проеме, и две створки, подвешенные на металлические петли (под тип дверных).</p>
+								</div>
+								<div class="card-readmore">
+									<span>Читать</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</div>
+						</a>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+
+				<!-- Pagination -->
+				@@include('parts/pagination.html')
+
+			</div>
+			<!-- End Articles single page -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+@@include('parts/footer.html')

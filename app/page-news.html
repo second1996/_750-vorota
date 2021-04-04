@@ -1,0 +1,135 @@
+@@include('parts/header.html', { title: 'Новости' })
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Новости</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="section-heading mb-32">
+				<h1 class="title">Новости</h1>
+			</div>
+
+			<!-- News -->
+			<div class="news">
+
+				<!-- News list -->
+				<div class="news-list">
+
+					<div class="row row-items-40 row-cols-1 row-cols-md-2 row-cols-lg-3">
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/1.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Режим работы на новогодние праздники 2021</h3>
+									<span class="date text-gray-400">16 января 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/2.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Как выбрать автоматику для ворот</h3>
+									<span class="date text-gray-400">1 декабря 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/3.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Виды приводов для ворот</h3>
+									<span class="date text-gray-400">8 ноября 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/4.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Где используется контроллер замка Perco</h3>
+									<span class="date text-gray-400">3 сентября 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/5.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Важная информация</h3>
+									<span class="date text-gray-400">2 сентября 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+						<div class="col">
+							<a href="page-news-single.html" class="card card-animated card-article-lg">
+								<div class="card-photo img-cover">
+									<img src="./images/portfolio/1.jpg" alt="">
+								</div>
+								<div class="card-meta">
+									<h3 class="title">Важная информация покупателям</h3>
+									<span class="date text-gray-400">14 декабря 2020</span>
+								</div>
+								<div class="card-readmore">
+									<span>Подробнее</span>
+									<svg class="icon icon-arrow"><use xlink:href="images/symbol-defs.svg#arrow"></use></svg>
+								</div>
+							</a>
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+
+					<!-- Pagination -->
+					@@include('parts/pagination.html')
+
+				</div>
+
+			</div>
+			<!-- End News -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+@@include('parts/footer.html')

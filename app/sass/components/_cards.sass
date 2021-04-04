@@ -6,8 +6,10 @@
 	display: block
 	min-width: 0
 	height: 100%
-	.card-body
-		margin-top: 20px
+	&:hover
+		.card-readmore
+			opacity: 1
+			transform: none
 	&.card-animated
 		&:hover
 			.card-photo img
@@ -16,6 +18,22 @@
 			img
 				transform: scale(1.01)
 				transition: transform .3s ease
+	.card-body
+		margin-top: 20px
+	.card-readmore
+		margin-top: 20px
+		color: $green
+		line-height: 1
+		opacity: 0
+		transform: translateY(-3px)
+		transition: $trs
+		+media-breakpoint-down(md)
+			display: none
+		> span
+			font-weight: $w-medium
+		> .icon
+			width: 16px
+			height: 16px
 
 
 /* ==========================================================================
@@ -323,7 +341,6 @@
 				font-size: 13px
 
 
-
 /* ==========================================================================
 	 Product card horizontal
 	 ========================================================================== */
@@ -456,8 +473,6 @@
 					height: 24px
 
 
-
-
 /* ==========================================================================
 	 Testimonial card
 	 ========================================================================== */
@@ -499,7 +514,7 @@
 
 
 /* ==========================================================================
-	 Article card
+	 Article cards
 	 ========================================================================== */
 .card-article
 	&:hover
@@ -519,6 +534,55 @@
 		.date
 			display: block
 			color: $text-400
+
+.card-article-lg
+	&:hover
+		.card-readmore
+			opacity: 1
+			transform: none
+	.card-photo
+		overflow: hidden
+		height: 280px
+		border-radius: 4px
+		+media-breakpoint-down(sm)
+			height: 200px
+	.card-meta
+		margin-top: 20px
+		.title
+			margin-bottom: 0
+		.date
+			display: block
+			margin-top: 12px
+			+media-breakpoint-down(sm)
+				margin-top: 6px
+
+.card-article-horizontal
+	display: flex
+	+media-breakpoint-down(sm)
+		flex-direction: column
+	.card-photo
+		flex: 0 0 40%
+		height: 232px
+		border-radius: 4px
+		border: 1px solid $border
+		+media-breakpoint-down(sm)
+			flex-basis: auto
+			height: 200px
+	.card-body
+		flex: 0 0 60%
+		margin-top: 0
+		padding-left: 24px
+		+media-breakpoint-down(sm)
+			flex-basis: auto
+			margin-top: 16px
+			padding-left: 0
+	.card-meta
+		.descr
+			margin-bottom: 0
+			line-height: 20px
+			+media-breakpoint-down(sm)
+				display: none
+
 
 
 /* ==========================================================================
