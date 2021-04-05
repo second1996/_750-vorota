@@ -123,6 +123,29 @@ hr
 	stroke: currentColor
 	fill: currentColor
 
+.preloader
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9
+	background-color: rgba($white, 0.8)
+	&-spinner
+		width: 32px
+		height: 32px
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-left: -16px
+		margin-top: -16px
+		box-sizing: border-box
+		border: 3px solid $green
+		border-radius: 50%
+		border-top-color: transparent
+		transform-origin: 50%
+		animation: spinner 1s infinite linear
+
 .w-100
 	width: 100% !important
 
