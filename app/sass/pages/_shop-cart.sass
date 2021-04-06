@@ -135,6 +135,51 @@
 						font-size: 20px
 					&:hover
 						color: $warning
+			// Custom services
+			.configuration
+				position: absolute
+				left: 68%
+				top: 75px
+				padding: 6px 8px
+				border-radius: 4px
+				background-color: $background
+				white-space: nowrap
+				+media-breakpoint-down(md)
+					left: 60%
+				+media-breakpoint-down(sm)
+					position: static
+					margin-top: 12px
+				.form-checkbox
+					margin-bottom: 0
+					&-label
+						display: inline-flex
+						align-items: center
+						&::after,
+						&::before
+							top: 50%
+							transform: translateY(-50%)
+						&::before
+							border: 2px solid $green
+				&-text
+					overflow: hidden
+					max-width: 256px
+					text-overflow: ellipsis
+					white-space: nowrap
+					+media-breakpoint-down(xl)
+						max-width: 180px
+					+media-breakpoint-down(lg)
+						max-width: 124px
+					+media-breakpoint-down(md)
+						max-width: 116px
+						+font-size(xxs)
+					+media-breakpoint-down(sm)
+						max-width: 300px
+					+media-breakpoint-down(xs)
+						max-width: 136px
+				&-price
+					padding-left: 10px
+					+media-breakpoint-down(md)
+						+font-size(xxs)
 
 	// Cart Actions
 	&-actions
