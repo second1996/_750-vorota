@@ -1,0 +1,42 @@
+@@include('parts/header.html', { title: 'Страница 404' })
+
+<main class="page-main">
+
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs mb-32">
+		<div class="container">
+			<ul class="breadcrumbs-list">
+				<li><a href="page-home.html">Главная</a></li>
+				<li><span>Страница 404</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container">
+			<div class="page-heading mb-32">
+				<h1 class="title"><span class="text-green">:( Упс.</span> Такой страницы не существует</h1>
+			</div>
+
+			<!-- Page 404 -->
+			<div class="page">
+
+				<div class="shop-message shop-message--yellow">
+					<p>Похоже, что данная страница не найдена, вы можете вернуться на главную страницу.</p>
+				</div>
+
+				<div class="mt-24">
+					<a href="page-home.html" class="btn btn-green">На главную</a>
+				</div>
+
+			</div>
+			<!-- End Page 404 -->
+
+		</div><!-- /.container -->
+	</div>
+	<!-- End Page content -->
+
+</main>
+
+@@include('parts/footer.html')
