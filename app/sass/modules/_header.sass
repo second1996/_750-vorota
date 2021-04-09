@@ -315,12 +315,12 @@
 						box-shadow: none
 					> div:not(:last-child)
 						margin-bottom: 26px
-				.categories
-					&-title
+				&-categories
+					.cats-title
 						display: block
 						color: $text-400
 						+font-size(xxs)
-					&-list
+					.cats-list
 						> li
 							&:not(:last-child)
 								margin-bottom: 6px
@@ -329,12 +329,12 @@
 								font-size: 15px
 								line-height: 1.3
 								font-weight: $w-bold
-				.products
-					&-title
+				&-products
+					.products-title
 						display: block
 						color: $text-400
 						+font-size(xxs)
-					&-results
+					.products-found
 						display: flex
 						flex-wrap: wrap
 						justify-content: space-between
@@ -344,7 +344,7 @@
 							+media-breakpoint-down(xs)
 								margin-bottom: 8px
 								+font-size(xxs)
-					&-list
+					.products-list
 						margin-top: 20px
 						> li
 							&:not(:last-child)
