@@ -375,9 +375,15 @@
 			&:hover
 				.product-complectation-photo
 					border-color: $green
+					&::before
+						opacity: 1
+						transform: none
 				.product-complectation-meta .title
 					color: $green
 		&-photo
+			position: relative
+			user-select: none
+			outline: none
 			flex: 0 0 auto
 			width: 48px
 			height: 48px
@@ -386,6 +392,23 @@
 			transition: border .3s ease
 			img
 				padding: 2px
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: 1
+				display: block
+				width: 32px
+				height: 32px
+				margin-top: -16px
+				margin-left: -16px
+				border-radius: 50%
+				background: rgba($text-400, 0.5) url('../images/icons/plus-circle.svg') no-repeat center/22px
+				opacity: 0
+				will-change: transform
+				transform: scale(0.9)
+				transition: $trs
 		&-meta
 			display: flex
 			width: 100%
