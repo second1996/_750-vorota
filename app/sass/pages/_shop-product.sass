@@ -375,9 +375,6 @@
 			&:hover
 				.product-complectation-photo
 					border-color: $green
-					&::before
-						opacity: 1
-						transform: none
 				.product-complectation-meta .title
 					color: $green
 		&-photo
@@ -390,6 +387,9 @@
 			margin-right: 16px
 			border: 1px solid $text-200
 			transition: border .3s ease
+			&:hover::before
+				opacity: 1
+				transform: none
 			img
 				padding: 2px
 			&::before
