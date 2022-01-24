@@ -1,23 +1,4 @@
-<h1>OptimizedHTML 5</h1>
-<p>Lightweight production ready Gulp starter.</p>
-
-<p>
-	<img src="https://raw.githubusercontent.com/agragregra/oh5/master/app/images/preview.jpg" alt="Start HTML Template">
-</p>
-
-<p><strong>OptimizedHTML 5</strong> - lightweight startup environment with <strong>Gulp 4</strong>, <strong>Preprocessors (Sass, Scss, Less, Stylus)</strong>, <strong>clean-css</strong>, <strong>Browsersync</strong>, <strong>Autoprefixer</strong>, <strong>webpack-stream</strong>, <strong>Babel</strong>, <strong>Rsync</strong>, <strong>CSS Reboot</strong> (Bootstrap reboot), Server-side <strong>HTML imports</strong> (SSI), <strong>build</strong>. It uses best practices for responsive images, JavaScript, CSS optimizing and contains a <strong>.htaccess</strong> code for resources caching (images, fonts, HTML, CSS, JS and other content types).</p>
-
-<h2>How to use OptimizedHTML 5</h2>
-
-<p>Clone into the current folder and remove all unnecessary (one command):</p>
-
-<pre>git clone https://github.com/agragregra/oh5 .; rm -rf trunk .gitignore readme.md .git</pre>
-
-<ol>
-	<li>Clone or <a href="https://github.com/agragregra/OptimizedHTML-5/archive/master.zip">Download</a> <strong>OptimizedHTML 5</strong> from GitHub</li>
-	<li>Install Node Modules: <strong>npm i</strong></li>
-	<li>Run: <strong>gulp</strong></li>
-</ol>
+<h1>Автоматика для ворот</h1>
 
 <h2>Main Gulpfile.js options:</h2>
 
